@@ -1,0 +1,10 @@
+dr Paweł Bednarz
+
+Rozpoznawanie rysunków grafów
+
+W ramach pracy zostaną zebrane i zorganizowane odpowiednie zbiory danych zawierające rysunki grafów nieskierowanych i nieoznakowanych.
+Następnie, przeprowadzone zostaną prace nad przetwarzaniem i reprezentacją tych danych, aby były odpowiednie do treningu sieci neuronowej.
+Kolejnym krokiem będzie wybranie i zaimplementowanie sieci, która będzie w stanie efektywnie rozpoznawać rysunki grafów.
+Model sieci neuronowej będzie trenowany na zebranym wcześniej zbiorze danych, a następnie zostanie przeprowadzona analiza i ocena wyników.
+Celem tej pracy będzie uzyskanie wytrenowanego modelu sieci neuronowej,
+który będzie w stanie skutecznie rozpoznawać rysunki grafów nieskierowanych, nieoznakowanych o małej liczbie.
