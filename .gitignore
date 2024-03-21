@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 /latex_template
+/graph_generator/directed
+/graph_generator/undirected
