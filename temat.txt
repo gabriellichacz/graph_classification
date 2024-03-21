@@ -8,3 +8,17 @@ Kolejnym krokiem będzie wybranie i zaimplementowanie sieci, która będzie w st
 Model sieci neuronowej będzie trenowany na zebranym wcześniej zbiorze danych, a następnie zostanie przeprowadzona analiza i ocena wyników.
 Celem tej pracy będzie uzyskanie wytrenowanego modelu sieci neuronowej,
 który będzie w stanie skutecznie rozpoznawać rysunki grafów nieskierowanych, nieoznakowanych o małej liczbie.
+
+Plan:
+- Planuję pisać ją w Latex, korzystając z szablonu dostępnego na stronie Wydziału Elektrotechniki i Informatyki (https://weii.prz.edu.pl/studenci/praca-dyplomowa/jak-napisac-prace-dyplomowa).
+- Stworzę skrypt w R (chyba, że w trakcie pracy okaże się to uciążliwe, to przejdę na Pythona), który będzie generował rysunki różnych grafów i je zapisywał - będzie to zbiór danych, który podzielę na dane wejściowe i testowe.
+- Sieć neuronową, wszelkie manipulacje na plikach i inne zadania, które okażą się konieczne, chciałbym wykonać w Pythonie.
+- Jeśli wszystko pójdzie dobrze, to chciałbym również przetestować stworzony model sieci neuronowej na danych znalezionych w internecie - na przykład czy rozpozna jakiś graf na mapach, czy schematach.
+
+Z części teoretycznej pracy, myślałem o zarysowaniu tematu grafów, ich rodzajów, czemu akurat te rodzaje chcemy rozpoznawać, w czym może to być przydatne.
+Oprócz tego zarys wykorzystanych technologii i technik, z których skorzystam przy tworzeniu modelu.
+Dalej przedstawiłbym testy, ich wyniki i wnioski.
+Na końcu jakieś podsumowanie całego tematu.
+
+Jeśli chodzi o techniczne aspekty pisania pracy to nie zostały nam przedstawione na seminarium dyplomowym, ale publikowałem swój projekt inżynierski, więc domyślam się, że założenia są dość podobne.
+Na początku musi znaleść się najpewniej jakiś abstract, we wstępie trzeba będzie zarysować plan pracy i tematu, później jakiś przegląd literatury i dopiero w kolejnych rozdziałach przejście już do głównej części treści, a po podsumowaniu najlepiej bibliografia, która nie będzie zbyt skąpa.
