@@ -27,42 +27,42 @@ for (i in 1:50) {
   V(graph_unlabeled_undirected)$name <- sample(LETTERS, vcount(graph_unlabeled_undirected))
   E(graph_unlabeled_undirected)$weight <- runif(ecount(graph_unlabeled_undirected))
   png(file.path(path_name_unlabeled_undirected, paste0(path_name_unlabeled_undirected, "-", i, ".png")), width = 800, height = 600)
-  plot(graph_unlabeled_undirected, main = paste("Unlabeled and undirected graph no.", i))
+  plot(graph_unlabeled_undirected)
   dev.off()
 }
 
 # 50 random undirected graphs
 for (i in 1:50) {
   graph_undirected <- erdos.renyi.game(10, 0.2) # 10 wierzchołków
-  png(file.path(path_name_rest, paste0(path_name_rest, "-", i, ".png")), width = 800, height = 600)
-  plot(graph_undirected, main = paste("Undirected graph no.", i))
+  png(file.path(path_name_rest, paste0(path_name_rest, "-undirected-", i, ".png")), width = 800, height = 600)
+  plot(graph_undirected)
   dev.off()
 }
 
 # 50 random directed graphs
 for (i in 1:50) {
   graph_directed <- erdos.renyi.game(10, 0.2, directed = TRUE) # 10 wierzchołków
-  png(file.path(path_name_rest, paste0(path_name_rest, "-", i, ".png")), width = 800, height = 600)
-  plot(graph_directed, main = paste("Directed graph no.", i))
+  png(file.path(path_name_rest, paste0(path_name_rest, "-directed-", i, ".png")), width = 800, height = 600)
+  plot(graph_directed)
   dev.off()
 }
 
 # 50 random labeled and directed graphs
 for (i in 1:50) {
-  graph_labeled_directed <- erdos.renyi.game(10, 0.2, directed = TRUE)
+  graph_labeled_directed <- erdos.renyi.game(10, 0.2, directed = TRUE) # 10 wierzchołków
   V(graph_labeled_directed)$name <- sample(LETTERS, vcount(graph_labeled_directed))
   E(graph_labeled_directed)$weight <- runif(ecount(graph_labeled_directed))
-  png(file.path(path_name_rest, paste0(path_name_rest, "-", i, ".png")), width = 800, height = 600)
-  plot(graph_labeled_directed, main = paste("Labeled and directed graph no.", i))
+  png(file.path(path_name_rest, paste0(path_name_rest, "-labeled_directed-", i, ".png")), width = 800, height = 600)
+  plot(graph_labeled_directed)
   dev.off()
 }
 
 # 50 random labeled and undirected graphs
 for (i in 1:50) {
-  graph_labeled_undirected <- erdos.renyi.game(10, 0.2, directed = FALSE)
+  graph_labeled_undirected <- erdos.renyi.game(10, 0.2, directed = FALSE) # 10 wierzchołków
   V(graph_labeled_undirected)$name <- sample(LETTERS, vcount(graph_labeled_undirected))
   E(graph_labeled_undirected)$weight <- runif(ecount(graph_labeled_undirected))
-  png(file.path(path_name_rest, paste0(path_name_rest, "-", i, ".png")), width = 800, height = 600)
-  plot(graph_labeled_undirected, main = paste("Labeled and undirected graph no.", i))
+  png(file.path(path_name_rest, paste0(path_name_rest, "-labeled_undirected-", i, ".png")), width = 800, height = 600)
+  plot(graph_labeled_undirected)
   dev.off()
 }
