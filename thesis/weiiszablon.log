@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  11 FEB 2024 09:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  26 MAR 2024 22:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -335,7 +335,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
  (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 42.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 20.
  (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -345,20 +345,20 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (./weiiszablon.aux)
 \openout1 = `weiiszablon.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
  (b:/Aplikacje/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count292
@@ -417,15 +417,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 <auxiliary/logoweii.jpg, id=1, 400.1349pt x 117.67966pt>
 File: auxiliary/logoweii.jpg Graphic file (type jpg)
 <use auxiliary/logoweii.jpg>
-Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 45.
+Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 23.
 (pdftex.def)             Requested size: 355.65944pt x 104.60167pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
  []
 
@@ -470,97 +470,49 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
  [3] [4
 
-] [5{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 72.
- (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [6
+] [5
+
+] [6
 
 ] [7
 
 ]
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
- [8
-
-] [9{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-<figures/fig1.png, id=53, 253.69781pt x 179.92218pt>
-File: figures/fig1.png Graphic file (type png)
-<use figures/fig1.png>
-Package pdftex.def Info: figures/fig1.png  used on input line 213.
-(pdftex.def)             Requested size: 170.71652pt x 121.07434pt.
-<figures/fig2.png, id=54, 444.15938pt x 213.79875pt>
-File: figures/fig2.png Graphic file (type png)
-<use figures/fig2.png>
-Package pdftex.def Info: figures/fig2.png  used on input line 224.
-(pdftex.def)             Requested size: 341.43306pt x 164.3515pt.
-
-Underfull \vbox (badness 2035) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 3965) has occurred while \output is active []
-
- [12 <./figures/fig1.png> <./figures/fig2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 270--274
-
- []
-
-(b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [14] [15] [16] [17
-
-] [18
-
-] [19
-
-]
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 381--381
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 71--71
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 381--381
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 71--71
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 [][]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] (./weiiszablon.aux)
+[8] (./weiiszablon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8488 strings out of 474221
- 128071 string characters out of 5745158
- 2037978 words of memory out of 5000000
- 30615 multiletter control sequences out of 15000+600000
- 627220 words of font info for 73 fonts, out of 8000000 for 9000
+ 7335 strings out of 474221
+ 115080 string characters out of 5745158
+ 1929978 words of memory out of 5000000
+ 29482 multiletter control sequences out of 15000+600000
+ 600361 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,13n,79p,1318b,1731s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri9.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on weiiszablon.pdf (20 pages, 1010633 bytes).
+ 72i,13n,79p,379b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
+Output written on weiiszablon.pdf (8 pages, 769224 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 58 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
