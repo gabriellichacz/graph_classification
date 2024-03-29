@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  26 MAR 2024 22:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  29 MAR 2024 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -414,11 +414,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<auxiliary/logoweii.jpg, id=1, 400.1349pt x 117.67966pt>
-File: auxiliary/logoweii.jpg Graphic file (type jpg)
-<use auxiliary/logoweii.jpg>
-Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 23.
-(pdftex.def)             Requested size: 355.65944pt x 104.60167pt.
+<auxiliary/wmifs_pl.png, id=1, 401.5pt x 150.06062pt>
+File: auxiliary/wmifs_pl.png Graphic file (type png)
+<use auxiliary/wmifs_pl.png>
+Package pdftex.def Info: auxiliary/wmifs_pl.png  used on input line 23.
+(pdftex.def)             Requested size: 355.65944pt x 132.93759pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
@@ -431,7 +431,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
 [1
 
-{b:/Aplikacje/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./auxiliary/logoweii.jpg>] [2] (./weiiszablon.toc
+{b:/Aplikacje/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./auxiliary/wmifs_pl.png>] [2] (./weiiszablon.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2.
  (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -509,10 +509,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  72i,13n,79p,379b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on weiiszablon.pdf (8 pages, 769224 bytes).
+Output written on weiiszablon.pdf (8 pages, 218177 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

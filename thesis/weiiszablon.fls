@@ -116,12 +116,12 @@ INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./auxiliary/logoweii.jpg
-INPUT ./auxiliary/logoweii.jpg
-INPUT ./auxiliary/logoweii.jpg
-INPUT ./auxiliary/logoweii.jpg
+INPUT ./auxiliary/wmifs_pl.png
+INPUT ./auxiliary/wmifs_pl.png
+INPUT ./auxiliary/wmifs_pl.png
+INPUT ./auxiliary/wmifs_pl.png
 OUTPUT weiiszablon.pdf
-INPUT ./auxiliary/logoweii.jpg
+INPUT ./auxiliary/wmifs_pl.png
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
