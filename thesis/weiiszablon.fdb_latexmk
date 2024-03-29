@@ -1,7 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1711715482.38038 "b:/Projekty/Studia/Semestry/II_stopien_III_semestr/Praca magisterska/thesis/weiiszablon.tex" "weiiszablon.pdf" "weiiszablon" 1711715484.91289 0
-  "auxiliary/wmifs_pl.png" 1711715293 120128 9e66f0df224a185918caff15d76fa877 ""
+["pdflatex"] 1711716511.02179 "b:/Projekty/Studia/Semestry/II_stopien_III_semestr/Praca magisterska/thesis/weiiszablon.tex" "weiiszablon.pdf" "weiiszablon" 1711716512.37107 0
+  "auxiliary/wmifs_pl.png" 1711716057 148476 10f641b0f34a95f8ab852c19573cc443 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1707609594 2375 baa924870cfb487815765f9094cf3728 ""
+  "b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1707609594 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1707608663 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1707611183 2172 fd0c924230362ff848a33632ed45dc23 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm" 1707611183 2288 f478fc8fed18759effb59f3dad7f3084 ""
@@ -22,6 +23,7 @@
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm" 1707609594 11888 6841b91e46b65cf41a49b160e6e74130 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm" 1707609594 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm" 1707609594 11884 c93929a6974dce79eabb778f219d7e18 ""
+  "b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm" 1707609594 1596 1d4548788e389ded56d0b01b28377882 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb" 1707609594 121021 836464b5fe0c782d94085eb083550ccc ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb" 1707609594 116908 9a7a12d1e4df280ea0ab4aad83cdef88 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb" 1707609594 119235 05e5c8d6d60439433e50047898c2c0e0 ""
@@ -70,6 +72,7 @@
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd" 1707609594 568 a5494d810f2680caf10205cd1226c76c ""
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd" 1707609594 1882 28c08db1407ebff35a658fd141753d16 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd" 1707609594 1867 996fe743d88a01aca041ed22cc10e1bb ""
+  "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd" 1707609594 1914 884882d7ebb0fd65cea93fca77ff6f5a ""
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/psnfss/courier.sty" 1707610387 803 1508145d595475dad3d7fb46782a0f94 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/psnfss/mathptmx.sty" 1707610387 4631 6e41de2b7a83dfa5d2c4b0a2fe01f046 ""
   "b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1707610387 961 15056f4a61917ceed3a44e4ac11fcc52 ""
@@ -82,11 +85,11 @@
   "b:/Aplikacje/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1707611695 5518072 dc838e62b7e22bbac7d65a6c78646ad8 ""
   "b:/Aplikacje/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1707611865 8211127 5c5de82ae8f74bd84ecb23f8ddca6923 ""
   "b:/Aplikacje/texlive/2023/texmf.cnf" 1707611672 713 e69b156964470283e0530f5060668171 ""
-  "b:/Projekty/Studia/Semestry/II_stopien_III_semestr/Praca magisterska/thesis/weiiszablon.tex" 1711487354 1209 13944538cc988d8e5868b54fc39fc891 ""
-  "weiiszablon.aux" 1711715484 1582 5b0711a5ba92dda84c4d483d91c57a7a "pdflatex"
+  "b:/Projekty/Studia/Semestry/II_stopien_III_semestr/Praca magisterska/thesis/weiiszablon.tex" 1711716510 1300 32f99ba2ad25d79aacc363a2444b1201 ""
+  "weiiszablon.aux" 1711716512 1599 e7d6282d2459f4621bb3c120f0cc81a4 "pdflatex"
   "weiiszablon.sty" 1711715431 12308 efeabc0039f15c038225ea7cde7bf98c ""
-  "weiiszablon.tex" 1711487354 1209 13944538cc988d8e5868b54fc39fc891 ""
-  "weiiszablon.toc" 1711715484 935 c85ad25568a4bc1c5b080fff679dc72d "pdflatex"
+  "weiiszablon.tex" 1711716510 1300 32f99ba2ad25d79aacc363a2444b1201 ""
+  "weiiszablon.toc" 1711716512 935 c85ad25568a4bc1c5b080fff679dc72d "pdflatex"
   (generated)
   "weiiszablon.aux"
   "weiiszablon.log"

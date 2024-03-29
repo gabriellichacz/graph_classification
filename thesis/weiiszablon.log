@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  29 MAR 2024 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.11)  29 MAR 2024 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -342,7 +342,11 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box59
-) (./weiiszablon.aux)
+) (./weiiszablon.aux
+
+LaTeX Warning: Label `str' multiply defined.
+
+)
 \openout1 = `weiiszablon.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -414,11 +418,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<auxiliary/wmifs_pl.png, id=1, 401.5pt x 150.06062pt>
+<auxiliary/wmifs_pl.png, id=1, 1037.37563pt x 282.30469pt>
 File: auxiliary/wmifs_pl.png Graphic file (type png)
 <use auxiliary/wmifs_pl.png>
 Package pdftex.def Info: auxiliary/wmifs_pl.png  used on input line 23.
-(pdftex.def)             Requested size: 355.65944pt x 132.93759pt.
+(pdftex.def)             Requested size: 355.65944pt x 96.78784pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
@@ -474,20 +478,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 ] [6
 
-] [7
-
 ]
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 71--71
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 67.
+ (b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [7
+
+{b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 72--72
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 71--71
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 72--72
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 72--72
 [][]
  []
 
@@ -499,20 +507,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7335 strings out of 474221
- 115080 string characters out of 5745158
+ 7370 strings out of 474221
+ 115980 string characters out of 5745158
  1929978 words of memory out of 5000000
- 29482 multiletter control sequences out of 15000+600000
- 600361 words of font info for 63 fonts, out of 8000000 for 9000
+ 29512 multiletter control sequences out of 15000+600000
+ 600736 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,79p,379b,355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on weiiszablon.pdf (8 pages, 218177 bytes).
+Output written on weiiszablon.pdf (8 pages, 241915 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -166,6 +166,11 @@ INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 OUTPUT weiiszablon.toc
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT b:/Aplikacje/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT weiiszablon.aux
 INPUT b:/Aplikacje/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
