@@ -10,3 +10,7 @@ Na rysunku kreski łączące wierzchołki mają strzałki.
 Pomiędzy dwoma wierzchołkami może być tylko jedna krawędź (bo V jest zbiorem);  
 zazwyczaj nie chcemy pętli w wierzchołkach.  
 Dalej wszystkie grafy są nieskierowane, jeśli nie zaznaczymy inaczej
+
+# Inne
+set.seed() psuje losowość.
+layouty grafów psują losowość.
