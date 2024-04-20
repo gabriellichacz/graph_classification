@@ -71,11 +71,9 @@ plotCycles <- function(N, vertexNo, plotCurve)
   
   for (i in 1:N)
   {
-    graph <- erdos.renyi.game(vertexNo, 1, directed = FALSE)
-    E(graph)$weight <- runif(ecount(graph))
+    graph <- make_ring(vertexNo, directed = FALSE)
     png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
     plot(graph, vertex.label = NA, edge.curved = plotCurve)
-    # plot(graph, vertex.label = NA, edge.curved = plotCurve, layout = randomLayout(graph)) # Bez opisów wierzchołków, zakrzywienie krawędzi 0.3
     dev.off()
   }
 }
@@ -85,7 +83,7 @@ plotCycles <- function(N, vertexNo, plotCurve)
 #' @param N int - liczba rysunków
 #' @param vertexNo int - liczba wierzchołków
 #' @param plotCurve float
-#' @return void
+#' @return voided
 #'
 plotFullGraphs <- function(N, vertexNo, plotCurve)
 {
@@ -106,6 +104,14 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
   }
 }
 
-# plotPaths(50, 3, 0.3)
-# plotCycles(50, 3, 0.3)
+plotPaths(50, 3, 0.3)
+plotCycles(50, 3, 0.3)
 plotFullGraphs(50, 3, 0.3)
+
+plotPaths(50, 5, 0.3)
+plotCycles(50, 5, 0.3)
+plotFullGraphs(50, 5, 0.3)
+
+plotTest()
+
+plotTest(5, 3, 0.3)
