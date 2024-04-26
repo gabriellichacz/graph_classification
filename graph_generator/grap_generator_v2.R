@@ -104,19 +104,47 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
   }
 }
 
+#' Graf spójny N wierzchołków
+#'
+#' @param N int - liczba rysunków
+#' @param vertexNo int - liczba wierzchołków
+#' @param plotCurve float
+#' @return voided
+#'
+plotConnectedGraphs <- function(N, vertexNo, plotCurve)
+{
+  fileName <- 'connected'
+  dir.create(fileName, showWarnings = FALSE)
+  dir.create(file.path(fileName, vertexNo), showWarnings = FALSE)
+  
+  pathName <- paste0(fileName, '/', vertexNo)
+  unlink(paste0(pathName, "/*"))
+  
+  for (i in 1:N)
+  {
+    graph <- graph(c(1, 2, 2, 3, 3, 4, 4, 5, 5, 1, 1, round(runif(1, 1, 10)), 2, round(runif(1, 1, 10)), 3, round(runif(1, 1, 10)) , 4, round(runif(1, 1, 10)) , 5, round(runif(1, 1, 10))))
+    png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
+    plot(graph, vertex.label = NA, edge.curved = plotCurve)
+    dev.off()
+  }
+}
+
 plotPaths(200, 4, 0.3)
 plotCycles(200, 4, 0.3)
 plotFullGraphs(200, 4, 0.3)
+plotConnectedGraphs(200, 4, 0.3)
 
 plotPaths(200, 5, 0.3)
 plotCycles(200, 5, 0.3)
 plotFullGraphs(200, 5, 0.3)
+plotConnectedGraphs(200, 5, 0.3)
 
 plotPaths(200, 6, 0.3)
 plotCycles(200, 6, 0.3)
 plotFullGraphs(200, 6, 0.3)
+plotConnectedGraphs(200, 6, 0.3)
 
 plotPaths(200, 7, 0.3)
 plotCycles(200, 7, 0.3)
 plotFullGraphs(200, 7, 0.3)
-
+plotConnectedGraphs(200, 7, 0.3)
