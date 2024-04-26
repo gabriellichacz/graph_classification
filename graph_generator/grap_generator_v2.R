@@ -104,14 +104,19 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
   }
 }
 
-plotPaths(50, 3, 0.3)
-plotCycles(50, 3, 0.3)
-plotFullGraphs(50, 3, 0.3)
+plotPaths(200, 4, 0.3)
+plotCycles(200, 4, 0.3)
+plotFullGraphs(200, 4, 0.3)
 
-plotPaths(50, 5, 0.3)
-plotCycles(50, 5, 0.3)
-plotFullGraphs(50, 5, 0.3)
+plotPaths(200, 5, 0.3)
+plotCycles(200, 5, 0.3)
+plotFullGraphs(200, 5, 0.3)
 
-plotTest()
+plotPaths(200, 6, 0.3)
+plotCycles(200, 6, 0.3)
+plotFullGraphs(200, 6, 0.3)
 
-plotTest(5, 3, 0.3)
+plotPaths(200, 7, 0.3)
+plotCycles(200, 7, 0.3)
+plotFullGraphs(200, 7, 0.3)
+

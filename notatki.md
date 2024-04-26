@@ -14,3 +14,9 @@ Dalej wszystkie grafy są nieskierowane, jeśli nie zaznaczymy inaczej
 # Inne
 set.seed() psuje losowość.
 layouty grafów psują losowość.
+
+# Plan
+Rozpoznwanie podstawowych typów grafów.
+Ścieżki, pełne, cykle, itp.
+Najpierw stała liczba wierzchołków. Zaczynam od 4. Potem więcej.
+Generalnie więcej klas do modelu dodać.
