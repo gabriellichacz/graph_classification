@@ -19,6 +19,21 @@ randomLayout <- function(graph)
   return(cbind(cos(rotation) * layout[,1] - sin(rotation) * layout[,2], sin(rotation) * layout[,1] + cos(rotation) * layout[,2]))
 }
 
+#' Tworzy katalog do zapisu grafów
+#'
+#' @param vertexNo int - liczba wierzchołków
+#' @param fileName string - nazwa grafu
+#' @return string - ścieżka
+#'
+createDir <- function(vertexNo, fileName)
+{
+  dir.create(as.character(vertexNo), showWarnings = FALSE)
+  dir.create(file.path(vertexNo, fileName), showWarnings = FALSE)
+  pathName <- paste0(vertexNo, '/', fileName)
+  unlink(paste0(pathName, "/*"))
+  return(pathName)
+}
+
 #' Graf ścieżka N wierzchołków, nieskierowany
 #'
 #' @param N int - liczba rysunków
@@ -29,12 +44,7 @@ randomLayout <- function(graph)
 plotPaths <- function(N, vertexNo, plotCurve)
 {
   fileName <- 'path'
-  dir.create(fileName, showWarnings = FALSE)
-  dir.create(file.path(fileName, vertexNo), showWarnings = FALSE)
-  
-  pathName <- paste0(fileName, '/', vertexNo)
-  unlink(paste0(pathName, "/*"))
-  
+  pathName <- createDir(vertexNo, fileName)
   definition <- c()
   for (index in 1:(vertexNo-1))
   {
@@ -63,12 +73,7 @@ plotPaths <- function(N, vertexNo, plotCurve)
 plotCycles <- function(N, vertexNo, plotCurve)
 {
   fileName <- 'cycle'
-  dir.create(fileName, showWarnings = FALSE)
-  dir.create(file.path(fileName, vertexNo), showWarnings = FALSE)
-  
-  pathName <- paste0(fileName, '/', vertexNo)
-  unlink(paste0(pathName, "/*"))
-  
+  pathName <- createDir(vertexNo, fileName)
   for (i in 1:N)
   {
     graph <- make_ring(vertexNo, directed = FALSE)
@@ -83,17 +88,12 @@ plotCycles <- function(N, vertexNo, plotCurve)
 #' @param N int - liczba rysunków
 #' @param vertexNo int - liczba wierzchołków
 #' @param plotCurve float
-#' @return voided
+#' @return void
 #'
 plotFullGraphs <- function(N, vertexNo, plotCurve)
 {
   fileName <- 'full'
-  dir.create(fileName, showWarnings = FALSE)
-  dir.create(file.path(fileName, vertexNo), showWarnings = FALSE)
-  
-  pathName <- paste0(fileName, '/', vertexNo)
-  unlink(paste0(pathName, "/*"))
-  
+  pathName <- createDir(vertexNo, fileName)
   for (i in 1:N)
   {
     graph <- graph.full(vertexNo, directed = FALSE)
@@ -109,17 +109,12 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
 #' @param N int - liczba rysunków
 #' @param vertexNo int - liczba wierzchołków
 #' @param plotCurve float
-#' @return voided
+#' @return void
 #'
 plotConnectedGraphs <- function(N, vertexNo, plotCurve)
 {
   fileName <- 'connected'
-  dir.create(fileName, showWarnings = FALSE)
-  dir.create(file.path(fileName, vertexNo), showWarnings = FALSE)
-  
-  pathName <- paste0(fileName, '/', vertexNo)
-  unlink(paste0(pathName, "/*"))
-  
+  pathName <- createDir(vertexNo, fileName)
   for (i in 1:N)
   {
     graph <- graph(c(1, 2, 2, 3, 3, 4, 4, 5, 5, 1, 1, round(runif(1, 1, 10)), 2, round(runif(1, 1, 10)), 3, round(runif(1, 1, 10)) , 4, round(runif(1, 1, 10)) , 5, round(runif(1, 1, 10))))
