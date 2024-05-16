@@ -56,7 +56,7 @@ plotPaths <- function(N, vertexNo, plotCurve)
   {
     graph <- graph_from_edgelist(definitionMatrix, directed = FALSE)
     E(graph)$weight <- runif(ecount(graph))
-    png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
+    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
     plot(graph, vertex.label = NA, edge.curved = plotCurve)
     # plot(graph, vertex.label = NA, edge.curved = plotCurve, layout = randomLayout(graph)) # Bez opisów wierzchołków, zakrzywienie krawędzi, losowy obrót
     dev.off()
@@ -77,7 +77,7 @@ plotCycles <- function(N, vertexNo, plotCurve)
   for (i in 1:N)
   {
     graph <- make_ring(vertexNo, directed = FALSE)
-    png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
+    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
     plot(graph, vertex.label = NA, edge.curved = plotCurve)
     dev.off()
   }
@@ -98,7 +98,7 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
   {
     graph <- graph.full(vertexNo, directed = FALSE)
     E(graph)$weight <- runif(ecount(graph))
-    png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
+    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
     plot(graph, vertex.label = NA, edge.curved = plotCurve)
     dev.off()
   }
@@ -118,7 +118,7 @@ plotConnectedGraphs <- function(N, vertexNo, plotCurve)
   for (i in 1:N)
   {
     graph <- graph(c(1, 2, 2, 3, 3, 4, 4, 5, 5, 1, 1, round(runif(1, 1, 10)), 2, round(runif(1, 1, 10)), 3, round(runif(1, 1, 10)) , 4, round(runif(1, 1, 10)) , 5, round(runif(1, 1, 10))))
-    png(file.path(pathName, paste0(fileName, "-", i, ".png")), width = 800, height = 600)
+    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
     plot(graph, vertex.label = NA, edge.curved = plotCurve)
     dev.off()
   }
