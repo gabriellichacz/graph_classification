@@ -20,3 +20,11 @@ Rozpoznwanie podstawowych typów grafów.
 Ścieżki, pełne, cykle, itp.
 Najpierw stała liczba wierzchołków. Zaczynam od 4. Potem więcej.
 Generalnie więcej klas do modelu dodać.
+
+# Typy grafów
+https://pl.wikipedia.org/wiki/Klasa_grafów
+Pełny
+Pusty
+Ścieżka
+Cykl
+Dwudzielne
