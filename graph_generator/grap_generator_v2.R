@@ -9,7 +9,7 @@ library(igraph)
 #############################_Graph_generation_#######################
 #' Losowy obrót dla rysunku grafu - layout_in_circle() psuje losowość
 #'
-#' @param List graph
+#' @param graph List
 #' @return matrix
 #'
 randomLayout <- function(graph)
@@ -34,6 +34,23 @@ createDir <- function(vertexNo, fileName)
   return(pathName)
 }
 
+#' Rysuj graf
+#'
+#' @param graph Graph - Graf do narysowania
+#' @param pathName string - Ścieżka
+#' @param fileName string - Nazwa pliku
+#' @param vertexNo int - liczba wierzchołków
+#' @param i int - Numer iteracji
+#' @param plotCurve float
+#' @return void
+#'
+plotGraphHelper <- function(graph, pathName, fileName, vertexNo, i, plotCurve)
+{
+  png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
+  plot(graph, vertex.label = NA, edge.curved = plotCurve)
+  dev.off()
+}
+
 #' Graf ścieżka N wierzchołków, nieskierowany
 #'
 #' @param N int - liczba rysunków
@@ -56,10 +73,7 @@ plotPaths <- function(N, vertexNo, plotCurve)
   {
     graph <- graph_from_edgelist(definitionMatrix, directed = FALSE)
     E(graph)$weight <- runif(ecount(graph))
-    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
-    plot(graph, vertex.label = NA, edge.curved = plotCurve)
-    # plot(graph, vertex.label = NA, edge.curved = plotCurve, layout = randomLayout(graph)) # Bez opisów wierzchołków, zakrzywienie krawędzi, losowy obrót
-    dev.off()
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
   }
 }
 
@@ -77,9 +91,7 @@ plotCycles <- function(N, vertexNo, plotCurve)
   for (i in 1:N)
   {
     graph <- make_ring(vertexNo, directed = FALSE)
-    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
-    plot(graph, vertex.label = NA, edge.curved = plotCurve)
-    dev.off()
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
   }
 }
 
@@ -98,9 +110,7 @@ plotFullGraphs <- function(N, vertexNo, plotCurve)
   {
     graph <- graph.full(vertexNo, directed = FALSE)
     E(graph)$weight <- runif(ecount(graph))
-    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
-    plot(graph, vertex.label = NA, edge.curved = plotCurve)
-    dev.off()
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
   }
 }
 
@@ -118,28 +128,70 @@ plotConnectedGraphs <- function(N, vertexNo, plotCurve)
   for (i in 1:N)
   {
     graph <- graph(c(1, 2, 2, 3, 3, 4, 4, 5, 5, 1, 1, round(runif(1, 1, 10)), 2, round(runif(1, 1, 10)), 3, round(runif(1, 1, 10)) , 4, round(runif(1, 1, 10)) , 5, round(runif(1, 1, 10))))
-    png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
-    plot(graph, vertex.label = NA, edge.curved = plotCurve)
-    dev.off()
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
+  }
+}
+
+#' Graf dwudzielny N wierzchołków
+#'
+#' @param N int - liczba rysunków
+#' @param vertexNo int - liczba wierzchołków
+#' @param plotCurve float
+#' @return void
+#'
+plotBipartiteGraphs <- function(N, vertexNo, plotCurve)
+{
+  fileName <- 'bipartite'
+  pathName <- createDir(vertexNo, fileName)
+  for (i in 1:N)
+  {
+    graph <- make_full_bipartite_graph(vertexNo/2, vertexNo/2)
+    E(graph)$weight <- runif(ecount(graph))
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
+  }
+}
+
+#' Graf pusty N wierzchołków
+#'
+#' @param N int - liczba rysunków
+#' @param vertexNo int - liczba wierzchołków
+#' @param plotCurve float
+#' @return void
+#'
+plotEmptyGraphs <- function(N, vertexNo, plotCurve)
+{
+  fileName <- 'empty'
+  pathName <- createDir(vertexNo, fileName)
+  for (i in 1:N)
+  {
+    graph <- make_empty_graph(vertexNo)
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
   }
 }
 
 plotPaths(200, 4, 0.3)
 plotCycles(200, 4, 0.3)
 plotFullGraphs(200, 4, 0.3)
-plotConnectedGraphs(200, 4, 0.3)
+# plotConnectedGraphs(200, 4, 0.3)
+plotBipartiteGraphs(200, 4, 0.3)
+plotEmptyGraphs(200, 4, 0.3)
 
 plotPaths(200, 5, 0.3)
 plotCycles(200, 5, 0.3)
 plotFullGraphs(200, 5, 0.3)
-plotConnectedGraphs(200, 5, 0.3)
+# plotConnectedGraphs(200, 5, 0.3)
+plotEmptyGraphs(200, 5, 0.3)
 
 plotPaths(200, 6, 0.3)
 plotCycles(200, 6, 0.3)
 plotFullGraphs(200, 6, 0.3)
-plotConnectedGraphs(200, 6, 0.3)
+# plotConnectedGraphs(200, 6, 0.3)
+plotBipartiteGraphs(200, 6, 0.3)
+plotEmptyGraphs(200, 6, 0.3)
 
 plotPaths(200, 7, 0.3)
 plotCycles(200, 7, 0.3)
 plotFullGraphs(200, 7, 0.3)
-plotConnectedGraphs(200, 7, 0.3)
+# plotConnectedGraphs(200, 7, 0.3)
+plotBipartiteGraphs(200, 7, 0.3)
+plotEmptyGraphs(200, 7, 0.3)
