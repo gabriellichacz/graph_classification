@@ -28,3 +28,28 @@ Pusty
 Ścieżka
 Cykl
 Dwudzielne
+
+# 1
+Chyba do wywalenia te dwudzielne
+Dodaj wiecej obrotów, np. 100 grafów z obrotem 0.3, a 100 z 0.5
+
+# 2
+- Wstęp
+Wprowadzenie do tematu: Wyjaśnij, czym są grafy i dlaczego są ważne w matematyce, informatyce i innych dziedzinach.
+Cel pracy: Określ, dlaczego wybrałeś klasyfikację typów grafów jako temat swojej pracy.
+- Podstawowe definicje
+Omów podstawowe pojęcia związane z grafami, takie jak wierzchołki, krawędzie, grafy skierowane i nieskierowane.
+Przedstaw różne reprezentacje grafów, takie jak macierze sąsiedztwa i listy sąsiedztwa.
+- Klasyfikacja grafów
+Opisz różne typy grafów, takie jak grafy spójne, drzewa, grafy planarne, grafy regularne itp.
+Wyjaśnij, jak można klasyfikować grafy na podstawie ich właściwości (np. liczby wierzchołków, stopnia wierzchołków).
+- Algorytmy klasyfikacji grafów
+Przedstaw istniejące algorytmy służące do klasyfikacji grafów.
+Omów ich złożoność obliczeniową i efektywność.
+- Przykłady zastosowań
+Zbadaj, jak klasyfikacja typów grafów jest używana w praktyce. Przykłady mogą obejmować sieci społecznościowe, analizę sieci, planowanie tras, układanie grafów itp.
+- Badania własne
+Przeprowadź własne badania na temat klasyfikacji grafów. Możesz zbadać nowe algorytmy, porównać istniejące metody lub zastosować je w konkretnym kontekście.
+- Podsumowanie
+Podsumuj wyniki swoich badań i wnioski dotyczące klasyfikacji typów grafów.
+Zastanów się nad możliwościami dalszych badań w tej dziedzinie.
