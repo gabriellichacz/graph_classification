@@ -1,13 +1,27 @@
-Model uczenia maszynowego jaki został wykorzystany w testach to sieć neuronowa 
+Uczenie maszynowe, znane również jako machine learning, to specjalistyczna gałąź sztucznej inteligencji,
+która koncentruje się na konstruowaniu modeli i algorytmów umożliwiajcych komputerom samodzielne uczenie się z dostępnych danych.
+W przeciwieństwie do systemów, które są bezpośrednio programowane do wykonania określonych zadań,
+systemy uczenia maszynowego analizują dane, rozpoznają wzorce i podejmują decyzje oparte na zdobytej w ten sposób wiedzy.
 
-Do testów stworzone zostało kilka modeli sieci neuronowych,
-wytrenowanych na rysunkach grafów stworzonych za pomocą skryptów R.
-Implementacja została wykonana biblioteką TensorFlow oraz Keras w języku Python.
-Modele są w stanie rozpoznawać rysunki grafów i przypisywać im odpowiednie klasy.
-Celem było również przetestowanie modeli na rzeczywistych zdjęciach,
-zawierających wzorce przypominające grafy, bądź rysunkach grafów narysowanych ręcznie.
+\subsection{Rodzaje uczenia maszynowego}
+Według \cite{Geron2020}, uczenie maszynowe można sklasyfikować na podstawie kilku kryteriów.
+Jest to nadzór człowieka w procesie trenowania, możliwość modelu do uczenia się w czasie rzeczywistym
+oraz sam sposób pracy (nauka z przykładów lub modelu). Kryteria te nie wykluczają się wzajemnie - można je dowolnie łączyć.
+Za przykład może posłużyć filtr antyspamowy, który ciągle się uczy,
+wykorzystując model sieci neuronowej i analizując wiadomości email.
+Taki system można określić przyrostowym, opartym na modelu i nadzorowanym.
 
-Stworzone zostały 3 modele:
-- wytrenowany na danych ze stałą liczbą wierchołków
-- wytrenowany na danych ze stałą liczbą wierchołków oraz walidacją krzyżową
-- wytrenowany na danych ze zmienną liczbą wierzchołków
+Dodatkowe kryteria oceny rodzaju uczenia maszynowego:
+\begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
+    \item Uczenie nadzorowane (ang. supervised learning) to podejście, w którym model jest szkolony na danych,
+        które są już odpowiednio oznaczone (np. rekordy mają przypisane odpowiednie klasy).
+        Celem jest odkrycie funkcji, która przekształca dane wejściowe w oczekiwane wyjścia.
+        Znajduje zastosowanie w klasyfikacji i regresji.
+    \item Uczenie nienadzorowane (ang. unsupervised learning)
+        - w tym przypadku model bada nieoznaczone dane, aby odkryć pewne wzorce lub struktury.
+        Najczęściej stosowane w klasteryzacji, czy redukcji wymiarowości.
+    \item Uczenie przez wzmacnianie (ang. reinforcement learning) to przypadek,
+        gdzie model uczy się poprzez interakcję ze swoim otoczeniem,
+        podejmując decyzje, które maksymalizują pewną nagrodę.
+        Przykłady zastosowań to robotyka i gry komputerowe.
+\end{itemize}
