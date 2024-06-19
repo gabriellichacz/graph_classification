@@ -1,4 +1,4 @@
-Model uczenia maszynowego jaki został wykorzystany w testach to sieć neuronowa 
+Model uczenia maszynowego jaki został wykorzystany w testach to sieć neuronowa.
 
 Do testów stworzone zostało kilka modeli sieci neuronowych,
 wytrenowanych na rysunkach grafów stworzonych za pomocą skryptów R.
@@ -12,8 +12,30 @@ Stworzone zostały 3 modele:
 - wytrenowany na danych ze stałą liczbą wierchołków oraz walidacją krzyżową
 - wytrenowany na danych ze zmienną liczbą wierzchołków
 
+\subsection{Model}
+Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
+Dokonany został podział na zbiory treningowe i walidacyjne.
+Dla każdego przejścia walidacji krzyżowej, dane zostały podzielone inaczej.
+Po wczytaniu danych, zostały przeskalowane i przeskztałcone do odcieni szarości.
+
+Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw.
+Pierwsza warstwa to warstwa Rescaling, która normalizuje wartości pikseli do zakresu [0, 1].
+Następne trzy warstwy to Conv2D z wybraną liczbą filtrów, z których każda jest poprzedzona warstwą MaxPooling2D.
+Warstwy konwolucyjne używają różnych funkcji akytwacji, np. ReLU.
+Po warstwach konwolucyjnych znajduje się warstwa Flatten, która przekształca mapy cech 2D w wektor 1D.
+Następnie dodana jest w pełni połączona (Dense) warstwa z wybraną liczbą jednostek
+i wybraną funkcją aktywacji, wraz z warstwą dropout.
+Zastosowana jest tam również regularyzacja L2 (zmniejszanie wag) z ustaloną siłą regularyzacji wynoszącą.
+Warstwa wyjściowa zawiera tyle jednostek, ile występuje klas.
+Zależnie od danego testu, może być to różna liczba.
+
 \subsection{Wyniki}
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Najlepsze wyniki zostały uzyskane przy użyciu modelu sieci neuronowej z walidacją krzyżową K-Fold z liczbą podziałów równą 5.
+Dla wszystkich warstw wybrana została funkcja aktywacji ReLU.
+W przypadku warstw konwolucyjnych, wybrano 32 filtry, a dla warstwy w pełni połączonej zastosowano 128 jednostek.
+Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2.
+
 
 \subsection{Wnioski}
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Przy modelach uczonych na danych zawierających rysunki grafów dwudzielnych, ciężko było wyciągnąć poprawne wnioski.
+Działo się tak ze względu na podobieństwo grafów dwudzielnych do innych typów grafów. 
