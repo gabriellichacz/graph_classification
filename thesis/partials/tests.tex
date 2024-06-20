@@ -21,10 +21,25 @@ Przygotowane zostały funkcje tworzące ścieżki, grafy cykliczne, grafy pełne
 W każdej z funkcji możliwy jest wybór liczby generowanych grafów, liczba wierzchołków grafu
 oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 
-\subsection{Opis skryptu}
-Obrazy z katalogów roboczych 
+\subsection{Dane zewnętrzne}
+Obrazy testowe, które nazwane są tutaj danymi zewnętrznymi, są rysunkami grafów pochodzącymi spoza przygotowanego testu.
+Dzielą się na obrazy pobrane z internetu, obrazy wygenerowane przez skrypt w R, ale nie używane w treningu
+oraz rysunki odręczne grafów.
 
-\subsection{Model}
+\subsection{Opis skryptu}
+
+\subsubsection{Przygotowanie}
+Skrypt rozpoczyna się od przygotowania środowiska do trenowania modelu.
+Najpierw ustawia ścieżki do katalogów z wygenerowanymi grafami oraz do katalogów na dane treningowe i walidacyjne.
+Następnie sprawdza, czy te katalogi istnieją, a jeśli nie, tworzy je.
+Dalej, definiuje parametry dotyczące wielkości obrazów oraz wielkości partii danych, które będą używane podczas treningu.
+Dla każdej wartości liczby wierzchołków ustawia ścieżkę do katalogu z wygenerowanymi grafami,
+pobiera listę podkatalogów oraz obrazów w każdym z nich,
+a następnie dzieli obrazy na zestawy treningowe i walidacyjne w stosunku 80:20.
+Tworzy odpowiednie katalogi dla tych zestawów, jeśli jeszcze nie istnieją,
+i kopiuje obrazy do właściwych lokalizacji, segregując je na treningowe i walidacyjne.
+
+\subsubsection{Model}
 Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
 Dokonany został podział na zbiory treningowe i walidacyjne.
 Dla każdego przejścia walidacji krzyżowej, dane zostały podzielone inaczej.
@@ -41,37 +56,93 @@ Zastosowana jest tam również regularyzacja L2 (zmniejszanie wag) z ustaloną s
 Warstwa wyjściowa zawiera tyle jednostek, ile występuje klas.
 Zależnie od danego testu, może być to różna liczba.
 
-\subsection{Wyniki}
-Najlepsze wyniki zostały uzyskane przy użyciu modelu sieci neuronowej z walidacją krzyżową K-Fold z liczbą podziałów równą 5.
+Dla standaryzacji danego testu ustalono K-Fold z liczbą podziałów równą 5.
 Dla wszystkich warstw wybrana została funkcja aktywacji ReLU.
+Liczba epok wyniosła 75.
 W przypadku warstw konwolucyjnych, wybrano 32 filtry, a dla warstwy w pełni połączonej zastosowano 128 jednostek.
 Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2.
 
+\subsubsection{Wyniki}
+Po wytrenowaniu modelu, skrypt wizualizuje dokładność i stratę modelu.
+Najpierw wyświetla w konsoli wartości dokładności dla obu zbiorów z historii treningu.
+Dalej tworzy wykresy, gdzie na pierwszym z nich pokazuje dokładność na zbiorze treningowym i walidacyjnym,
+a na drugim wykresie prezentuje stratę modelu dla obu zbiorów.
+
+\subsubsection{Testy na danych zewnętrznych}
+Po wyświetleniu dokładnosci modelu skrypt przeszukuje katalog z danymi i jego podkatalogi, by przygotować obrazy zewnętrzne.
+Następnie ustawia ścieżkę do katalogu z obrazami testowymi i pobiera ich listę.
+Dla każdego obrazu w tej liście wczytuje go, przeskalowuje do odpowiedniego rozmiaru i konwertuje do skali szarości
+Następnie model przewiduje klasę obrazu, a wynik jest wyświetlany w konsoli.
+
+\subsection{Testy modeli}
 \subsubsection{Model podstawowy}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{partials/images/tests/v2.png}
+	\includegraphics[height=5.5cm]{partials/images/tests/v2_epoch75.png}
 	\caption{Wyniki testów dla modelu podstawowego}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=7cm]{partials/images/tests/v2_epoch75_img_tests.png}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków}
 \label{Fig:GraphUndirected}
 \end{figure}
 \FloatBarrier
 
 \subsubsection{Model z walidacją krzyżową}
 
+W przypadku standardowego modelu z walidacją krzyżową model bardzo szybko uległ przeuczeniu.
+Już po szóstej iteracji dokładność na zbiorze walidaycjnym wyniosła 100\%, co nie jest realistycznie możliwe.
+Została podjęta próba ograniczenia overfittingu poprzez zwiększenie zbioru danych, zmiany liczby epok w modelu
+oraz manipulacji współczynnikami dropout i regularyzacji.
+W każdym przypadku model zwracał niezadowalające wyniki wynoszące 100\% po jednej z początkowych iteracji.
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5cm]{partials/images/tests/v2_crossvalid.png}
+	\includegraphics[height=5.5cm]{partials/images/tests/v2_crossvalid.png}
 	\caption{Wyniki testów dla modelu z walidacją krzyżową}
 \label{Fig:GraphUndirected}
 \end{figure}
 \FloatBarrier
 
+Z powodu przeuczenia model nie radził sobie z zewnętrznymi obrazkami testowymi.
+Większość grafów określił jako grafy pełne, co nie jest zgodne ze stanem rzeczywistym.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=7cm]{partials/images/tests/v2_crossvalid_img_tests.png}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Model ze zmienną liczbą wierzchołków}
+Najlepsze wyniki pod względem rozpoznawania zewnętrznych obrazków testowych
+oraz realistycznej dokładności na zbiorze walidacyjnym,
+zostały uzyskane przy użyciu modelu sieci neuronowej uczonej na rysunkach grafów z różną liczbą wierzchołków.
+Było to odpowiednio 4, 5, 6 oraz 7 wierzchołków.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges.png}
 	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
+Model nie poradził sobie zbyt dobrze z obrazami zewnętrznymi, lecz znacznie lepiej niż model z walidacją krzyżową.
+Poprawnie wskazanych klas grafów było 5 z 14 wszystkich rysunków.
+Mimo, że model jest w stanie poprawnie określić niektóre typy grafów poprawnie,
+wciąż jest to dokładność niższa niż 50\%.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=7cm]{partials/images/tests/v2_multiple_edges_img_tests.png}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową}
 \label{Fig:GraphUndirected}
 \end{figure}
 \FloatBarrier
@@ -86,12 +157,20 @@ Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2
 \end{figure}
 \FloatBarrier
 
-\subsection{Wnioski}
-Przy modelach uczonych na danych zawierających rysunki grafów dwudzielnych, ciężko było wyciągnąć poprawne wnioski.
-Działo się tak ze względu na podobieństwo grafów dwudzielnych do innych typów grafów. 
+\begin{figure}[ht]
+	\centering
+	% \includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges_crossvalid_img_tests.png}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
 
+\subsection{Wnioski}
 W przypadku uczenia modeli z wykorzystaniem grafów pełnych, najczęściej dominowały one cały zbiór danych,
 przez co modele w kolejnych testach klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
 
 Testy z wykorzystaniem stałej liczby wierzchołków grafów okazały się mniej owocne niż testy z rysunkami grafów
 o zmiennej liczbie wierchołków.
+
+Wystąpiła tendencja do niepoprawnego określania innych grafów, grafami dwudzielnymi, jeśli takie znajdowały się
+w zbiorze danych uczących.
