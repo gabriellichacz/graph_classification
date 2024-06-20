@@ -21,6 +21,9 @@ Przygotowane zostały funkcje tworzące ścieżki, grafy cykliczne, grafy pełne
 W każdej z funkcji możliwy jest wybór liczby generowanych grafów, liczba wierzchołków grafu
 oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 
+\subsection{Opis skryptu}
+Obrazy z katalogów roboczych 
+
 \subsection{Model}
 Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
 Dokonany został podział na zbiory treningowe i walidacyjne.
@@ -44,6 +47,44 @@ Dla wszystkich warstw wybrana została funkcja aktywacji ReLU.
 W przypadku warstw konwolucyjnych, wybrano 32 filtry, a dla warstwy w pełni połączonej zastosowano 128 jednostek.
 Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2.
 
+\subsubsection{Model podstawowy}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{partials/images/tests/v2.png}
+	\caption{Wyniki testów dla modelu podstawowego}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Model z walidacją krzyżową}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5cm]{partials/images/tests/v2_crossvalid.png}
+	\caption{Wyniki testów dla modelu z walidacją krzyżową}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Model ze zmienną liczbą wierzchołków}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges.png}
+	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Model ze zmienną liczbą wierzchołków i walidacją krzyżową}
+
+\begin{figure}[ht]
+	\centering
+	% \includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges_crossvalid.png}
+	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
+\label{Fig:GraphUndirected}
+\end{figure}
+\FloatBarrier
 
 \subsection{Wnioski}
 Przy modelach uczonych na danych zawierających rysunki grafów dwudzielnych, ciężko było wyciągnąć poprawne wnioski.
