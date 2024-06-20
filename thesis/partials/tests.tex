@@ -12,6 +12,15 @@ Stworzone zostały 3 modele:
 - wytrenowany na danych ze stałą liczbą wierchołków oraz walidacją krzyżową
 - wytrenowany na danych ze zmienną liczbą wierzchołków
 
+\subsection{Generacja danych}
+Dane wygenerowane zostały przy pomocy skryptu stworoznego w języku R oraz biblioteki igraph.
+Skrypt został zaprojektowany funkcyjnie, by osiągnąć możliwie największą automatyzację testów.
+Rysunki grafów tworzone są o wielkości 800x600 pikseli, na białym tle, z wierzchołkami w kolorze pomarańczowym,
+bez jakichkolwiek oznaczeń wierzchołków oraz zapisywane są w odpowiednich katalogach, odpowiadających klasie grafu.
+Przygotowane zostały funkcje tworzące ścieżki, grafy cykliczne, grafy pełne, grary spójne, grafy dwudzielne oraz puste.
+W każdej z funkcji możliwy jest wybór liczby generowanych grafów, liczba wierzchołków grafu
+oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
+
 \subsection{Model}
 Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
 Dokonany został podział na zbiory treningowe i walidacyjne.
@@ -39,3 +48,9 @@ Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2
 \subsection{Wnioski}
 Przy modelach uczonych na danych zawierających rysunki grafów dwudzielnych, ciężko było wyciągnąć poprawne wnioski.
 Działo się tak ze względu na podobieństwo grafów dwudzielnych do innych typów grafów. 
+
+W przypadku uczenia modeli z wykorzystaniem grafów pełnych, najczęściej dominowały one cały zbiór danych,
+przez co modele w kolejnych testach klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
+
+Testy z wykorzystaniem stałej liczby wierzchołków grafów okazały się mniej owocne niż testy z rysunkami grafów
+o zmiennej liczbie wierchołków.
