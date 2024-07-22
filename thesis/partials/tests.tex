@@ -13,17 +13,17 @@ Stworzone zostały 3 modele:
 - wytrenowany na danych ze zmienną liczbą wierzchołków
 
 \subsection{Generacja danych}
-Dane wygenerowane zostały przy pomocy skryptu stworoznego w języku R oraz biblioteki igraph.
+Dane wygenerowane zostały przy pomocy skryptu stworzonego w języku R oraz biblioteki igraph.
 Skrypt został zaprojektowany funkcyjnie, by osiągnąć możliwie największą automatyzację testów.
 Rysunki grafów tworzone są o wielkości 800x600 pikseli, na białym tle, z wierzchołkami w kolorze pomarańczowym,
 bez jakichkolwiek oznaczeń wierzchołków oraz zapisywane są w odpowiednich katalogach, odpowiadających klasie grafu.
-Przygotowane zostały funkcje tworzące ścieżki, grafy cykliczne, grafy pełne, grary spójne, grafy dwudzielne oraz puste.
+Przygotowane zostały funkcje tworzące ścieżki, cykle, grafy pełne, grafy spójne, grafy dwudzielne oraz bezkrawędziowe.
 W każdej z funkcji możliwy jest wybór liczby generowanych grafów, liczba wierzchołków grafu
 oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 
 W testach wykorzystane zostały wszystkie typy grafów.
 Każdy z nich, czyli dana liczba wierchołków i typ grafu, wygenerowany został w liczbie 500 sztuk
-oraz ze stałą krzywizną krawędzi, wynoszącą 0,3.
+oraz ze stałą krzywizną krawędzi, wynoszącą 0,3. % Zastanowić się nad zmianą na losowe rozmieszczenie
 
 \subsection{Dane zewnętrzne}
 Obrazy testowe, które nazwane są tutaj danymi zewnętrznymi, są rysunkami grafów pochodzącymi spoza przygotowanego testu.
@@ -47,7 +47,7 @@ i kopiuje obrazy do właściwych lokalizacji, segregując je na treningowe i wal
 Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
 Dokonany został podział na zbiory treningowe i walidacyjne.
 Dla każdego przejścia walidacji krzyżowej, dane zostały podzielone inaczej.
-Po wczytaniu danych, zostały przeskalowane i przeskztałcone do odcieni szarości.
+Po wczytaniu danych, zostały przeskalowane i przekształcone do odcieni szarości.
 
 Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw.
 Pierwsza warstwa to warstwa Rescaling, która normalizuje wartości pikseli do zakresu [0, 1].
@@ -101,7 +101,7 @@ Następnie model przewiduje klasę obrazu, a wynik jest wyświetlany w konsoli.
 
 W przypadku standardowego modelu z walidacją krzyżową model bardzo szybko uległ przeuczeniu.
 Już po szóstej iteracji dokładność na zbiorze walidaycjnym wyniosła 100\%, co nie jest realistycznie możliwe.
-Została podjęta próba ograniczenia overfittingu poprzez zwiększenie zbioru danych, zmiany liczby epok w modelu
+Została podjęta próba ograniczenia przeuczenia poprzez zwiększenie zbioru danych, zmiany liczby epok w modelu
 oraz manipulacji współczynnikami dropout i regularyzacji.
 W każdym przypadku model zwracał niezadowalające wyniki wynoszące 100\% po jednej z początkowych iteracji.
 
