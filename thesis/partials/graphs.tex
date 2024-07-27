@@ -1,8 +1,14 @@
 \subsection{Definicje}
 Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Wilson2012}, \cite{Wloch2008} oraz \cite{Wojciechwoski2013}.
 
+\newcommand{\graphDefinitionIndex}{1}
+\newcommand{\incrementGraphDefinitionIndex} {
+    \pgfmathtruncatemacro{\graphDefinitionIndex}{\graphDefinitionIndex + 1}
+}
+
 \noindent
-\textbf{Definicja 1.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Grafem nieskierowanym, skończonym G nazywamy parę $(V,E)$, gdzie $V = V(G)$ jest zbiorem skończonym, niepustym,
 natomiast $E = E(V)$ jest rodziną mogących się powtarzać dwuelementowych podzbiorów niekoniecznie różnych elementów ze zbioru $V$.
 Zbiór $V(G)$ nazywamy zbiorem wierzchołków (lub węzłami), a elementy tego zbioru nazywamy wierzchołkami i oznaczamy symbolami:
@@ -10,41 +16,50 @@ $x$, $y$, $x_i$, $y_i$, $1$, $2$, ... Zbiór $E(G)$ nazywamy zbiorem krawędzi g
 Mówimy, że krawędź $\{v, w\}$ łączy wierzchołki $v$ i $w$, i na ogół oznaczamy ją krócej symbolem $vw$.
 
 \noindent
-\textbf{Definicja 2.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 W wielu zagadnieniach nazwy wierzchołków są nieistotne, więc je pomijamy i mówimy wtedy, że graf jest nieoznakowany.
 
 \noindent
-\textbf{Definicja 3.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Jeżeli w grafie G istnieją co najmniej dwie krawędzie $\{x, y\}$, to krawędź tę nazywamy krawędzią wielokrotną.
 
 \noindent
-\textbf{Definicja 4.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Krawędź $\{x, x\}$ w grafie G nazywamy pętlą.
 
 \noindent
-\textbf{Definicja 5.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf mający krawędzie wielokrotne nazywamy multigrafem.
 
 \noindent
-\textbf{Definicja 6.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf, który nie ma krawędzi wielokrotnych i pętli, nazywamy grafem prostym.
 
 \noindent
-\textbf{Definicja 7.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf zawierający pętle nazywamy pseudografem.
 
 \noindent
-\textbf{Definicja 8.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf $G$ taki, że $E(G) = \emptyset$, nazywamy grafem pustym. Jeżeli $|V(G)| = n$, to graf pusty oznaczony symbolem $N_n$.
 Każdy wierchołek grafu pustego jest wierchołkiem izolowanym.
 
 \noindent
-\textbf{Definicja 9.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf prosty $G$ taki, że każde dwa wierzchołki są sąsiednie, nazywamy grafem pełnym.
 Jeżeli $|V(G)| = n$, to graf pełny oznaczamy $K_n$.
 
 \noindent
-\textbf{Definicja 10.}
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
 Graf G, którego zbiór wierchołków można podzielić na dwa rozłączne, niepuste podzbiory $V_1$ i $V_2$ tak,
 że jeżeli $\{x, y\} \in E(G)$, to $x \in V_1 \vee y \in V_2$ nazywamy grafem dwudzielnym.
 
