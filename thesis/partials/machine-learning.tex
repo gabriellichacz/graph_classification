@@ -51,12 +51,16 @@ Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej it
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Rescaling
+Warstwa Rescaling mnoży każde wejście przez ustalony współczynnik skalujący.
+Zastosowanie tej techniki jest przydatne, gdy różne cechy danych wejściowych mają różne zakresy wartości.
+Poprzez jednolite skalowanie, model może efektywniej uczyć się wzorców, a proces optymalizacji staje się stabilniejszy.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Conv2D
+Warstwa Conv2D tworzy jądro splotu, które jest nakładane na dane wejściowe w jednym wymiarze przestrzennym (lub czasowym), 
+aby wygenerować tensor danych wyjściowych.
+Dodatkowo, jeśli stosowana jest funkcja aktywacji, jest ona stosowana również do danych wyjściowych.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -66,7 +70,10 @@ Warstwa MaxPooling2D
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa dropout
+Warstwa Dropout losowo zeruje jednostki wejściowe z prawdopodobieństwem określonym
+przez wybrany współczynnik dropout na każdym etapie treningu, co pomaga unikać przeuczenia modelu.
+Jednostki, które nie zostały wyzerowane, są skalowane w górę przez mnożenie przez $\frac{1}{1 - współczynnikDropout}$,
+aby suma wartości wejściowych pozostała niezmieniona.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -78,7 +85,7 @@ Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą warto
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
 Funkcje aktywacji są nieliniowe, co pozwala na modelowanie złożonych funkcji i wprowadza nieliniowość do sieci.
-Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T \cdot W)$, gdzie:
+Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T * W)$, gdzie:
 $Y'$ to przewidywana wartość wyjściowa,
 $W_o$ to wartość bias,
 $X^T$ to transpozycja macierzy wejściowej $X$,
