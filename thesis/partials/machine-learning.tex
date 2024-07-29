@@ -98,9 +98,10 @@ Nie zawiera żadnych parametrów, a jej jedynym celem jest proste, wstępne prze
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Dense (pl. w pełni połączona) najczęściej zawiera bardzo dużo parametrów.
-Dzięki temu model uzyskuje swobodę w dopasowaniu do danych uczących,
-ale jednocześnie grozi mu ryzyko przetrenowania,
+Warstwa Dense (pl. w pełni połączona) zarządza samodzielnie swoją macierzą wag,
+zawierającą wszystkie wagi połączeń między neuronami a wejściami do nich, oraz wekorem obciążeń.
+Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych uczących.
+Jednocześnie, grozi mu również przez to ryzyko przetrenowania,
 zwłaszcza w przypadku korzystania z mniejszych zestawów danych.
 
 \noindent
@@ -121,7 +122,8 @@ K-fold
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Epoka
+Epoka to pełny cykl przez cały zbiór danych treningowych, w której model przetwarza wszystie dostępne dane treningowe.
+Liczba epok określa ile razy model przejdzie przez cały zbiór danych treningowych.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -156,7 +158,10 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Algorytm t-SNE
+Algorytm t-SNE (t-Distributed Stochastic Neighbor Embedding) to technika redukcji wymiarowości,
+która szczególnie dobrze nadaje się do wizualizacji wielowymiarowych zbiorów danych.
+Można ją zaimplementować przy użyciu aproksymacji Barnesa-Huta,
+co umożliwia stosowanie jej na dużych, rzeczywistych zbiorach danych.
 
 \subsection{Rodzaje uczenia maszynowego}
 Według \cite{Geron2020}, uczenie maszynowe można sklasyfikować na podstawie kilku kryteriów.
