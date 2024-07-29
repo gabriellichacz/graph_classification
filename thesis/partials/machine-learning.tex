@@ -29,7 +29,7 @@ po przeszkoleniu go na zbiorze treningowym i ocenie na zbiorze walidacyjnym.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Klasyfikacja - klasyfikatory to modele przyjmujące przykłady wsadowe i zwracające wynik będący jednym z niewielkiej liczby grup lub klas.
+Klasyfikacja to proces polegający na przypisaniu obiektów do wcześniej zdefiniowanych klas na podstawie ich cech.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -111,12 +111,16 @@ Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Strata modelu
+Strata modelu to wartość, która wskazuje,
+jak bardzo prognozy modelu różnią się od rzeczywistych wartości dla pojedynczych przykładów.
+Idealnie przewidziane wartości mają stratę równą zeru,
+natomiast im większa różnica między prognozami a rzeczywistością, tym wyższa jest strata.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Przeuczenie
+Przeuczenie to sytuacja, w której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
+co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na podstawie nowych danych spoza zbioru treningowego. 
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
