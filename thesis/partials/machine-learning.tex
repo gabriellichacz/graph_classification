@@ -40,10 +40,9 @@ nazywanej punktem obciążenia lub punktem przecięcia.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy n) zwanych "złożeniami" (lub "foldami").
-Model jest trenowany na n-1 złożeń, a testowany na pozostałym z nich.
-Proces ten jest powtarzany n razy, za każdym razem używając innego złożenia do testowania,
-a pozostałych do treningu.
+Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy k) zwanych "złożeniami"
+(lub "foldami" - stąd nazwa k-Fold Cross-Validation). Model jest trenowany na k-1 złożeń, a testowany na pozostałym z nich.
+Proces ten jest powtarzany k razy, za każdym razem używając innego złożenia do testowania, a pozostałych do treningu.
 Jeżeli róznica w wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
 Z drugiej strony, jeżeli wszystkie wyniki są podobne, można mieć dużą dozę pewności, że niezależnie od konkretnego podziału
 na dane testowe i treningowe, wydajność systemu będzie podobna.
@@ -63,6 +62,11 @@ Warstwa Conv2D
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
 Warstwa MaxPooling2D
+
+\noindent
+\textbf{Definicja \mlDefinitionIndex.}
+\incrementMlDefinitionIndex
+Warstwa dropout
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -116,16 +120,6 @@ Działa poprzez dodanie kary do funkcji kosztu, co penalizuje zbyt złożone mod
 Regularyzacja L2 służy do ograniczania wag sieci neuronowych,
 natomiast regularyzacja L1 przydaje się do tworzenia modeli rzadkich (w których wiele wag ma wartość równą 0). 
 Zazwyczaj powinno się stosować ten sam typ regularyzatora we wszystkich wartstwach sieci.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-Warstwa dropout
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-K-fold
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
