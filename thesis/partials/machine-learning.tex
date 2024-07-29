@@ -67,7 +67,19 @@ Warstwa MaxPooling2D
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Funkcja aktywacji - 
+Bias (pl. błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
+Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą wartością.
+
+\noindent
+\textbf{Definicja \mlDefinitionIndex.}
+\incrementMlDefinitionIndex
+Funkcje aktywacji są nieliniowe, co pozwala na modelowanie złożonych funkcji i wprowadza nieliniowość do sieci.
+Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T \cdot W)$, gdzie:
+$Y'$ to przewidywana wartość wyjściowa,
+$W_o$ to wartość bias,
+$X^T$ to transpozycja macierzy wejściowej $X$,
+$W$ to przypisane wagi,
+a $g$ to funkcja aktywacji.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
