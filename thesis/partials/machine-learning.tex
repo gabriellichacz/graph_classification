@@ -40,7 +40,14 @@ nazywanej punktem obciążenia lub punktem przecięcia.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Walidacja krzyżowa 
+Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy n) zwanych "złożeniami" (lub "foldami").
+Model jest trenowany na n-1 złożeń, a testowany na pozostałym z nich.
+Proces ten jest powtarzany n razy, za każdym razem używając innego złożenia do testowania,
+a pozostałych do treningu.
+Jeżeli róznica w wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
+Z drugiej strony, jeżeli wszystkie wyniki są podobne, można mieć dużą dozę pewności, że niezależnie od konkretnego podziału
+na dane testowe i treningowe, wydajność systemu będzie podobna.
+Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej iteracji.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
