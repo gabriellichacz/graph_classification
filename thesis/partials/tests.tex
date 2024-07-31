@@ -67,10 +67,18 @@ W przypadku warstw konwolucyjnych, wybrano 32 filtry, a dla warstwy w pełni po�
 Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2.
 
 \subsubsection{Wyniki}
-Po wytrenowaniu modelu, skrypt wizualizuje dokładność i stratę modelu.
+Po wytrenowaniu modelu, skrypt dokonuje wizualizacji dokładności i straty modelu w następujących krokach.
 Najpierw wyświetla w konsoli wartości dokładności dla obu zbiorów z historii treningu.
 Dalej tworzy wykresy, gdzie na pierwszym z nich pokazuje dokładność na zbiorze treningowym i walidacyjnym,
 a na drugim wykresie prezentuje stratę modelu dla obu zbiorów.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm]{partials/images/test-standard-result.png}
+	\caption{Przykładowe wartości dokładności dla obu zbiorów z historii treningu}
+	\label{Fig:tests-wyniki-2}
+\end{figure}
+\FloatBarrier
 
 \begin{figure}[ht]
 	\centering
