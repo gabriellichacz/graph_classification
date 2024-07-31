@@ -121,6 +121,65 @@ Dokonany został podział na zbiory treningowe i walidacyjne.
 Dla każdego przejścia walidacji krzyżowej, dane zostały podzielone inaczej.
 Po wczytaniu danych, zostały przeskalowane i przekształcone do odcieni szarości.
 
+\begin{lstlisting}[language=Python,caption=Listing jedenego ze skryptów tworzących model,label={tests-model-1}]
+	n_splits = 5
+	kfold = KFold(n_splits=n_splits, shuffle=True, random_state=42)
+	history = []
+	all_images = [os.path.join(dp, f) for dp, dn, filenames in os.walk(data_dir) for f in filenames if os.path.splitext(f)[1] == '.png']
+
+	for train_index, val_index in kfold.split(all_images):
+		train_images = [all_images[i] for i in train_index]
+		validation_images = [all_images[i] for i in val_index]
+
+		# Dane treningowe
+		train_ds = tf.keras.preprocessing.image_dataset_from_directory(
+			data_dir,
+			labels='inferred',
+			label_mode='int',
+			image_size=(img_height, img_width),
+			batch_size=batch_size)
+		class_names = train_ds.class_names
+		train_ds = train_ds.map(lambda x, y: (rgb_to_grayscale(x), y))
+
+		# Dane walidacyjne
+		val_ds = tf.keras.preprocessing.image_dataset_from_directory(
+			data_dir,
+			labels='inferred',
+			label_mode='int',
+			image_size=(img_height, img_width),
+			batch_size=batch_size)
+		val_ds = val_ds.map(lambda x, y: (rgb_to_grayscale(x), y))
+
+		# Model
+		model = tf.keras.models.Sequential([
+			tf.keras.layers.Rescaling(1./255),
+			tf.keras.layers.Conv2D(32, 3, activation='relu'),
+			tf.keras.layers.MaxPooling2D(),
+			tf.keras.layers.Conv2D(32, 3, activation='relu'),
+			tf.keras.layers.MaxPooling2D(),
+			tf.keras.layers.Conv2D(32, 3, activation='relu'),
+			tf.keras.layers.MaxPooling2D(),
+			tf.keras.layers.Flatten(),
+			tf.keras.layers.Dense(128, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.01)),
+			tf.keras.layers.Dropout(0.2),
+			tf.keras.layers.Dense(len(class_names))
+		])
+
+		# Kompilacja modelu
+		model.compile(
+			optimizer='adam',
+			loss=tf.losses.SparseCategoricalCrossentropy(from_logits=True),
+			metrics=['accuracy']
+		)
+
+		# Uczenie modelu
+		history.append(model.fit(
+			train_ds,
+			validation_data=val_ds,
+			epochs=75
+		))
+\end{lstlisting}
+
 Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw.
 Pierwsza warstwa to warstwa Rescaling, która normalizuje wartości pikseli do zakresu [0, 1].
 Następne trzy warstwy to Conv2D z wybraną liczbą filtrów, z których każda jest poprzedzona warstwą MaxPooling2D.
@@ -147,7 +206,7 @@ a na drugim wykresie prezentuje stratę modelu dla obu zbiorów.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15cm]{partials/images/test-standard-result.png}
-	\caption{Przykładowe wartości dokładności dla obu zbiorów z historii treningu}
+	\caption{Przykładowe wartości dokładności dla zbioru treningowe i walidacyjnego}
 	\label{Fig:tests-wyniki-2}
 \end{figure}
 \FloatBarrier
