@@ -72,6 +72,14 @@ Najpierw wyświetla w konsoli wartości dokładności dla obu zbiorów z histori
 Dalej tworzy wykresy, gdzie na pierwszym z nich pokazuje dokładność na zbiorze treningowym i walidacyjnym,
 a na drugim wykresie prezentuje stratę modelu dla obu zbiorów.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{partials/images/tests/v2_epoch75.png}
+	\caption{Przykładowa wizualizacja dokładności i straty wytrenowanego modelu}
+	\label{Fig:tests-wyniki-1}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Testy na danych zewnętrznych}
 Po wyświetleniu dokładnosci modelu skrypt przeszukuje katalog z danymi i jego podkatalogi, by przygotować obrazy zewnętrzne.
 Następnie ustawia ścieżkę do katalogu z obrazami testowymi i pobiera ich listę.
@@ -85,7 +93,7 @@ Następnie model przewiduje klasę obrazu, a wynik jest wyświetlany w konsoli.
 	\centering
 	\includegraphics[height=5.5cm]{partials/images/tests/v2_epoch75.png}
 	\caption{Wyniki testów dla modelu podstawowego}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-base-1}
 \end{figure}
 \FloatBarrier
 
@@ -93,7 +101,7 @@ Następnie model przewiduje klasę obrazu, a wynik jest wyświetlany w konsoli.
 	\centering
 	\includegraphics[height=7cm]{partials/images/tests/v2_epoch75_img_tests.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-base-2}
 \end{figure}
 \FloatBarrier
 
@@ -109,7 +117,7 @@ W każdym przypadku model zwracał niezadowalające wyniki wynoszące 100\% po j
 	\centering
 	\includegraphics[height=5.5cm]{partials/images/tests/v2_crossvalid.png}
 	\caption{Wyniki testów dla modelu z walidacją krzyżową}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-cv-1}
 \end{figure}
 \FloatBarrier
 
@@ -120,7 +128,7 @@ Większość grafów określił jako grafy pełne, co nie jest zgodne ze stanem 
 	\centering
 	\includegraphics[height=7cm]{partials/images/tests/v2_crossvalid_img_tests.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-cv-2}
 \end{figure}
 \FloatBarrier
 
@@ -134,7 +142,7 @@ Było to odpowiednio 4, 5, 6 oraz 7 wierzchołków.
 	\centering
 	\includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges_epoch75.png}
 	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-var-1}
 \end{figure}
 \FloatBarrier
 
@@ -147,7 +155,7 @@ wciąż jest to dokładność niższa niż 50\%.
 	\centering
 	\includegraphics[height=7cm]{partials/images/tests/v2_multiple_edges_epoch75_img_tests.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-var-2}
 \end{figure}
 \FloatBarrier
 
@@ -157,7 +165,7 @@ wciąż jest to dokładność niższa niż 50\%.
 	\centering
 	% \includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges_crossvalid.png}
 	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-csvar-1}
 \end{figure}
 \FloatBarrier
 
@@ -165,7 +173,7 @@ wciąż jest to dokładność niższa niż 50\%.
 	\centering
 	% \includegraphics[height=5.5cm]{partials/images/tests/v2_multiple_edges_crossvalid_img_tests.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
-\label{Fig:GraphUndirected}
+	\label{Fig:tests-csvar-2}
 \end{figure}
 \FloatBarrier
 
