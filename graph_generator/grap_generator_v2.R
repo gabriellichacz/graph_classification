@@ -201,7 +201,6 @@ plotTrees <- function(N, vertexNo, plotCurve, treeType = "random")
   }
 }
 
-
 #' Graf hiper-kostki o N wymiarach
 #'
 #' @param N int - liczba rysunków
@@ -209,13 +208,32 @@ plotTrees <- function(N, vertexNo, plotCurve, treeType = "random")
 #' @param plotCurve float
 #' @return void
 #'
-plotHypercube <- function(N, No, plotCurve)
-{
+plotHypercube <- function(N, No, plotCurve) {
   fileName <- 'hypercube'
   pathName <- createDir(No, fileName)
+  generate_hypercube_edges <- function(dim)
+  {
+    num_vertices <- 2^dim
+    edges <- matrix(nrow = 0, ncol = 2)
+    vertices <- expand.grid(rep(list(c(0, 1)), dim))
+    vertices <- as.matrix(vertices)
+    for (i in 1:(num_vertices - 1))
+    {
+      for (j in (i + 1):num_vertices)
+      {
+        if (sum(vertices[i, ] != vertices[j, ]) == 1)
+        {
+          edges <- rbind(edges, c(i, j))
+        }
+      }
+    }
+    return(edges)
+  }
+  
   for (i in 1:N)
   {
-    graph <- make_graph("cube", dim = N)
+    edges <- generate_hypercube_edges(No)
+    graph <- graph_from_edgelist(edges, directed = FALSE)
     E(graph)$weight <- runif(ecount(graph))
     plotGraphHelper(graph, pathName, fileName, No, i, plotCurve)
   }
