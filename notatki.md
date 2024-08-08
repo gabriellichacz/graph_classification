@@ -23,11 +23,14 @@ Generalnie więcej klas do modelu dodać.
 
 # Typy grafów
 https://pl.wikipedia.org/wiki/Klasa_grafów
-Pełny
-Pusty
 Ścieżka
 Cykl
+Pełny
+Pusty
+Bezkrawędziowe
 Dwudzielne
+Ścieżka, cykl, pełny to grafy spójne.
+Grafy dwudzielne mogą być spójne lub niespójne. 
 
 # 1
 Chyba do wywalenia te dwudzielne
