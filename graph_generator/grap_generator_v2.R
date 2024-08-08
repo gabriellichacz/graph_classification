@@ -169,22 +169,86 @@ plotEmptyGraphs <- function(N, vertexNo, plotCurve)
   }
 }
 
+#' Graf drzewa N wierzchołków, nieskierowany
+#'
+#' @param N int - liczba rysunków
+#' @param vertexNo int - liczba wierzchołków
+#' @param plotCurve float
+#' @param treeType string - typ drzewa ("binary", "random")
+#' @return void
+#'
+plotTrees <- function(N, vertexNo, plotCurve, treeType = "random")
+{
+  fileName <- 'tree'
+  pathName <- createDir(vertexNo, fileName)
+  
+  for (i in 1:N)
+  {
+    if (treeType == "binary")
+    {
+      graph <- make_tree(vertexNo, children = 2, mode = "undirected") # Drzewo binarne o liczbie wierzchołków vertexNo
+    }
+    else if (treeType == "random")
+    {
+      graph <- sample_tree(vertexNo, directed = FALSE) # Losowe drzewo rozpinające (drzewo losowe)
+    }
+    else
+    {
+      stop("Nieznany typ drzewa. Dostępne opcje to 'binary' lub 'random'.")
+    }
+    E(graph)$weight <- runif(ecount(graph))
+    plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
+  }
+}
+
+
+#' Graf hiper-kostki o N wymiarach
+#'
+#' @param N int - liczba rysunków
+#' @param No int - liczba wymiarów (czyli liczba bitów w ciągach binarnych)
+#' @param plotCurve float
+#' @return void
+#'
+plotHypercube <- function(N, No, plotCurve)
+{
+  fileName <- 'hypercube'
+  pathName <- createDir(No, fileName)
+  for (i in 1:N)
+  {
+    graph <- make_graph("cube", dim = N)
+    E(graph)$weight <- runif(ecount(graph))
+    plotGraphHelper(graph, pathName, fileName, No, i, plotCurve)
+  }
+}
+
 plotPaths(500, 4, 0.3)
 plotCycles(500, 4, 0.3)
 plotFullGraphs(500, 4, 0.3)
 plotEmptyGraphs(200, 4, 0.3)
+plotTrees(500, 4, 0.3, "random")
+plotTrees(500, 4, 0.3, "binary")
+plotHypercube(500, 4, 0.3)
 
 plotPaths(500, 5, 0.3)
 plotCycles(500, 5, 0.3)
 plotFullGraphs(500, 5, 0.3)
-plotEmptyGraphs(200, 5, 0.3)
+plotEmptyGraphs(500, 5, 0.3)
+plotTrees(500, 5, 0.3, "random")
+plotTrees(500, 5, 0.3, "binary")
+plotHypercube(500, 5, 0.3)
 
 plotPaths(500, 6, 0.3)
 plotCycles(500, 6, 0.3)
 plotFullGraphs(500, 6, 0.3)
-plotEmptyGraphs(200, 6, 0.3)
+plotEmptyGraphs(500, 6, 0.3)
+plotTrees(500, 6, 0.3, "random")
+plotTrees(500, 6, 0.3, "binary")
+plotHypercube(500, 6, 0.3)
 
 plotPaths(500, 7, 0.3)
 plotCycles(500, 7, 0.3)
 plotFullGraphs(500, 7, 0.3)
-plotEmptyGraphs(200, 7, 0.3)
+plotEmptyGraphs(500, 7, 0.3)
+plotTrees(500, 7, 0.3, "random")
+plotTrees(500, 7, 0.3, "binary")
+plotHypercube(500, 7, 0.3)
