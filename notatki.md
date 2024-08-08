@@ -56,3 +56,20 @@ Przeprowadź własne badania na temat klasyfikacji grafów. Możesz zbadać nowe
 - Podsumowanie
 Podsumuj wyniki swoich badań i wnioski dotyczące klasyfikacji typów grafów.
 Zastanów się nad możliwościami dalszych badań w tej dziedzinie.
+
+##################-te nie-##################
+- Graf gwiazda (star graph)
+Definicja: Graf dwudzielny który składa się z jednego wierzchołka centralnego, połączonego krawędziami z innymi wierzchołkami (liśćmi).
+Wierzchołki liści nie są ze sobą połączone.
+
+- Graf koło (wheel graph)
+​Definicja: Graf, który powstaje przez dodanie jednego wierzchołka do grafu cyklu i połączenie go krawędziami ze wszystkimi wierzchołkami cyklu.
+Taki wierzchołek nazywany jest "centrum koła".
+
+##################-do testów-##################
+- Drzewo
+Graf nieskierowany, który jest spójny i nie zawiera cykli. Każdy graf będący drzewem ma dokładnie n-1 krawędzi, n to liczba wierzchołków
+
+- Graf hiper-kostki (hypercube graph)
+Definicja: Graf, którego wierzchołki reprezentują wszystkie możliwe ciągi binarne o długości n,
+a krawędzie łączą te wierzchołki, które różnią się dokładnie jednym bitem.
