@@ -11,24 +11,20 @@ Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Wloch2008}, \cite
 \incrementGraphDefinitionIndex
 Grafem nieskierowanym, skończonym $G$ nazywamy parę $(V,E)$, gdzie $V = V(G)$ jest zbiorem skończonym, niepustym,
 natomiast $E = E(G)$ jest rodziną mogących się powtarzać dwuelementowych podzbiorów niekoniecznie różnych elementów ze zbioru $V$.
-Zbiór $V(G)$ nazywamy zbiorem wierzchołków (lub węzłami), a elementy tego zbioru nazywamy wierzchołkami i oznaczamy symbolami:
+Zbiór $V(G)$ nazywamy zbiorem wierzchołków, a elementy tego zbioru nazywamy wierzchołkami i oznaczamy symbolami:
 $x$, $y$, $x_i$, $y_i$, $1$, $2$, ... Zbiór $E(G)$ nazywamy zbiorem krawędzi grafu $G$.
 Mówimy, że krawędź $\{v, w\}$ łączy wierzchołki $v$ i $w$, i na ogół oznaczamy ją krócej symbolem $vw$.
-
-\noindent
-\textbf{Definicja \graphDefinitionIndex.}
-\incrementGraphDefinitionIndex
 W wielu zagadnieniach nazwy wierzchołków są nieistotne, więc je pomijamy i mówimy wtedy, że graf jest nieoznakowany.
 
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
 \incrementGraphDefinitionIndex
-Jeżeli w grafie $G$ istnieją co najmniej dwie krawędzie $\{x, y\}$, to krawędź tę nazywamy krawędzią wielokrotną.
+Jeżeli w grafie $G$ istnieją co najmniej dwie krawędzie $xy$, to krawędź tę nazywamy krawędzią wielokrotną.
 
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
 \incrementGraphDefinitionIndex
-Krawędź $\{x, x\}$ w grafie $G$ nazywamy pętlą.
+Krawędź $xy$ w grafie $G$ nazywamy pętlą.
 
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
@@ -48,8 +44,18 @@ Graf zawierający pętle nazywamy pseudografem.
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
 \incrementGraphDefinitionIndex
-Graf $G$ taki, że $E(G) = \emptyset$, nazywamy grafem pustym. Jeżeli $|V(G)| = n$, to graf pusty oznaczony symbolem $N_n$.
-Każdy wierchołek grafu pustego jest wierchołkiem izolowanym.
+% Wierchołek izolowany ---------------------------------- to do
+
+\noindent
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
+Graf $G$ taki, że $E(G) = \emptyset$, nazywamy grafem bezkrawędziowym. Jeżeli $|V(G)| = n$, to graf bezkrawędziowy oznaczony symbolem $N_n$.
+Każdy wierchołek grafu bezkrawędziowego jest wierchołkiem izolowanym.
+
+\noindent
+\textbf{Definicja \graphDefinitionIndex.}
+\incrementGraphDefinitionIndex
+% Wierchołki sąsiednie ---------------------------------- to do
 
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
@@ -61,7 +67,8 @@ Jeżeli $|V(G)| = n$, to graf pełny oznaczamy $K_n$.
 \textbf{Definicja \graphDefinitionIndex.}
 \incrementGraphDefinitionIndex
 Graf G, którego zbiór wierchołków można podzielić na dwa rozłączne, niepuste podzbiory $V_1$ i $V_2$ tak,
-że jeżeli $\{x, y\} \in E(G)$, to $x \in V_1 \vee y \in V_2$ nazywamy grafem dwudzielnym.
+że jeżeli $xy \in E(G)$, to $x \in V_1 \vee y \in V_2$ nazywamy grafem dwudzielnym.
+% Sprawdzić znak LUB (usunąć?) ---------------------------------- to do
 
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
@@ -72,7 +79,7 @@ i kończący wierzchołkami, taki, że każde dwie kolejno po sobie następując
 \noindent
 \textbf{Definicja \graphDefinitionIndex.}
 \incrementGraphDefinitionIndex
-Graf skierowany ---------------------------------- to do
+% Graf skierowany ---------------------------------- to do
 
 \begin{figure}[ht]
 	\centering
