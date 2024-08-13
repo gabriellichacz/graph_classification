@@ -12,19 +12,19 @@ W kontekście grafów warto podkreślić ich zastosowanie poza teoretycznymi ana
 W dziedzinach informatycznych, grafy stanowią fundament wielu algorytmów, takich jak algorytmy przechodzenia,
 algorytmy najkrótszej ścieżki, drzew rozpinających, czy modeli sieci.
 Przykładem może być tutaj wyszukiwanie najkrótszej trasy, chociażby w nawigacji GPS,
-gdzie węzły odpowiadają skrzyżowaniom, a krawędzie drogom.
-W przypadku znajdowania najbardziej optymalnych tras, warto wymienić takie algorytmy jak A*, Bellmana-Forda czy Dijkstry.
+gdzie wierzchołki odpowiadają skrzyżowaniom, a krawędzie drogom.
+W przypadku znajdowania najbardziej optymalnych tras, warto wymienić takie algorytmy jak $A*$, Bellmana-Forda czy Dijkstry.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=6cm]{partials/images/intro_shortest_path.png}
-	\caption{Przykład grafu z wyznaczoną najkrótszą ścieżką od węzła A do G}
+	\caption{Przykład grafu z wyznaczoną najkrótszą ścieżką od wierzchołka $A$ do $G$}
     \label{Fig:intro-1}
 \end{figure}
 
 Duże znaczenie mają również w reprezentacji i modelowaniu struktur danych, takich jak bazy danych.
 Najczęściej stosowane bazy danych, tj. relacyjne, zbudowane są w sposób, który grafy mogą doskonale zobrazować -
-węzły będą kolumnami w tabelach a połączenia między nimi to krawędzie, reprezentujące relacje.
+wierzchołki odpowiadają kolumnom w tabelach a połączenia między nimi to krawędzie, reprezentujące relacje.
 
 \begin{figure}[ht]
 	\centering
@@ -37,19 +37,20 @@ W biologii, grafy pełnią ważną rolę w modelowaniu układu nerwowego, sieci 
 szlaków metabolicznych oraz interakcji między genami.
 W genetyce wykorzystuje się je między innymi do analizy drzew filogenetycznych,
 co pozwala chociażby na śledzenie relacji ewolucyjnych między organizmami,
-z liśćmi reprezentującymi żywe organizmy, a węzłami pośrednimi jako ich wspólnymi przodkami \cite{Erciyes2023}.
+z liśćmi reprezentującymi żywe organizmy, a wierzchołkami pośrednimi jako ich wspólnymi przodkami \cite{Erciyes2023}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=12cm]{partials/images/intro_brain.png}
-	\caption{Przykłady minimalnych drzew rozpinających sieci neuronowych ludzkiego mózgu \cite{Chung2021}}
+	\caption{Przykłady minimalnych drzew rozpinających sieci neuronowych ludzkiego mózgu.
+		Źródło: Chung M.K.: Graph Theory in Brain Networks, University of Wisconsin-Madison, 2021}
     \label{Fig:intro-3}
 \end{figure}
 
 Natomiast w chemii, grafy służą do reprezentacji struktury molekularnej związków chemicznych,
 umożliwiając naukowcom analizę ich właściwości i reaktywności.
 Znaczenie teorii grafów dla chemii wynika głównie z istnienia zjawiska izomeryzmu,
-które jest uzasadnione przez teorię struktury chemicznej \cite{Balaban1985}.
+które jest uzasadnione przez teorię struktury chemicznej.
 Wszystkie wzory strukturalne związków o wiązaniach kowalencyjnych są grafami,
 które nazywane są grafami molekularnymi \cite{Balaban1985}.
 
