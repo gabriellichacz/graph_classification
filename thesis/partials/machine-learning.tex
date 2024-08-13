@@ -42,9 +42,9 @@ nazywanej punktem obciążenia lub punktem przecięcia.
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
 Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy k) zwanych "złożeniami"
-(lub "foldami" - stąd nazwa k-Fold Cross-Validation). Model jest trenowany na k-1 złożeń, a testowany na pozostałym z nich.
-Proces ten jest powtarzany k razy, za każdym razem używając innego złożenia do testowania, a pozostałych do treningu.
-Jeżeli róznica w wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
+(lub "foldami" - stąd nazwa k-Fold Cross-Validation). Model jest trenowany na $k-1$ złożeń, a testowany na pozostałym z nich.
+Proces ten jest powtarzany $k$ razy, za każdym razem używając innego złożenia do testowania, a pozostałych do treningu.
+Jeżeli różnica w wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
 Z drugiej strony, jeżeli wszystkie wyniki są podobne, można mieć dużą dozę pewności, że niezależnie od konkretnego podziału
 na dane testowe i treningowe, wydajność systemu będzie podobna.
 Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej iteracji.
@@ -82,7 +82,7 @@ aby suma wartości wejściowych pozostała niezmieniona.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Bias (pl. błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
+Bias (błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
 Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą wartością.
 
 \noindent
@@ -107,13 +107,13 @@ Nie ma maksymalnej wartości wyjściowej.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Flatten (pl. spłaszczona) ma za zadanie przekształcić każdy obraz wejściowy w tablicę jednowymiarową.
+Warstwa Flatten (spłaszczona) ma za zadanie przekształcić każdy obraz wejściowy w tablicę jednowymiarową.
 Nie zawiera żadnych parametrów, a jej jedynym celem jest proste, wstępne przetworzenie danych.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Dense (pl. w pełni połączona) zarządza samodzielnie swoją macierzą wag,
+Warstwa Dense (w pełni połączona) zarządza samodzielnie swoją macierzą wag,
 zawierającą wszystkie wagi połączeń między neuronami a wejściami do nich, oraz wekorem obciążeń.
 Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych uczących.
 Jednocześnie, grozi mu również przez to ryzyko przetrenowania,
