@@ -14,7 +14,7 @@ Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Fenner2020}, \cit
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Zbiór uczący - zbiór danych, który jest używany do trenowania modelu uczenia maszynowego.
+Zbiór treningowy - zbiór danych, który jest używany do trenowania modelu uczenia maszynowego.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
@@ -121,7 +121,7 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 \incrementMlDefinitionIndex
 Warstwa Dense (w pełni połączona) zarządza samodzielnie swoją macierzą wag,
 zawierającą wszystkie wagi połączeń między neuronami a wejściami do nich, oraz wekorem obciążeń.
-Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych uczących.
+Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych treningowych.
 Jednocześnie, grozi mu również przez to ryzyko przetrenowania,
 zwłaszcza w przypadku korzystania z mniejszych zestawów danych.
 
@@ -228,10 +228,10 @@ dlatego konieczne jest odpowiednie przygotowanie i zbadanie danych przed podjęc
 
 Wybór modelu to proces, który zależy od rodzaju problemu (np. regresja, klasyfikacja, klasteryzacja)
 oraz charakterystyki danych, gdzie najpopularniejsze modele to drzewa decyzyjne,
-lasy losowe, maszyny wektorów nośnych (SVM), sieci neuronowe, k-najbliższych sąsiadów (k-NN)
+lasy losowe, maszyny wektorów nośnych (SVM), sieci neuronowe, $k$-najbliższych sąsiadów ($k$-NN)
 i regresja liniowa/logistyczna. Trenowanie modelu to kolejny etap,
 który polega na dostosowaniu parametrów modelu do danych treningowych,
-w tym dostosowaniu hyperparametrów modelu (parametrów, które nie są uczone,
+w tym dostosowaniu hiperparametrów modelu (parametrów, które nie są uczone,
 np. liczba warstw w sieci neuronowej) poprzez metodę walidacji krzyżowej lub inne techniki optymalizacji.
 
 Ewaluacja obejmuje ocenę modelu za pomocą pewnych metryk,

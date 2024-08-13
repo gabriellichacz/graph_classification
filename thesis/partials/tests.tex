@@ -8,8 +8,8 @@ Celem było również przetestowanie modeli na rzeczywistych zdjęciach,
 zawierających wzorce przypominające grafy, bądź rysunkach grafów narysowanych ręcznie.
 
 Stworzone zostały 3 modele:
-- wytrenowany na danych ze stałą liczbą wierchołków
-- wytrenowany na danych ze stałą liczbą wierchołków oraz walidacją krzyżową
+- wytrenowany na danych ze stałą liczbą wierzchołków
+- wytrenowany na danych ze stałą liczbą wierzchołków oraz walidacją krzyżową
 - wytrenowany na danych ze zmienną liczbą wierzchołków
 
 \subsection{Generacja danych}
@@ -78,7 +78,7 @@ oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 \end{lstlisting}
 
 W testach wykorzystane zostały wszystkie wybrane typy grafów.
-Każdy z nich, czyli dana liczba wierchołków i typ grafu, wygenerowany został w liczbie 500 sztuk
+Każdy z nich, czyli dana liczba wierzchołków i typ grafu, wygenerowany został w liczbie 500 sztuk
 oraz ze stałą krzywizną krawędzi, wynoszącą 0,3. % Zastanowić się nad zmianą na losowe rozmieszczenie
 
 \subsection{Dane zewnętrzne}
@@ -321,7 +321,7 @@ W przypadku uczenia modeli z wykorzystaniem grafów pełnych, najczęściej domi
 przez co modele w kolejnych testach klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
 
 Testy z wykorzystaniem stałej liczby wierzchołków grafów okazały się mniej owocne niż testy z rysunkami grafów
-o zmiennej liczbie wierchołków.
+o zmiennej liczbie wierzchołków.
 
 Wystąpiła tendencja do niepoprawnego określania innych grafów, grafami dwudzielnymi, jeśli takie znajdowały się
-w zbiorze danych uczących.
+w zbiorze danych treningowych.
