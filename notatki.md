@@ -26,9 +26,10 @@ https://pl.wikipedia.org/wiki/Klasa_grafów
 Ścieżka
 Cykl
 Pełny
-Pusty
 Bezkrawędziowe
-Dwudzielne
+
+Dwudzielne (nie używam)
+
 Ścieżka, cykl, pełny to grafy spójne.
 Grafy dwudzielne mogą być spójne lub niespójne. 
 
