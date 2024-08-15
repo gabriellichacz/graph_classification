@@ -13,3 +13,5 @@ deactivate
 ### Powershell
 .\env\Scripts\activate  
 deactivate
+
+Wszystkie kody puszczone z V2
