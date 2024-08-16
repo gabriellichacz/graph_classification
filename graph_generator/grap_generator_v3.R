@@ -27,10 +27,9 @@ randomLayout <- function(graph)
 #'
 createDir <- function(vertexNo, fileName)
 {
-  dir <- paste0('graph_generator_v3_output/', as.character(vertexNo))
-  dir.create(dir, showWarnings = FALSE)
-  dir.create(file.path(dir, fileName), showWarnings = FALSE)
-  pathName <- paste0(dir, '/', fileName)
+  dir.create(as.character(vertexNo), showWarnings = FALSE)
+  dir.create(file.path(vertexNo, fileName), showWarnings = FALSE)
+  pathName <- paste0(vertexNo, '/', fileName)
   unlink(paste0(pathName, "/*"))
   return(pathName)
 }
