@@ -27,9 +27,10 @@ randomLayout <- function(graph)
 #'
 createDir <- function(vertexNo, fileName)
 {
-  dir.create(paste0('random-curve/', as.character(vertexNo)), showWarnings = FALSE)
-  dir.create(file.path(vertexNo, fileName), showWarnings = FALSE)
-  pathName <- paste0(vertexNo, '/', fileName)
+  dir <- paste0('graph_generator_v3_output/', as.character(vertexNo))
+  dir.create(dir, showWarnings = FALSE)
+  dir.create(file.path(dir, fileName), showWarnings = FALSE)
+  pathName <- paste0(dir, '/', fileName)
   unlink(paste0(pathName, "/*"))
   return(pathName)
 }
@@ -46,7 +47,8 @@ createDir <- function(vertexNo, fileName)
 #'
 plotGraphHelper <- function(graph, pathName, fileName, vertexNo, i, plotCurve)
 {
-  png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
+  path <- file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png"))
+  png(path, width = 800, height = 600)
   plot(graph, vertex.label = NA, edge.curved = plotCurve)
   dev.off()
 }
