@@ -14,4 +14,9 @@ deactivate
 .\env\Scripts\activate  
 deactivate
 
-Wszystkie kody puszczone z V2
+## Typ
+V2 to podstawa.
+V3 to V2 z dodaną losowością zakrzywienia krawędzi grafów.
+
+## Status
+Wszystkie kody puszczone z V2 i zapisane.
