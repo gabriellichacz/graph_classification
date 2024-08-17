@@ -74,3 +74,6 @@ Graf nieskierowany, który jest spójny i nie zawiera cykli. Każdy graf będąc
 - Graf hiper-kostki (hypercube graph)
 Definicja: Graf, którego wierzchołki reprezentują wszystkie możliwe ciągi binarne o długości n,
 a krawędzie łączą te wierzchołki, które różnią się dokładnie jednym bitem.
+
+#####################
+Wydajność przy definicji walidacji krzyżowej to odpowiednie słowo, bo to definicja z książki.
