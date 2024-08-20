@@ -1,0 +1,39 @@
+Model uczenia maszynowego jaki został wykorzystany w testach to sieć neuronowa.
+
+Do testów stworzone zostało kilka modeli sieci neuronowych,
+wytrenowanych na rysunkach grafów stworzonych za pomocą skryptów R.
+Implementacja została wykonana biblioteką TensorFlow oraz Keras w języku Python.
+Modele są w stanie rozpoznawać rysunki grafów i przypisywać im odpowiednie klasy.
+Celem było również przetestowanie modeli na rzeczywistych zdjęciach,
+zawierających wzorce przypominające grafy, bądź rysunkach grafów narysowanych ręcznie.
+
+Klasy, których rozpoznawania uczony był model:
+\begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
+	\item Graf bezkrawędziowy
+	\item Graf pełny
+	\item Drzewo binarne
+	\item Ścieżka
+	\item Cykl
+\end{itemize}
+
+Stworzone zostały 3 modele:
+\begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
+	\item wytrenowany na danych ze stałą liczbą wierzchołków
+	\item wytrenowany na danych ze stałą liczbą wierzchołków oraz walidacją krzyżową
+	\item wytrenowany na danych ze zmienną liczbą wierzchołków
+\end{itemize}
+
+\subsection{Generacja danych}
+\input{partials/tests/partials/data-generation}
+
+\subsection{Dane zewnętrzne}
+\input{partials/tests/partials/data-external}
+
+\subsection{Opis skryptu}
+\input{partials/tests/partials/script}
+
+\subsection{Testy modeli}
+\input{partials/tests/partials/tests}
+
+\subsection{Wnioski}
+\input{partials/tests/partials/conclusion}
