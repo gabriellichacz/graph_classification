@@ -1,11 +1,3 @@
-\begin{figure}[ht]
-	\centering
-	\includegraphics[height=6cm]{resources/tests/images/gen-graph_full.png}
-	\caption{Przykładowy wygenerowany graf pełny}
-	\label{Fig:tests-generation-1}
-\end{figure}
-\FloatBarrier
-
 Dane wygenerowane zostały przy pomocy skryptu stworzonego w języku R oraz biblioteki igraph.
 Skrypt został zaprojektowany funkcyjnie, by osiągnąć możliwie największą automatyzację testów.
 Rysunki grafów tworzone były o wielkości 800x600 pikseli, na białym tle, z wierzchołkami w kolorze pomarańczowym,
@@ -74,3 +66,11 @@ W testach wykorzystane zostały wszystkie wybrane typy grafów.
 Każdy z nich, czyli dana liczba wierzchołków i typ grafu, wygenerowany został w liczbie 500 sztuk.
 Testy zostały przeprowadzone w dwóch wariantach - ze stałą krzywizną krawędzi, wynoszącą 0,3,
 oraz z losową krzywizną krawędzi, mieszczącą się w przedziale od 0 do 1.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=8cm]{resources/tests/images/gen-graphs-generated.png}
+	\caption{Przykładowe wygenerowane grafy z każdej klasy}
+	\label{Fig:tests-generation-1}
+\end{figure}
+\FloatBarrier
