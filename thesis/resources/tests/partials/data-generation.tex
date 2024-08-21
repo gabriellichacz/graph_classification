@@ -27,10 +27,13 @@ oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 	#'
 	plotGraphHelper <- function(graph, pathName, fileName, vertexNo, i, plotCurve)
 	{
-	  png(file.path(pathName, paste0(fileName, "-", vertexNo, "-", i, ".png")), width = 800, height = 600)
-	  plot(graph, vertex.label = NA, edge.curved = plotCurve)
-	  dev.off()
-	}
+		path <- file.path(pathName, paste0(
+			fileName, "-", vertexNo, "-", i, ".png"
+		))
+		png(path, width = 800, height = 600)
+		plot(graph, vertex.label = NA, edge.curved = plotCurve)
+		dev.off()
+	}	
 \end{lstlisting}
 
 \begin{lstlisting}[language=R,caption=Listing funkcji tworzącej ścieżkę,label={tests-generation-2}]
@@ -38,10 +41,9 @@ oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 	#'
 	#' @param N int - liczba rysunkow
 	#' @param vertexNo int - liczba wierzcholkow
-	#' @param plotCurve float
 	#' @return void
 	#'
-	plotPaths <- function(N, vertexNo, plotCurve)
+	plotPaths <- function(N, vertexNo)
 	{
 		fileName <- 'path'
 		pathName <- createDir(vertexNo, fileName)
@@ -50,13 +52,20 @@ oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 		{
 			definition <- c(definition, index, index + 1)
 		}
-		definitionMatrix <- matrix(definition, ncol = 2, byrow = TRUE)
+		definitionMatrix <- matrix(
+			definition, ncol = 2, byrow = TRUE
+		)
 		
 		for (i in 1:N)
 		{
-			graph <- graph_from_edgelist(definitionMatrix, directed = FALSE)
+			plotCurve <- generateGaussian(0.01, 0.99)
+			graph <- graph_from_edgelist(
+				definitionMatrix, directed = FALSE
+			)
 			E(graph)$weight <- runif(ecount(graph))
-			plotGraphHelper(graph, pathName, fileName, vertexNo, i, plotCurve)
+			plotGraphHelper(
+				graph, pathName, fileName, vertexNo, i, plotCurve
+			)
 		}
 	}
 \end{lstlisting}
