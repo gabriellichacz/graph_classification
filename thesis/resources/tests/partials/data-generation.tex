@@ -8,8 +8,8 @@
 
 Dane wygenerowane zostały przy pomocy skryptu stworzonego w języku R oraz biblioteki igraph.
 Skrypt został zaprojektowany funkcyjnie, by osiągnąć możliwie największą automatyzację testów.
-Rysunki grafów tworzone są o wielkości 800x600 pikseli, na białym tle, z wierzchołkami w kolorze pomarańczowym,
-bez jakichkolwiek oznaczeń wierzchołków oraz zapisywane są w odpowiednich katalogach, odpowiadających klasie grafu.
+Rysunki grafów tworzone były o wielkości 800x600 pikseli, na białym tle, z wierzchołkami w kolorze pomarańczowym,
+bez jakichkolwiek oznaczeń wierzchołków oraz zapisywane w odpowiednich katalogach, odpowiadających klasie grafu.
 Przygotowane zostały funkcje tworzące ścieżki, cykle, grafy pełne, grafy bezkrawędziowe oraz drzewa binarne.
 W każdej z funkcji możliwy jest wybór liczby generowanych grafów, liczba wierzchołków grafu
 oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
@@ -71,5 +71,6 @@ oraz współczynnik odpowiadający za zakrzywienie krawędzi na rysunkach.
 \end{lstlisting}
 
 W testach wykorzystane zostały wszystkie wybrane typy grafów.
-Każdy z nich, czyli dana liczba wierzchołków i typ grafu, wygenerowany został w liczbie 500 sztuk
-oraz ze stałą krzywizną krawędzi, wynoszącą 0,3.
+Każdy z nich, czyli dana liczba wierzchołków i typ grafu, wygenerowany został w liczbie 500 sztuk.
+Testy zostały przeprowadzone w dwóch wariantach - ze stałą krzywizną krawędzi, wynoszącą 0,3,
+oraz z losową krzywizną krawędzi, mieszczącą się w przedziale od 0 do 1.
