@@ -46,36 +46,6 @@ Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej it
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Rescaling mnoży każde wejście przez ustalony współczynnik skalujący.
-Zastosowanie tej techniki jest przydatne, gdy różne cechy danych wejściowych mają różne zakresy wartości.
-Poprzez jednolite skalowanie, model może efektywniej uczyć się wzorców, a proces optymalizacji staje się stabilniejszy.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-Warstwa Conv2D tworzy jądro splotu, które jest nakładane na dane wejściowe w jednym wymiarze przestrzennym (lub czasowym), 
-aby wygenerować tensor danych wyjściowych.
-Dodatkowo, jeśli stosowana jest funkcja aktywacji, jest ona stosowana również do danych wyjściowych.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-Warstwa MaxPooling2D dokonuje redukcji wymiarów danych wejściowych wzdłuż ich wymiarów przestrzennych (wysokości i szerokości),
-wybierając maksymalną wartość z każdego okna o rozmiarze określonym przez wybrany współczynnik $pool\_size$,
-dla każdego kanału danych wejściowych.
-Okno to jest przesuwane o określoną liczbę kroków wzdłuż obu wymiarów.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-Warstwa Dropout losowo zeruje jednostki wejściowe z prawdopodobieństwem określonym
-przez wybrany współczynnik dropout na każdym etapie treningu, co pomaga unikać przeuczenia modelu.
-Jednostki, które nie zostały wyzerowane, są skalowane w górę przez mnożenie przez $\frac{1}{1 - współczynnikDropout}$,
-aby suma wartości wejściowych pozostała niezmieniona.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
 Bias (błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
 Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą wartością.
 
@@ -110,12 +80,6 @@ Nie ma maksymalnej wartości wyjściowej.
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Warstwa Flatten (spłaszczona) ma za zadanie przekształcić każdy obraz wejściowy w tablicę jednowymiarową.
-Nie zawiera żadnych parametrów, a jej jedynym celem jest proste, wstępne przetworzenie danych.
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
 Przeuczenie to sytuacja, w której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
 co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na podstawie nowych danych spoza zbioru treningowego.
 
@@ -125,15 +89,6 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 	\caption{Zobrazowane przeuczenie modelu}
     \label{Fig:def-2}
 \end{figure}
-
-\noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
-Warstwa Dense (w pełni połączona) zarządza samodzielnie swoją macierzą wag,
-zawierającą wszystkie wagi połączeń między neuronami a wejściami do nich, oraz wekorem obciążeń.
-Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych treningowych.
-Jednocześnie, grozi mu również przez to ryzyko przetrenowania,
-zwłaszcza w przypadku korzystania z mniejszych zestawów danych.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
