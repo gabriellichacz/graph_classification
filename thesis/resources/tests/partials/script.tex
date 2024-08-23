@@ -10,10 +10,10 @@ W przypadku modeli wykorzystujących wszystkie warianty liczby wierzchołków, d
 i od razu dzielone na zbiory treningowe i walidacyjne.
 
 \subsubsection{Model}
-Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
-Dokonany został podział na zbiory treningowe i walidacyjne.
-Dla każdego przejścia walidacji krzyżowej, dane zostały podzielone inaczej.
-Po wczytaniu danych, zostały przeskalowane i przekształcone do odcieni szarości.
+Każdy typ modelu tworzony jest w inny sposób. Opisana zostanie tu główna zasada i ich elementy wspólne.
+Na początku, skrypt wczytuje obrazy przygotowane na wcześniejszym etapie do odpowiednich zmiennych - treningowe i walidacyjne.
+W przypadku modeli z walidacją krzyżową, dla każdej itreacji walidacyjnej, dane zostały podzielone inaczej.
+Po wczytaniu danych, zostają one przeskalowane do wielkości 180x180 pikseli i przekształcone do odcieni szarości.
 
 \begin{lstlisting}[language=Python,caption=Listing jedenego ze skryptów tworzących model,label={tests-model-1}]
 	n_splits = 5
