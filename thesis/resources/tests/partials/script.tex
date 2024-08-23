@@ -76,13 +76,21 @@ Po wczytaniu danych, zostają one przeskalowane do wielkości 180x180 pikseli i 
 
 Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw.
 Pierwsza warstwa to warstwa Rescaling, która normalizuje wartości pikseli do zakresu [0, 1].
-Następne trzy warstwy to Conv2D z wybraną liczbą filtrów, z których każda jest poprzedzona warstwą MaxPooling2D.
-Warstwy konwolucyjne używają różnych funkcji akytwacji, np. ReLU.
-Po warstwach konwolucyjnych znajduje się warstwa Flatten, która przekształca mapy cech 2D w wektor 1D.
-Następnie dodana jest w pełni połączona (Dense) warstwa z wybraną liczbą jednostek
-i wybraną funkcją aktywacji, wraz z warstwą dropout.
-Zastosowana jest tam również regularyzacja L2 (zmniejszanie wag) z ustaloną siłą regularyzacji wynoszącą.
-Warstwa wyjściowa zawiera tyle jednostek, ile występuje klas.
+W przykładzie, parametr $1./255$ oznacza, że każda wartość piksela mnożona jest przez $\frac{1}{255}$.
+Następne trzy warstwy to Conv2D, z których każda jest następowana warstwą MaxPooling2D.
+W przykładzie, warstwa kolwolucyjna stosuje 32 filtry o wymiarach 3x3 oraz funkcję aktywacji ReLU,
+która wprowadza nieliniowość do modelu.
+MaxPooling2D redukuje rozmiar danych wejściowych,
+wybierając maksymalną wartość z każdego regionu (domyślnie oraz tutaj - 2x2). 
+Po wyżej wymienionych warstwach, znajduje się warstwa Flatten, która przekształca mapy cech 2D w wektor 1D.
+Innymi słowy, przekształca wielowymiarową macierz wyjściową z poprzedniej warstwy do jednowymiarowego wektora.
+Następnie, dodana jest w pełni połączona (Dense) warstwa z 128 neuronami
+i funkcją aktywacji, podobnie jak w przypadku Conv2D, ReLU.
+Wprowadzona jest również regularizacja L2, która dodaje karę za duże wartości wag,
+by zmniejszyć ryzyko przeuczenia.
+Kolejna warstwa to Droput, która losowo wyłącza 20\% neuronów podczas uczenia,
+co również jest moetodą zapobiegającą przeuczeniu.
+Warstwa wyjściowa zawiera tyle jednostek, ile występuje klas w danych uczących.
 Zależnie od danego testu, może być to różna liczba.
 
 Dla standaryzacji danego testu ustalono K-Fold z liczbą podziałów równą 5.
