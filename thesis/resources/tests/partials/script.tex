@@ -1,13 +1,13 @@
 \subsubsection{Przygotowanie}
-Skrypt rozpoczyna się od przygotowania środowiska do trenowania modelu.
-Najpierw ustawia ścieżki do katalogów z wygenerowanymi grafami oraz do katalogów na dane treningowe i walidacyjne.
-Następnie sprawdza, czy te katalogi istnieją, a jeśli nie, tworzy je.
-Dalej, definiuje parametry dotyczące wielkości obrazów oraz wielkości partii danych, które będą używane podczas treningu.
-Dla każdej wartości liczby wierzchołków ustawia ścieżkę do katalogu z wygenerowanymi grafami,
-pobiera listę podkatalogów oraz obrazów w każdym z nich,
-a następnie dzieli obrazy na zestawy treningowe i walidacyjne w stosunku 80:20.
-Tworzy odpowiednie katalogi dla tych zestawów, jeśli jeszcze nie istnieją,
-i kopiuje obrazy do właściwych lokalizacji, segregując je na treningowe i walidacyjne.
+Wszystkie przygotowane skrypty testowe rozpoczynają się od przygotowania środowiska do trenowania modelu.
+Najpierw ustawiana jest ścieżka do katalogów z wygenerowanymi grafami oraz do katalogów na dane treningowe i walidacyjne.
+Następnie sprawdzane jest, czy te katalogi istnieją, a jeśli nie, są tworzone.
+Dalej, skrypty definiują parametry dotyczące wielkości obrazów oraz wielkości partii danych, które będą używane podczas treningu.
+Dla każdej wartości liczby wierzchołków ustawiana jest ścieżka do katalogu z wygenerowanymi grafami,
+pobierana lista podkatalogów oraz obrazów w każdym z nich.
+Następnie obrazy dzielone są na zestawy treningowe i walidacyjne w stosunku 80:20.
+W przypadku modeli wykorzystujących wszystkie warianty liczby wierzchołków, dane przenoszone są do jednego katalogu
+i od razu dzielone na zbiory treningowe i walidacyjne.
 
 \subsubsection{Model}
 Na początku dane zostały przygotowane ze zbioru obrazów, znajdującego się w katalogu lokalnym.
