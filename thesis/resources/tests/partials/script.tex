@@ -75,6 +75,7 @@ Po wczytaniu danych, zostają one przeskalowane do wielkości 180x180 pikseli i 
 \end{lstlisting}
 
 Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw.
+Dla standaryzacji danego testu, w przypadku modeli z walidacją krzyżową, ustalono K-Fold z liczbą podziałów równą 5.
 Pierwsza warstwa to warstwa Rescaling, która normalizuje wartości pikseli do zakresu [0, 1].
 W przykładzie, parametr $1./255$ oznacza, że każda wartość piksela mnożona jest przez $\frac{1}{255}$.
 Następne trzy warstwy to Conv2D, z których każda jest następowana warstwą MaxPooling2D.
@@ -87,17 +88,13 @@ Innymi słowy, przekształca wielowymiarową macierz wyjściową z poprzedniej w
 Następnie, dodana jest w pełni połączona (Dense) warstwa z 128 neuronami
 i funkcją aktywacji, podobnie jak w przypadku Conv2D, ReLU.
 Wprowadzona jest również regularizacja L2, która dodaje karę za duże wartości wag,
-by zmniejszyć ryzyko przeuczenia.
+by zmniejszyć ryzyko przeuczenia. Została zastosowana z siłą 0,01.
 Kolejna warstwa to Droput, która losowo wyłącza 20\% neuronów podczas uczenia,
 co również jest moetodą zapobiegającą przeuczeniu.
 Warstwa wyjściowa zawiera tyle jednostek, ile występuje klas w danych uczących.
 Zależnie od danego testu, może być to różna liczba.
-
-Dla standaryzacji danego testu ustalono K-Fold z liczbą podziałów równą 5.
-Dla wszystkich warstw wybrana została funkcja aktywacji ReLU.
-Liczba epok wyniosła 75.
 W przypadku warstw konwolucyjnych, wybrano 32 filtry, a dla warstwy w pełni połączonej zastosowano 128 jednostek.
-Regularyzacja została zastosowana z siłą 0,01, a współczynnik dropout - 0,2.
+Liczba epok w podstawowej wersji modelu wyniosła 75.
 
 \subsubsection{Wyniki}
 Po wytrenowaniu modelu, skrypt dokonuje wizualizacji dokładności i straty modelu w następujących krokach.
