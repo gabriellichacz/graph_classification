@@ -17,12 +17,27 @@
 \FloatBarrier
 
 \textbf{Model uczony na losowej krzywiźnie wierzechołków}
+W przypadku modelu z walidacją krzyżową dokładność wzrasta gwałtownie na początku treningu,
+osiągając wartości powyżej 0.8 już po około 10 epokach.
+Dokładność stabiliziuje się w okolicach 90\%, ale mimo to widać pewne fluktuacje, zwłaszacza na danych walidacyjnych.
+Możliwe do zaobserowania są regularne spadki dokładności w niektórych epokach,
+co może wynikać z niestabilnego treningu lub problemów modelu w generalizacji dla niektórych danych walidacyjncyh.
 
-W przypadku standardowego modelu z walidacją krzyżową model bardzo szybko uległ przeuczeniu.
-Już po szóstej iteracji dokładność na zbiorze walidaycjnym wyniosła 100\%, co nie jest realistycznie możliwe.
-Została podjęta próba ograniczenia przeuczenia poprzez zwiększenie zbioru danych, zmiany liczby epok w modelu
-oraz manipulacji współczynnikami dropout i regularyzacji.
-W każdym przypadku model zwracał niezadowalające wyniki wynoszące 100\% po jednej z początkowych iteracji.
+Dla straty modelu można zaobserować spadek w pierwszych 10 epokach, co mogłoby wskazywać na szybkie uczenie się modelu.
+Zaraz po nim, następuje stabilizacja na niskim poziomie, z pojedynczymi skokami, głównie na zbiorze walidacyjnym.
+Nieregularne wzrosty straty, podobnie jak w przypadku dokładności, mogą wskazywać na problemy z przeuczeniem.
+
+Podsumowując, ten wariant modelu generalnie uczy się poprawnie, dzięki czemu osiąga wysoką dokładność i niską stratę.
+Fluktuacje jakie występują w wynikach, szczególnie na danych walidacyjnych,
+sugerują jednak potencjalne problemy z generalizacją, co może być wynikiem niestabilności modelu,
+przeuczenia modelu, lub trudności w rozpoznawaniu bardziej złożonych przykładów w danych walidacyjnych.
+
+W przypadku tego modelu, zwiększenie liczby epok, nie przyniosłoby zamierzonych skutków.
+Model zbyt szybko się przeucza, a więc większa liczba iteracji nie wpłynęłaby w żaden znaczący sposób na wynik.
+
+% Została podjęta próba ograniczenia przeuczenia poprzez zwiększenie zbioru danych, zmiany liczby epok w modelu
+% oraz manipulacji współczynnikami dropout i regularyzacji.
+% W każdym przypadku model zwracał niezadowalające wyniki wynoszące 100\% po jednej z początkowych iteracji.
 
 \begin{figure}[ht]
 	\centering
