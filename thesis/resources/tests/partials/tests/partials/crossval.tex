@@ -17,6 +17,7 @@
 \FloatBarrier
 
 \textbf{Model uczony na losowej krzywiźnie wierzechołków}
+
 W przypadku modelu z walidacją krzyżową dokładność wzrasta gwałtownie na początku treningu,
 osiągając wartości powyżej 0.8 już po około 10 epokach.
 Dokładność stabiliziuje się w okolicach 90\%, ale mimo to widać pewne fluktuacje, zwłaszacza na danych walidacyjnych.
@@ -26,6 +27,14 @@ co może wynikać z niestabilnego treningu lub problemów modelu w generalizacji
 Dla straty modelu można zaobserować spadek w pierwszych 10 epokach, co mogłoby wskazywać na szybkie uczenie się modelu.
 Zaraz po nim, następuje stabilizacja na niskim poziomie, z pojedynczymi skokami, głównie na zbiorze walidacyjnym.
 Nieregularne wzrosty straty, podobnie jak w przypadku dokładności, mogą wskazywać na problemy z przeuczeniem.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{resources/tests/images/v3/crossvalid_img.png}
+	\caption{Wyniki testów dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
+	\label{Fig:tests-cv-1}
+\end{figure}
+\FloatBarrier
 
 Podsumowując, ten wariant modelu generalnie uczy się poprawnie, dzięki czemu osiąga wysoką dokładność i niską stratę.
 Fluktuacje jakie występują w wynikach, szczególnie na danych walidacyjnych,
@@ -41,19 +50,12 @@ Model zbyt szybko się przeucza, a więc większa liczba iteracji nie wpłynęł
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{resources/tests/images/v3/crossvalid_img.png}
-	\caption{Wyniki testów dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
-	\label{Fig:tests-cv-1}
-\end{figure}
-\FloatBarrier
-
-Z powodu przeuczenia model nie radził sobie z zewnętrznymi obrazkami testowymi.
-Większość grafów określił jako grafy pełne, co nie jest zgodne ze stanem rzeczywistym.
-
-\begin{figure}[ht]
-	\centering
 	\includegraphics[height=7cm]{resources/tests/images/v3/crossvalid_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
 	\label{Fig:tests-cv-2}
 \end{figure}
 \FloatBarrier
+
+Z powodu przeuczenia model nie radził sobie z zewnętrznymi obrazkami testowymi.
+Większość grafów określił jako grafy pełne, a jedną ze scieżek jako drzewo binarne,
+co nie jest zgodne ze stanem rzeczywistym.
