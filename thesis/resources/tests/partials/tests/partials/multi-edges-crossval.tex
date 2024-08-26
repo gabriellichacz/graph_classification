@@ -39,6 +39,12 @@ Mogą być wynikiem, przeuczenia na pojedynczych epokach lub naturalną zmienno�
 \end{figure}
 \FloatBarrier
 
+Model wydaje się dokładny na zbiorze treningowym i walidacyjnym,
+co może skutkować polepszoną skutecznością w klasyfikacji grafów.
+Minimalne różnice pomiędzy dokładnością treningową a walidacyjną wskazują na dobrą zdolność generalizacji.
+Z otrzymanych wyników, wydawałoby się, że model nie uległ przeuczeniu,
+choć jest to również możliwe, zważając na bardzo wysokie wyniki dokładności. 
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v3/multiple_edges_crossvalid_txt.png}
@@ -46,3 +52,6 @@ Mogą być wynikiem, przeuczenia na pojedynczych epokach lub naturalną zmienno�
 	\label{Fig:tests-csvar-2}
 \end{figure}
 \FloatBarrier
+
+Model poprawnie sklasyfikował połowę testowanych danych zewnętrznych.
+Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym wskazywaniu klas sprawdzanych grafów.
