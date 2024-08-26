@@ -18,6 +18,19 @@
 
 \textbf{Model uczony na losowej krzywiźnie wierzechołków}
 
+Model uczony na grafach ze zmienną liczbą wierzchołków oraz zastosowaną walidacją krzyżową,
+bardzo szybko osiąga poziom dokładności biski 100\%, bo już w kilku pierwszych epokach.
+Po około 10 epoce, dokonuje się stabilizacja, oscylująca między 95\%, a 100\%.
+W przypadku tego modelu, fluktuacje dokładności są znikome, co wskazuje na dobrą stabilność modelu.
+Pojedyncze przypadku spadu dokładności, mogą być spowodowane bardziej skomplikowanymi
+przypadkami w zbiorze danych walidacyjnych.
+
+Strata tego modelu gwałtownie spada na początku procesu uczenia,
+po czym stabilizuje się na zadowalająco niskim poziomie - poniżej 20\%.
+Skoki wskaźnika są bardziej zauważalne na zbiorze walidacyjnym,
+ale nie wydają się być regularne i nie wpływają na ogólny wynik.
+Mogą być wynikiem, przeuczenia na pojedynczych epokach lub naturalną zmiennością walidacyjnego zbioru danych.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v3/multiple_edges_crossvalid_img.png}
