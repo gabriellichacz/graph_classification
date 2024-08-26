@@ -37,10 +37,8 @@ Można zaobserować pewne wzrosty, które mogą być spowodowane trudniejszymi p
 \end{figure}
 \FloatBarrier
 
-Model nie poradził sobie zbyt dobrze z obrazami zewnętrznymi, lecz znacznie lepiej niż model z walidacją krzyżową.
-Poprawnie wskazanych klas grafów było 5 z 14 wszystkich rysunków.
-Mimo, że model jest w stanie poprawnie określić niektóre typy grafów poprawnie,
-wciąż jest to dokładność niższa niż 50\%.
+Model ten wydaje się być dobrze dopasywany i stabilny oraz poprawnie generalizujący.
+Z uwagi na bliskość wyników dla treningu i walidacji, można stwierdzić, że model nie jest przeuczony.
 
 \begin{figure}[ht]
 	\centering
@@ -49,3 +47,6 @@ wciąż jest to dokładność niższa niż 50\%.
 	\label{Fig:tests-var-2}
 \end{figure}
 \FloatBarrier
+
+Model poprawnie sklasyfikował 10 na 14 rysunków zewnętrznych.
+Jest to bardzo dobry wynik - lepszy nawet od wariantu tego modelu z zastosowaną walidacją krzyżową.
