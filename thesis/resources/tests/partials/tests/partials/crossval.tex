@@ -63,6 +63,22 @@ co nie jest zgodne ze stanem rzeczywistym.
 
 \textbf{Zmodyfikowany model}
 
+W celu poprawy dokładności i zapobiegnięciu przeuczenia wprowadzone
+zostały następujące modyfikacje do modelu z walidacją krzyżową.
+Każde z nich zostało przetestowane w osobnym modelu.
+Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjami. 
+\begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
+    \item Zmieniono liczbę filtrów w warstwach Conv2D z 32 w każdej warstwie, do kolejno 32, 64 oraz 128.
+		Jednocześnie zwiększono parametr Dropout z 0,2 do 0,5.
+    \item Zastosowano Batch Normalization pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
+    \item Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
+		w celu poprawy zdolności generalizacyjnych.
+		Wykorzystano również GPU w procesie prefetchingu i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
+	\item Skorzystanie z wywołania zwrotnego, które zmniejsza szybkość uczenia.
+		W przypadku stagnacji dokładności w procesie przechodzenia przez kolejne epoki uczenia modelu
+		może pomóc w lepszej konwergencji modelu.
+\end{itemize}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_img.png}
