@@ -79,6 +79,19 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 		może pomóc w lepszej konwergencji modelu.
 \end{itemize}
 
+\textbf{Zmodyfikowany model połączony}
+
+Dokładność dla wszystkich przebiegów walidacji krzyżowej stopniowo wzrasta wraz z liczbą epok
+i osiąga wysoki poziom, bo powyżej 80\%, pod koniec treningu.
+W przypadku walidacji jednak, wyniki nie są zadowalające, a wrecz bardzo niestabilne.
+Przez większość przebiegów uczenia utrzymuje się na niskim poziomie,
+co może sugerować problemy z generalizacją danych.
+
+Strata treningowa maleje w większości przebiegów, co jest spodziewane podczas uczenia.
+Widać jednak pewne fluktuacje, świadczące o problemach z konwergencją.
+Dla straty walidacyjnej można zaobserować wielką niestabilność - osiąga bardzo wysokie wartości,
+nawet rzędu kilku tysięcy, jak również bardzo niskie, bliskie zeru.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_img.png}
@@ -87,6 +100,13 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 \end{figure}
 \FloatBarrier
 
+Ogólne wnioski jakie można wyciągnąć z procesu uczenia tego modelu,
+są takie, że model kompletnie nie radzi sobie z danymi walidacyjnymi.
+Model ewidentnie przeucza się na danych treningowych,
+podczas gdy jego wydajność na zbiorze walidacyjnym jest bardzo słaba.
+Zastosowanie wszystkich zaproponowanych technik na raz,
+nie osiągnęło zamierzonego skutku. 
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=7cm]{resources/tests/images/v4/crossvalid_txt.png}
@@ -94,3 +114,5 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 	\label{Fig:tests-cv-2}
 \end{figure}
 \FloatBarrier
+
+Model poprawnie wskazał klasy tylko dwóch grafów testowych, co jest znacznie poniżej oczekiwanych rezultatów.
