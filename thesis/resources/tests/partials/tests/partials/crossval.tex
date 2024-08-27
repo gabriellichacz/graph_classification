@@ -79,9 +79,47 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 		może pomóc w lepszej konwergencji modelu.
 \end{itemize}
 
+\textbf{Zmodyfikowany model - Conv2D i Dropout}
+
+Wszystkie przebiegi walidacji krzyżowej osiągają wysoką dokładność po kilku pierwszych epokach.
+Model bardzo szybko uczy się rozpoznawać wzorce.
+Walidacja również osiąga zadoalające wyniki, tj. około 90\%. Może to wskazywać na poprawną generalizację do nowych danych.
+Występuje jednak niewielka niesabilność, występująca pomiędzy epokami,
+co widać po gwałtownych spadkach i wzrostach dokładności walidacji.
+
+Strata na zbiorze treningowym i walidacyjnym systematycznie maleje z kolejnymi epokami,
+co może wskazywać na dobre dopasowanie do danych treningowych.
+Zauważalnym problemem jest jednak spora fluktuacja obu wskaźników.
+Model może napotykać trudności z pewnymi próbkami w zbiorze danych walidacyjnych. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_1_img.png}
+	\caption{Wyniki testów dla zmodyfikowanego modelu z walidacją krzyżową i losową krzywizną wierzchołków}
+	\label{Fig:tests-cv-1}
+\end{figure}
+\FloatBarrier
+
+Modfyikacja modelu wydaje się osiągać zamierzone skutki,
+ponieważ model wykazuje lepszą zdolność uczenia z danych treningowych
+oraz osiąga wysoką dokładność na danych walidacyjnych.
+Model może być jednak wrażliwy na trudniejsze przypadki ze zbioru danych walidacyjnych,
+zważając na wahania wskaźników.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_1_txt.png}
+	\caption{Wyniki testów dla zmodyfikowanego modelu z walidacją krzyżową i losową krzywizną wierzchołków}
+	\label{Fig:tests-cv-1}
+\end{figure}
+\FloatBarrier
+
+Model poprawnie sklasyfikował 9 rysunków grafów,
+co jest znacznym polepszeniem w stosunku do początkowego modelu z zastosowaną walidacją krzyżową.
+
 \textbf{Zmodyfikowany model połączony}
 
-Dokładność dla wszystkich przebiegów walidacji krzyżowej stopniowo wzrasta wraz z liczbą epok
+Dokładność dla wszystkich przebiegów stopniowo wzrasta wraz z liczbą epok
 i osiąga wysoki poziom, bo powyżej 80\%, pod koniec treningu.
 W przypadku walidacji jednak, wyniki nie są zadowalające, a wrecz bardzo niestabilne.
 Przez większość przebiegów uczenia utrzymuje się na niskim poziomie,
