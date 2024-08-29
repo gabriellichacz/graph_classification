@@ -58,21 +58,33 @@ Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym 
 
 \textbf{Zmodyfikowany model}
 
-Opis modyfikacji % ------ TO DO ------ %
+Do modelu wprowadzone zostały wszystkie modyfikacje wymienione w rozdziale z modelem z walidacją krzyżową,
+czyli zwiększenie liczby filtrów w warstwach, batch normalization, augmentacja danych oraz zmniejszenie szybkości uczenia.
 
-Dokładność % ------ TO DO ------ %
+Model dość szybko osiąga wysoką dokładność na zbiorze treningowym - stabilizuje się około 90-95\%.
+Podobnie jak i w innych modelach z zastosowanymi wszystkimi modyfikacjami,
+dokładność na zbiorze walidacyjnym jest niestabilna.
+Można zaobserować duże wahania pomiędzy kolejnymi epokami procesu uczenia.
+Sugeruje to trudności z uczeniem się wzorców.
 
-Strata % ------ TO DO ------ %
+Model szybko zmniejsza stratę treningową i pozostaje ona na bardzo niskim poziomie przez cały proces uczenia.
+Wskazuje to na sprawność w uczeniu się na danych treningowych.
+Wykresy strat przedstawiają się w nietypowej formie.
+Dla początkowych i końcowych epok, straty walidacji niewiele się wahają,
+a wręcz przeciwnie sytuacja wygląda dla epok od około dziesiątej do dwudziestej.
+Model ma więc trudności z radzeniem sobie z danymi, które są dla niego nowe.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=7cm]{resources/tests/images/v4/multiple_edges_crossvalid_upgraded_img.png}
+	\includegraphics[height=5cm]{resources/tests/images/v4/multiple_edges_crossvalid_upgraded_img.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
 	\label{Fig:tests-var-2}
 \end{figure}
 \FloatBarrier
 
-Ogólne % ------ TO DO ------ %
+Model osiąga bardzo wysokie wyniki na zbiorze treningowym,
+ale ma problemy z generalizacją na zbiorze walidacyjnym.
+Wskazuje to na przeuczenie modelu i brak uczenia się wzorców ogólnych.
 
 \begin{figure}[ht]
 	\centering
@@ -82,4 +94,8 @@ Ogólne % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Opis klasyfikacji % ------ TO DO ------ %
+Model ocenił poprawnie 6 klas grafów zewnętrznych, z czego większość była grafami wygenerowanymi
+(lecz nie stosowanymi w nauce i walidacji), co pokazuje, że model rozpoznaje tylko wzorce,
+które są bardzo zbliżone do zbioru treningowego.
+Nie jest w stanie rozpoznać poprawnie ani jednego grafu narysowanego ręcznie,
+co jest dowodem na to, że nie radzi sobie z nowymi danymi.
