@@ -56,9 +56,13 @@ Jest to bardzo dobry wynik - lepszy nawet od wariantu tego modelu z zastosowaną
 Do modelu wprowadzone zostały modyfikacje na wzór tych ze zmodyfikowanego modelu z walidacją krzyżową.
 Przetestowany został wariant z włączonymi wszystkimi modyfikacjami na raz.
 
-Dokładność % ------ TO DO ------ %
+Podobnie jak dla zmodyfikowanego modelu z walidacją krzyżową, dokładność treningowa jest bardzo wysoka (prawie 100\%),
+ale dokładność walidacyjna nie jest ustabilizowana. Jej wartości oscylują w przedziale od 0,2, aż do 0,9.
+To sugeruje, że model nie generalizuje dobrze na nowych danych i może być nadmiernie dopasowany.
 
-Strata % ------ TO DO ------ %
+Wykresy straty prezentują się w podobny sposób jak i wykresy dokładności.
+Strata treningowa jest bliska zeru, co mówi o świetnym zapamiętywaniu danych treningowych przez model, kosztem generalizacji na nowe dane.
+Strata walidacji jednak jest niestabilna z bardzo wysokimi wartościami w niekórych epokach.
 
 \begin{figure}[ht]
 	\centering
@@ -68,7 +72,10 @@ Strata % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Ogólne % ------ TO DO ------ %
+Model wykazuje cechy modelu przeuczonego.
+Są to bardzo wysoka dokładność i niemal zerowa strata na zbiorze treningowym
+oraz bardzo niska dokładność i wysoka, ale niestabilna strata na zbiorze walidacyjnym.
+Wniosek jaki można wyciągnąć jest taki, że model zapamiętał dane treningowe, ale nie nauczył się żadnych wzorców.
 
 \begin{figure}[ht]
 	\centering
@@ -78,4 +85,5 @@ Ogólne % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Opis klasyfikacji % ------ TO DO ------ %
+Model poprawnie wskazał aż 5 klas grafów, lecz analiza jego wskaźników mówi nam,
+że jest to dzieło raczej przypadku, aniżeli poprawnego nauczenia się ogólnych wzorców danych.
