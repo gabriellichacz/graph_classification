@@ -213,9 +213,18 @@ Dalej, na zbiorach uczących i walidacyjnych, użyte zostały funkcje cachujące
     val_ds = val_ds.cache().prefetch(buffer_size=tf.data.AUTOTUNE)
 \end{lstlisting}
 
-Dokładność % ------ TO DO ------ %
+Dokładność treningowa i walidacyjna w ciągu kilku pierwszych epok wzrasta znacząco,
+od około 23\% do 50\%, po czym rośnie w stałym tempie do 90\%.
+Wydają się to być dość realistyczne wartości dokładności dla nieprzeuczonego modelu.
+Głównym problemem w tym przypadku wydają się być niektóre przebiegi walidacji krzyżowej.
+W ich przypadku, dokładność na danych treningowych oraz walidacyjnych wynosi przez wszystkie epoki uczenia, około 23\%.
+Przy każdej iteracji walidacji krzyżowej generowane są nowe zbiory walidacyjne i treningowe,
+co w połączeniu z augmentacją danych, może powodować, że niektóre z tych zbiorów są wyjątkowo trudne do nauki dla modelu.
+Możliwe jest również, że niektóre zbiory na których dokonano augmentacji, zważając na to, że jest ona losowa,
+są nieprzystosowane do nauki modeli uczenia maszynowego.
 
-Strata % ------ TO DO ------ %
+Strata zachowuje się podobnie jak dokładność. Dla pewnych przejść walidacji krzyżowej, osiąga ona realistyczne
+i spadające z biegiem epok wartości. Dla innych zaś, wartości straty są stałe przez wszystkie epoki uczenia.
 
 \begin{figure}[ht]
 	\centering
@@ -224,7 +233,9 @@ Strata % ------ TO DO ------ %
 	\label{Fig:tests-cv-1}
 \end{figure}
 \FloatBarrier
-Ogólne % ------ TO DO ------ %
+
+Model wydaje się radzić poprawnie z niektórymi wariantami zaugmentowanych danych, a z innymi - całkowicie nie,
+co wyraża się w krzywych dokładności oraz straty modelu.
 
 \begin{figure}[ht]
 	\centering
@@ -234,7 +245,9 @@ Ogólne % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Opis klasyfikacji % ------ TO DO ------ %
+Model w takiej postaci nie sklasyfikował poprawnie żadnego rysunku grafu.
+Nie jest to zaskoczenie, mając na uwadze osiągniętą dokładność modelu na pewnych przejściach walidacji krzyżowej,
+która wynosiła około 22-23\%.
 
 \textbf{Zmodyfikowany model - spowolnienie uczenia}
 
