@@ -77,6 +77,23 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 
 \textbf{Zmodyfikowany model - Conv2D i Dropout}
 
+\begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z walidacją krzyżową - wersja 1,
+	label={tests-model-crossval1}]
+	model = tf.keras.models.Sequential([
+		tf.keras.layers.Rescaling(1./255),
+		tf.keras.layers.Conv2D(32, 3, activation='relu'),
+		tf.keras.layers.MaxPooling2D(),
+		tf.keras.layers.Conv2D(64, 3, activation='relu'),
+		tf.keras.layers.MaxPooling2D(),
+		tf.keras.layers.Conv2D(128, 3, activation='relu'),
+		tf.keras.layers.MaxPooling2D(),
+		tf.keras.layers.Flatten(),
+		tf.keras.layers.Dense(128, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.01)),
+		tf.keras.layers.Dropout(0.5),
+		tf.keras.layers.Dense(len(class_names))
+	  ])
+\end{lstlisting}
+
 Wszystkie przebiegi walidacji krzyżowej osiągają wysoką dokładność po kilku pierwszych epokach.
 Model bardzo szybko uczy się rozpoznawać wzorce.
 Walidacja również osiąga zadoalające wyniki, tj. około 90\%. Może to wskazywać na poprawną generalizację do nowych danych.
@@ -120,7 +137,7 @@ Ma to na celu poprawienie stabilności treningu oraz przyspieszenie uczenia.
 Użyte zostało również zwiększenie liczby filtrów w warstwach Conv2D oraz zwiększenie parametru Dropout
 z poprzedniej modyfikacji modelu, ponieważ osięgnęła ona zamierzone cele.
 
-\begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z walidacją krzyżową,
+\begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z walidacją krzyżową - wersja 2,
 	label={tests-model-crossval2}]
 	model = tf.keras.models.Sequential([
       tf.keras.layers.Rescaling(1./255),
@@ -175,6 +192,18 @@ Opis klasyfikacji % ------ TO DO ------ %
 
 Opis modyfikacji % ------ TO DO ------ %
 
+\begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu poprzedzającego tworzenie modelu z walidacją krzyżową
+	- wersja 3,label={tests-model-crossval3}]
+	data_augmentation = tf.keras.Sequential([
+        tf.keras.layers.RandomFlip("horizontal"),
+        tf.keras.layers.RandomRotation(0.1),
+        tf.keras.layers.RandomZoom(0.1),
+    ])
+    train_ds = train_ds.map(lambda x, y: (data_augmentation(x), y))
+    train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=tf.data.AUTOTUNE)
+    val_ds = val_ds.cache().prefetch(buffer_size=tf.data.AUTOTUNE)
+\end{lstlisting}
+
 Dokładność % ------ TO DO ------ %
 
 Strata % ------ TO DO ------ %
@@ -201,6 +230,11 @@ Opis klasyfikacji % ------ TO DO ------ %
 \textbf{Zmodyfikowany model - Spowolnienie uczenia}
 
 Opis modyfikacji % ------ TO DO ------ %
+
+\begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu
+	znajdującego się bezpośrdenio po tworzeniu modelu z walidacją krzyżową - wersja 4,label={tests-model-crossval4}]
+	reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.001)
+\end{lstlisting}
 
 Dokładność % ------ TO DO ------ %
 
