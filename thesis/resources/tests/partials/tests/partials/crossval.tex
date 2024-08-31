@@ -176,7 +176,7 @@ która osiąga ponad 6000 jednostek.
 \end{figure}
 \FloatBarrier
 
-Ogólne % ------ TO DO ------ %
+Model jest nadmiernie dopasowany do danych treningowych i nie pot
 
 \begin{figure}[ht]
 	\centering
@@ -186,11 +186,20 @@ Ogólne % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Opis klasyfikacji % ------ TO DO ------ %
+Model sklasyfikował poprawnie tylko 3 grafy zewnętrzne. Jest to zdecydowanie poniżej oczekiwań.
+Zastosowanie batch normalization nie spełniło założonej funkcji. Jest to nieudany eksperyment.
 
 \textbf{Zmodyfikowany model - augmentacja danych}
 
-Opis modyfikacji % ------ TO DO ------ %
+Przed rozpoczęciem nauki modelu, zastosowana została augmentacja danych treningowych.
+Najpierw, stworzony został sekwencyjny model, składający się z pewnych warstw.
+Pierwsza z nich - RandomFlip, odwraca losowe obrazy w poziomie, zwiększając tym samym różnorodność danych.
+Kolejna - RandomRotation, losowo obraza obrazy o kąt w zakresie od -0.1 do 0.1 radianów,
+tym samym pomagając modelowi stać się odpornym na rotacje grafów.
+RandomZoom z kolei przybliża lub oddala obrazy o wartości oscylujące w zakresie 10\%.
+W teorii, powinno to uodpornić model na grafy różnej wielkości.
+W kolejnej linii skryptu, wyżej stworzony sekwencyjny model został zastosowany do zbioru danych treningowych.
+Dalej, na zbiorach uczących i walidacyjnych, użyte zostały funkcje cachujące dane - przyspiesza to proces uczenia.
 
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu poprzedzającego tworzenie modelu z walidacją krzyżową
 	- wersja 3,label={tests-model-crossval3}]
