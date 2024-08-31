@@ -34,7 +34,7 @@ Mogą być wynikiem, przeuczenia na pojedynczych epokach lub naturalną zmienno�
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v3/multiple_edges_crossvalid_img.png}
-	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową oraz losową krzywizną wierzchołków}
+	\caption{Wyniki testów dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
 	\label{Fig:tests-csvar-1}
 \end{figure}
 \FloatBarrier
@@ -48,13 +48,41 @@ choć jest to również możliwe, zważając na bardzo wysokie wyniki dokładno�
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v3/multiple_edges_crossvalid_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową oraz losową krzywizną wierzchołków}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
 	\label{Fig:tests-csvar-2}
 \end{figure}
 \FloatBarrier
 
 Model poprawnie sklasyfikował połowę testowanych danych zewnętrznych.
 Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym wskazywaniu klas sprawdzanych grafów.
+
+\textbf{Zmodyfikowany model - Conv2D i Droput}
+
+Opis modyfikacji % ------ TO DO ------ %
+
+Dokładność % ------ TO DO ------ %
+
+Strata % ------ TO DO ------ %
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=7cm]{resources/tests/images/v4/multiple_edges_crossvalid_1_img.png}
+	\caption{Wyniki testów dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Droput}
+	\label{Fig:tests-var-2}
+\end{figure}
+\FloatBarrier
+
+Ogólne % ------ TO DO ------ %
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[height=7cm]{resources/tests/images/v4/multiple_edges_crossvalid_1_txt.png}
+	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Droput}
+	\label{Fig:tests-var-2}
+\end{figure}
+\FloatBarrier
+
+Opis klasyfikacji % ------ TO DO ------ %
 
 \textbf{Zmodyfikowany model}
 
@@ -77,7 +105,7 @@ Model ma więc trudności z radzeniem sobie z danymi, które są dla niego nowe.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5cm]{resources/tests/images/v4/multiple_edges_crossvalid_img.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
+	\caption{Wyniki testów dla w pełni zmodyfikowanego modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
 	\label{Fig:tests-var-2}
 \end{figure}
 \FloatBarrier
@@ -89,7 +117,7 @@ Wskazuje to na przeuczenie modelu i brak uczenia się wzorców ogólnych.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=7cm]{resources/tests/images/v4/multiple_edges_crossvalid_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla modelu z walidacją krzyżową i losową krzywizną wierzchołków}
+	\caption{Klasyfikacja obrazów zewnętrznych dla w pełni zmodyfikowanego modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
 	\label{Fig:tests-var-2}
 \end{figure}
 \FloatBarrier
