@@ -104,6 +104,11 @@ Po wytrenowaniu modelu, skrypt dokonuje wizualizacji dokładności i straty mode
 Najpierw wyświetla w konsoli wartości dokładności dla obu zbiorów z historii treningu.
 Dalej tworzy wykresy, gdzie na pierwszym z nich pokazuje dokładność na zbiorze treningowym i walidacyjnym,
 a na drugim wykresie prezentuje stratę modelu dla obu zbiorów.
+Jednostką straty jest entropia krzyżowa (cross-entropy), która jest wyrażana jako liczba bezwzględna.
+Entropia krzyżowa mierzy różnicę między rzeczywistymi etykietami a przewidywanymi prawdopodobieństwami klas.
+Im mniejsza wartość entropii krzyżowej, tym lepiej model przewiduje klasy.
+Dokładność jest wyrażana jako wartość procentowa lub ułamek, gdzie 1 oznacza 100\% dokładności.
+Na przykład, jeśli model przewiduje poprawnie 90 na 100 przypadków, dokładność wynosi 0.9 lub 90\%.
 
 \begin{figure}[ht]
 	\centering
