@@ -161,9 +161,11 @@ W jej wyniku, dane wejściowe zostają wyśrodkowane i znormalizowane,
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Caching % ------ TO DO ------ %
+Caching danych przyspiesza naukę modelu. Proces ten umieszcza zawartość danych w pamięci podręcznej GPU.
+Dzięki temu każdy przykład ze zbioru danych jest odczytywany i przetwarzany tylko raz, a nie jak domyslnie - raz na epokę.
 
 \noindent
 \textbf{Definicja \mlDefinitionIndex.}
 \incrementMlDefinitionIndex
-Prefetching % ------ TO DO ------ %
+Pobieranie wstępne (ang. prefetching) to metoda, w której podczas przetwarzania przez algrytm uczenia jednej grupy,
+zestaw danych równolegle przygotowuje kolejną grupę.
