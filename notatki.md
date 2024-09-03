@@ -77,3 +77,14 @@ a krawędzie łączą te wierzchołki, które różnią się dokładnie jednym b
 
 #####################
 Wydajność przy definicji walidacji krzyżowej to odpowiednie słowo, bo to definicja z książki.
+
+https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej
+
+##################### Plan 03.09 #####################
+1. Rozrysować na kartce więcej rysunków.
+2. Zrobić kopie obecnych modeli
+3. Puścić przygotowane modele na nowych danych zewnętrznych
+4. Edytować opisy modeli (nie powinno tego być wiele)
+5. Napisać wnioski z testów
+6. Napisać podsumowanie
+7. Napisac abstract
