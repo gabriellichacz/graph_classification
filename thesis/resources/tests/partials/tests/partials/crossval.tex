@@ -69,7 +69,7 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
     \item Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
     \item Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
 		w celu poprawy zdolności generalizacyjnych.
-		Wykorzystano również GPU w procesie prefetchingu i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
+		Wykorzystano również GPU w procesie pobierania wstępnego danych i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
 	\item Skorzystanie z wywołania zwrotnego, które zmniejsza szybkość uczenia.
 		W przypadku stagnacji dokładności w procesie przechodzenia przez kolejne epoki uczenia modelu
 		może pomóc w lepszej konwergencji modelu.
