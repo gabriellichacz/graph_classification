@@ -58,11 +58,18 @@ Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym 
 
 \textbf{Zmodyfikowany model - Conv2D i Droput oraz spowolnienie uczenia}
 
-Opis modyfikacji % ------ TO DO ------ %
+Model stosuje zwiększone parametry filtrów dla warstw Conv2D, powiększony parametr Dropout z 0,2 do 0,5
+oraz spowolnienie uczenia.
 
-Dokładność % ------ TO DO ------ %
+Dokładność osiąga poziom bliski 100\% na zbiorze treningowym i walidacyjnym w bardzo szybkim tempie.
+Po osiągnięciu tego pułapu, utrzymuje się na nim do ostatniej epoki procesu nauczania modelu.
+Jedyną anomalię można zaobserować około 55 epoki dla jednego z przejść walidacji krzyżowej.
+Spada ona gwałtownie do poziomu 23\% i pozostaje w takim stanie do końca nauki.
 
-Strata % ------ TO DO ------ %
+Strata prezentuje się podobnie jak dokładność.
+Wartości utrzymują się na dość niskich poziomach przez cały proces uczenia po początkowym spadku.
+Około 55 epoki, dla jednego przejścia walidacji krzyżowej,
+da się zaobserować nagły wzrost straty do około 2,5 jednostek, który stopniowo spada do około 1,8.
 
 \begin{figure}[ht]
 	\centering
@@ -72,7 +79,11 @@ Strata % ------ TO DO ------ %
 \end{figure}
 \FloatBarrier
 
-Ogólne % ------ TO DO ------ %
+W przypadku pojedynczej anomalii jaką da się zaobserować na krzywych dokładności oraz straty,
+można wnioskować, że dla jednego przejścia walidacji krzyżowej, a konkretnie czwartego, wystąpił pewien problem z uczeniem modelu.
+Mogła to być zmiana wartości współczynnika uczenia się lub inna zmiana w procesie treningu.
+Różnice pomiędzy wartościami dla danych treningowych oraz waldacyjnych są znikome - nawet w prypadku odstającym wartościami od reszty.
+Ogólnie, model osiągnął bardzo dobre wyniki, co sugeruje, że proces nauczania przebiegł pomyślnie.
 
 \begin{figure}[ht]
 	\centering
