@@ -66,7 +66,7 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 \begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
     \item Zmieniono liczbę filtrów w warstwach Conv2D z 32 w każdej warstwie, do kolejno 32, 64 oraz 128.
 		Jednocześnie zwiększono parametr Dropout z 0,2 do 0,5.
-    \item Zastosowano Batch Normalization pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
+    \item Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
     \item Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
 		w celu poprawy zdolności generalizacyjnych.
 		Wykorzystano również GPU w procesie prefetchingu i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
@@ -130,9 +130,9 @@ zważając na wahania wskaźników.
 Model poprawnie sklasyfikował 9 rysunków grafów,
 co jest znacznym polepszeniem w stosunku do początkowego modelu z zastosowaną walidacją krzyżową.
 
-\textbf{Zmodyfikowany model - batch normalization}
+\textbf{Zmodyfikowany model - normalizacja wsadowa}
 
-Model został zmodyfikowany poprzez zastosowanie batch normalization pomiędzy kolejnymi warstwami Conv2D modelu.
+Model został zmodyfikowany poprzez zastosowanie normalizacji wsadowej pomiędzy kolejnymi warstwami Conv2D modelu.
 Ma to na celu poprawienie stabilności treningu oraz przyspieszenie uczenia.
 Użyte zostało również zwiększenie liczby filtrów w warstwach Conv2D oraz zwiększenie parametru Dropout
 z poprzedniej modyfikacji modelu, ponieważ osięgnęła ona zamierzone cele.
@@ -171,7 +171,7 @@ która osiąga ponad 6000 jednostek.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_2_img.png}
-	\caption{Dokładność i walidacja dla zmodyfikowanego modelu z walidacją krzyżową - Batch Normalization}
+	\caption{Dokładność i walidacja dla zmodyfikowanego modelu z walidacją krzyżową - normalizacja wsadowa}
 	\label{Fig:tests-cv-2a}
 \end{figure}
 \FloatBarrier
@@ -181,13 +181,13 @@ Model jest nadmiernie dopasowany do danych treningowych i nie pot
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_2_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z walidacją krzyżową - Batch Normalization}
+	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z walidacją krzyżową - normalizacja wsadowa}
 	\label{Fig:tests-cv-2b}
 \end{figure}
 \FloatBarrier
 
 Model sklasyfikował poprawnie tylko 3 grafy zewnętrzne. Jest to zdecydowanie poniżej oczekiwań.
-Zastosowanie batch normalization nie spełniło założonej funkcji. Jest to nieudany eksperyment.
+Zastosowanie normalizacji wsadowej nie spełniło założonej funkcji. Jest to nieudany eksperyment.
 
 \textbf{Zmodyfikowany model - augmentacja danych}
 
