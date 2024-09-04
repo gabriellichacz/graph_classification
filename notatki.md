@@ -82,9 +82,9 @@ https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-
 
 ##################### Plan 03.09 #####################
 1. Zrobić kopie obecnych modeli. ---- done
-2. Rozrysować na kartce więcej rysunków.
-3. Puścić przygotowane modele na nowych danych zewnętrznych.
-4. Edytować opisy modeli (nie powinno tego być wiele).
+2. Rozrysować na kartce więcej rysunków. ---- done
+3. Puścić przygotowane modele na nowych danych zewnętrznych. ---- done
+4. Edytować opisy modeli (nie powinno tego być wiele). 
 5. Napisać wnioski z testów.
 6. Napisać podsumowanie.
 7. Napisac abstract.
