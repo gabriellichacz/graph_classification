@@ -61,10 +61,10 @@ Model zbyt szybko się przeucza, a więc większa liczba iteracji nie wpłynęł
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
 Z powodu przeuczenia model nie radził sobie z zewnętrznymi obrazkami testowymi.
-Większość grafów określił jako grafy pełne, a jedną ze scieżek jako drzewo binarne,
-co nie jest zgodne ze stanem rzeczywistym.
+Większość obrazów testowych określił jako grafy pełne, a tylko 3 jako jedna z innych klas,
+co oczywiście nie jest zgodne ze stanem rzeczywistym.
+Realna dokładność modelu wynosi więc około 24\%.
 
 \textbf{Zmodyfikowany model}
 
@@ -144,9 +144,10 @@ zważając na wahania wskaźników.
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Model poprawnie sklasyfikował 9 rysunków grafów,
+Model poprawnie sklasyfikował aż 40\% rysunków grafów,
 co jest znacznym polepszeniem w stosunku do początkowego modelu z zastosowaną walidacją krzyżową.
+Wynik, o ile daleko mu do pełnej pewności, jest znacznie lepszy niż losowe przypisywanie klas grafów.
+Model ten więc, choć nie idealny, wykazuje pewną realną użyteczność.
 
 \textbf{Zmodyfikowany model - normalizacja wsadowa}
 
@@ -212,9 +213,10 @@ Model jest nadmiernie dopasowany do danych treningowych i nie pot
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Model sklasyfikował poprawnie tylko 3 grafy zewnętrzne. Jest to zdecydowanie poniżej oczekiwań.
-Zastosowanie normalizacji wsadowej nie spełniło założonej funkcji. Jest to nieudany eksperyment.
+Model sklasyfikował poprawnie prawie 31\% grafów zewnętrznych.
+Jest to o 9 punktów procentowych mniej niż poprzenia modyfikacja modelu,
+co prowadzi do wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
+Nie jest to udany eksperyment, lecz model wciąż prezentuje pewną użyteczność.
 
 \textbf{Zmodyfikowany model - augmentacja danych}
 
@@ -280,8 +282,7 @@ co wyraża się w krzywych dokładności oraz straty modelu.
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Model w takiej postaci nie sklasyfikował poprawnie żadnego rysunku grafu.
+Model w takiej postaci nie sklasyfikował poprawnie nawet 10\% grafów testowych.
 Nie jest to zaskoczenie, mając na uwadze osiągniętą dokładność modelu na pewnych przejściach walidacji krzyżowej,
 która wynosiła około 22-23\%.
 
