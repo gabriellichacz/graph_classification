@@ -52,9 +52,14 @@ który spowodował, że model "przyspieszył" w ostatnich epokach.
 Wyniki uzyskane z procesu nauki poprzeniego modelu sugerują zmniejszenie liczby epok do około 55.
 Taka modyfikacja została zastosowana, a test przeprowadzono ponownie.
 
-% -- TO DO -- % Dokładność
+Po skóróceniu procesu uczenia, dokładność modelu nie spada gwałtownie w końcowych epokach.
+Dokładność szybko rośnie na początku treningu i osiąga wysokie wartości już po kilku epokach.
+Dokonuje się również stabilizacja w okolicach 98\%-100\%, co wskazuje na dobre dopasowanie modelu do danych.
+Fluktuacje walidacji są niewielkie i nie wskazujące na problemy z modelem.
 
-% -- TO DO -- % Strata
+Strata, po modyfikacji, nie już wzrasta gwłatownie pod koniec procesu uczenia.
+Oba typy strat maleją po kilku pierwszych epokach i pozostają na niskim poziomie (0,1 - 0,2).
+Model wygląda więc na dobrze dopasowany do danych treningowych, jak i walidacyjnych.
 
 \begin{figure}[ht]
 	\centering
