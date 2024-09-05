@@ -78,13 +78,30 @@ a krawędzie łączą te wierzchołki, które różnią się dokładnie jednym b
 #####################
 Wydajność przy definicji walidacji krzyżowej to odpowiednie słowo, bo to definicja z książki.
 
-https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej
-
 ##################### Plan 03.09 #####################
 1. Zrobić kopie obecnych modeli. ---- done
 2. Rozrysować na kartce więcej rysunków. ---- done
 3. Puścić przygotowane modele na nowych danych zewnętrznych. ---- done
-4. Edytować opisy modeli (nie powinno tego być wiele). 
-5. Napisać wnioski z testów.
+4. Edytować opisy modeli (nie powinno tego być wiele). ---- done
+5. Napisać wnioski z testów. ---- done
 6. Napisać podsumowanie.
 7. Napisac abstract.
+
+##################### Style #####################
+https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej
+
+Marginesy:
+margines górny – 25 mm
+margines dolny – 25 mm
+margines lewy – 30 mm
+margines prawy – 25 mm
+
+Praca powinna być napisana w formacie A4 czcionką w rozmiarze 10-12 pt. ---- done
+
+Odstęp między wierszami powinien wynosić 1,5 interlinii. ---- done
+
+Numeracja stron powinna być automatyczna. ---- done
+
+Wszystkie główne elementy struktury pracy dyplomowej, a więc wstęp, kolejne rozdziały, spisy rysunków, tabel, wykresów, bibliografia, ewentualne aneksy oraz streszczenie muszą rozpoczynać się od nowej strony. ---- done
+
+Podpisane wykresy, rysunki, tabele i zdjęcia zamieszczamy w tekście centralnie w stosunku do wewnętrznego i zewnętrznego marginesu. ---- done
