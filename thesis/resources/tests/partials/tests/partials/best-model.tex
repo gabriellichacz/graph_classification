@@ -12,7 +12,7 @@ oraz zastosowanie zwiększonego parametru dropout - 0,5.
 
 \textbf{Zmodyfikowany model podstawowy uczony na grafach sześciowierzchołkowych}
 
-Model osiąga poprawne wyniki, lecz po około 55 epoce procesu nauczania,
+Model osiąga wysokie i stabilne wyniki, lecz po około 55 epoce procesu nauczania,
 dokładność gwałtownie spada, aż do wartości około 23\%.
 
 Ta sama sytuacja dotyczy straty, która to gwałtownie wzrasta około 60 epoki,
@@ -25,6 +25,11 @@ z około 0,25, do aż 1,75.
 	\label{Fig:tests-base-5a}
 \end{figure}
 \FloatBarrier
+
+Powyższa sytuacja wskazuje na poważny problem z wydajnością modelu,
+np. przetrenowanie lub problem techniczny w procesie treningu
+- być może był to zbyt niski współczynnik procesu uczenia,
+który spowodował, że model "przyspieszył" w ostatnich epokach.
 
 % \begin{figure}[ht]
 % 	\centering
