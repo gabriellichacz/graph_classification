@@ -61,9 +61,10 @@ choć jest to również możliwe, zważając na bardzo wysokie wyniki dokładno�
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Model poprawnie sklasyfikował połowę testowanych danych zewnętrznych.
+Model poprawnie sklasyfikował aż 38\% testowanych danych zewnętrznych.
 Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym wskazywaniu klas sprawdzanych grafów.
+Podejrzenia dotyczące przeuczenia modelu były więc bezpodstawne.
+Model całkiem dobrze nauczył się żądanych wzorców.
 
 \textbf{Zmodyfikowany model - Conv2D i Droput oraz spowolnienie uczenia}
 
@@ -110,9 +111,11 @@ Ogólnie, model osiągnął bardzo dobre wyniki, co sugeruje, że proces nauczan
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Poprawna klasyfikacja połowy grafów jest w pewnym sensie rozczarowującym wynikiem,
-zważajac na wysokie wartości dokładności, nawet na zbiorach walidacyjnych.
+Poprawna klasyfikacja 29\% grafów jest w pewnym sensie rozczarowującym wynikiem,
+zważajac na wysokie wartości dokładności, nawet na zbiorach walidacyjnych
+oraz całkiem wysoki wynik modelu bez modyfikacji.
+Wnioskować można, że spowolnienie uczenia i zwiększenie liczby filtrów w warstwach Conv2D oraz zwiększenie parametru dropout,
+nie przyniosło oczekiwanych skutków.
 
 \textbf{Zmodyfikowany model}
 
@@ -160,9 +163,6 @@ Wskazuje to na przeuczenie modelu i brak uczenia się wzorców ogólnych.
 \end{figure}
 \FloatBarrier
 
-% -- TO DO -- %
-Model ocenił poprawnie 6 klas grafów zewnętrznych, z czego większość była grafami wygenerowanymi
-(lecz nie stosowanymi w nauce i walidacji), co pokazuje, że model rozpoznaje tylko wzorce,
-które są bardzo zbliżone do zbioru treningowego.
-Nie jest w stanie rozpoznać poprawnie ani jednego grafu narysowanego ręcznie,
-co jest dowodem na to, że nie radzi sobie z nowymi danymi.
+Model ocenił poprawnie około 38\% klas grafów zewnętrznych, co nie jest złym wynikiem.
+W przypadku modeli z walidacją krzyżową, zastosowanie wszystkich przygotowanych modyfikacji modelu,
+nie do końca spełniło swoje złożenia, ale również nie pogorszyło wyniku.
