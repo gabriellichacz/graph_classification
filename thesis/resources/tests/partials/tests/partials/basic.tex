@@ -65,7 +65,16 @@ zaważając że jest to najbardziej podstawowa wersja testowanego modelu.
 % \end{figure}
 % \FloatBarrier
 
-% -- TO DO -- % Opisać ten, bo uzyskał całkiem duży wynik.
+Kolejny warty uwagi wynik został uzyskany za pomocą podstaowego modelu, ale uczonego na grafach o sześciu wierzechołkach.
+Dokładność zarówno dla zbioru treningowego, jak i walidacyjnego, bardzo szybko wzrasta już w kilku pierwszych epokach
+i osiąga bardzo wysoki wynik, bo prawie 100\%.
+Występuje kilka spadków obu krzywych, z czego jeden nawet do 80\%.
+Ogólnie, po około 10 epokach, dokładność dla obu zestawów danych jest bardzo zbliżona i stabilizuje się na poziomie około 99\%.
+
+Strata, podobnie jak dokładnośc, spada w ciągu początkowych epok procesu nauczania do niskich wartości, bo około 0,25.
+W ciągu kolejnych epok, aż do końca, widać minimalny trend malejący, z trzema wzrostami straty do około wartości 0,5 na zbiorze walidacyjnym.
+Może to oznaczać, że w tych punktach model napotyka na trudniejsze przypadki testowe.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v3/base6_img.png}
@@ -73,6 +82,11 @@ zaważając że jest to najbardziej podstawowa wersja testowanego modelu.
 	\label{Fig:tests-base-3a}
 \end{figure}
 \FloatBarrier
+
+Różnice między wartościami straty i dokładności dla zbioru walidacyjnego i testowego są niewielkie.
+Nie widać również znaczących fluktuacji.
+Krzywe dokładności i straty sugerują, że model może być poprawnie nauczony ogólnych wzorców
+i nie być nadmiernie dopasowanym do danych treningowych.
 
 \begin{figure}[ht]
 	\centering
@@ -89,6 +103,9 @@ zaważając że jest to najbardziej podstawowa wersja testowanego modelu.
 	\label{Fig:tests-base-3c}
 \end{figure}
 \FloatBarrier
+
+Model poprawnie klasyfikuje ponad 45\% przypadków grafów zewnętrznych, co jest zaskakująco wysokim wynikiem,
+zważając na niską złożoność owego modelu.
 
 % \begin{figure}[ht]
 % 	\centering
