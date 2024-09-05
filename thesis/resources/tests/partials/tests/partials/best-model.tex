@@ -1,6 +1,16 @@
-\textbf{Zmodyfikowany model podstawowy uczony na grafach sześciowierzchołkowych}
+W wyniku testów wyłoniony został model o najlepszej dokładności realnej, tj.
+dokładności klasyfikacji zewnętrznych grafów testowych.
+Model ten okazał się jednym z najbardziej podstawowych z przygotowanych,
+bo jest to podstawowy model uczony na grafach sześciowierzchołkowych.
+W ramach eksperymentu, zastosowano dla niego modyfikacje,
+które pomogły zwiększyć realną dokładność modelu.
+Modyfikacje te zostały wprowadzone i przetestowane w podrozdziale z testami modeli
+z walidacją krzyżową.
+Jedyną zmianą z zaproponowanych, która przynosi realne korzyści,
+jest zwiększenie liczby filtrów w warstwach sieci neuronowej, kolejno 32, 64 oraz 128 dla Conv2D,
+oraz zastosowanie zwiększonego parametru dropout - 0,5.
 
-% -- TO DO -- % Opis modyfikacji
+\textbf{Zmodyfikowany model podstawowy uczony na grafach sześciowierzchołkowych}
 
 % -- TO DO -- % Dokładność
 
