@@ -1,9 +1,16 @@
-% -- TO DO -- % Everything to be changed
-W przypadku uczenia modeli z wykorzystaniem grafów pełnych, najczęściej dominowały one cały zbiór danych,
-przez co modele w kolejnych testach klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
+% -- TO DO -- %
+W testach zastosowano naukę na maksymalnie 75 epokach.
+Analizując krzywe dokładności i straty modeli, można dojść do wniosku,
+że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub znikome pozytywne.
+Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
+są za małe, by poprawnie nauczyć większość modeli.
+Modeli osiągały dość wysokie dokładności już po kilku pierwszych epokach,
+ale zdecydowana większość z nich, z biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
 
-Testy z wykorzystaniem stałej liczby wierzchołków grafów okazały się mniej owocne niż testy z rysunkami grafów
-o zmiennej liczbie wierzchołków.
+Uczenie modeli z wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
+niż nauka na ryunkach grafów o zmiennej liczbie wierzchołków.
 
-Wystąpiła tendencja do niepoprawnego określania innych grafów, grafami dwudzielnymi, jeśli takie znajdowały się
-w zbiorze danych treningowych.
+Skomplikowaność modelu i zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
+
+W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
+przez co modele te testach na danych zewnętrznych, klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
