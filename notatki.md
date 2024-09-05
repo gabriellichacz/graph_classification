@@ -90,7 +90,7 @@ Wydajność przy definicji walidacji krzyżowej to odpowiednie słowo, bo to def
 ##################### Style #####################
 https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej
 
-Marginesy:
+Marginesy: ---- done
 margines górny – 25 mm
 margines dolny – 25 mm
 margines lewy – 30 mm
