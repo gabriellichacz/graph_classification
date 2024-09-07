@@ -22,7 +22,7 @@ z około 0,25, do aż 1,75.
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/base6_1_img.png}
 	\caption{Wyniki testów dla zmodyfikowanego modelu podstawowego, liczba wierzchołków n = 6}
-	\label{Fig:tests-base-5a}
+	\label{Fig:tests-best-0a}
 \end{figure}
 \FloatBarrier
 
@@ -65,7 +65,7 @@ Model wygląda więc na dobrze dopasowany do danych treningowych, jak i walidacy
 	\centering
 	\includegraphics[height=5.5cm]{resources/tests/images/v4/base6_1_1_img.png}
 	\caption{Wyniki testów dla poprawionego zmodyfikowanego modelu podstawowego, liczba wierzchołków n = 6}
-	\label{Fig:tests-base-6a}
+	\label{Fig:tests-best-1a}
 \end{figure}
 \FloatBarrier
 
@@ -77,7 +77,7 @@ Model działa bardzo dobrze, z minimalnymi fluktuacjami, które mogą być natur
 	\centering
 	\includegraphics[width=14cm]{resources/tests/images/v4/base6_1_1_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla poprawionego zmodyfikowanego modelu podstawowego, liczba wierzchołków n = 6}
-	\label{Fig:tests-base-6b}
+	\label{Fig:tests-best-2b}
 \end{figure}
 \FloatBarrier
 
@@ -85,7 +85,7 @@ Model działa bardzo dobrze, z minimalnymi fluktuacjami, które mogą być natur
 	\centering
 	\includegraphics[width=14cm]{resources/tests/images/v4/base6_1_1_bar.png}
 	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla poprawionego zmodyfikowanego modelu podstawowego, liczba wierzchołków n = 6}
-	\label{Fig:tests-base-6c}
+	\label{Fig:tests-best-1c}
 \end{figure}
 \FloatBarrier
 
@@ -94,6 +94,16 @@ Jest to wynik gorszy o 3 punkty procentowe od wariantu tego samego modelu
 z mniejszą liczbą filtrów w warstwach Conv2D oraz niższym wskaźnikiem dropout.
 Wynik jednak jest wciąż zadowlający, bo czterdziestodwuprocentowa pewność,
 jest wynikiem lepszym niż przypisywanie klas losowo.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-13.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany poprawiony model podstawowy
+		uczony na grafach sześciowierzchołkowych
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-best-1d}
+\end{figure}
+\FloatBarrier
 
 Ponownie, to prostszy model okazał się tym, który dokonuje lepszej generalizacji na nowe dane
 i lepiej zapamiętuje ogólne wzorce.
