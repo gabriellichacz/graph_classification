@@ -48,6 +48,15 @@ Większość obrazów testowych określił jako grafy pełne, a tylko 3 jako jed
 co oczywiście nie jest zgodne ze stanem rzeczywistym.
 Realna dokładność modelu wynosi więc około 24\%.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-3.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model z walidacją krzyżową.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-0d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Modyfikacje modelu z walidacją krzyżową}
 
 W celu poprawy dokładności i zapobiegnięciu przeuczenia wprowadzone
@@ -131,6 +140,15 @@ co jest znacznym polepszeniem w stosunku do początkowego modelu z zastosowaną 
 Wynik, o ile daleko mu do pełnej pewności, jest znacznie lepszy niż losowe przypisywanie klas grafów.
 Model ten więc, choć nie idealny, wykazuje pewną realną użyteczność.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-4.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z walidacją krzyżową - Conv2D i Dropout.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-1d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model z walidacją krzyżową - normalizacja wsadowa}
 
 Model został zmodyfikowany poprzez zastosowanie normalizacji wsadowej pomiędzy kolejnymi warstwami Conv2D modelu.
@@ -201,6 +219,15 @@ Jest to o 9 punktów procentowych mniej niż poprzenia modyfikacja modelu,
 co prowadzi do wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
 Nie jest to udany eksperyment, lecz model wciąż prezentuje pewną użyteczność.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-5.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z walidacją krzyżową - normalizacja wsadowa.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-2d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model z walidacją krzyżową - augmentacja danych}
 
 Przed rozpoczęciem nauki modelu, zastosowana została augmentacja danych treningowych.
@@ -269,6 +296,15 @@ Model w takiej postaci nie sklasyfikował poprawnie nawet 10\% grafów testowych
 Nie jest to zaskoczenie, mając na uwadze osiągniętą dokładność modelu na pewnych przejściach walidacji krzyżowej,
 która wynosiła około 22-23\%.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-6.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z walidacją krzyżową - augmentacja danych.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-3d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model z walidacją krzyżową - spowolnienie uczenia}
 
 W tym modelu zostało zastosowane wywołanie zwrotne, które spowalnia proces uczenia.
@@ -325,6 +361,15 @@ Model poprawnie sklasyfikował około 31\% grafów zewnętrznych.
 Jest to w zasadzie identyczny wynik, jak dla modelu z zastosowaniem normalizacji wsadowej.
 Zważając na to, że ogólną większość grafów oznaczył jako pełne, może to również być przypadek.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-7.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z walidacją krzyżową - spowolnienie uczenia.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-4d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model z walidacją krzyżową - modyfikacje połączone}
 
 Dokładność dla wszystkich przebiegów stopniowo wzrasta wraz z liczbą epok
@@ -373,3 +418,12 @@ Model poprawnie wskazał klasy tylko 16\% grafów testowych, co jest znacznie po
 zważając na liczbę zastosowanych modyfikacji modelu.
 Wnioskować można, że nie każda modyfikacja była odpowiednio dobrana do danego przypadku
 lub niektóre z nich nie łączą się zbyt dobrze.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-8.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z walidacją krzyżową - modyfikacje połączone.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-5d}
+\end{figure}
+\FloatBarrier
