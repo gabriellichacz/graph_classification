@@ -1,41 +1,36 @@
 Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Fenner2020}, \cite{Geron2020},
 \cite{Seenappa} , \cite{Goodfellow2016} oraz \cite{vanDerMaaten}.
 
-\newcommand{\mlDefinitionIndex}{1}
-\newcommand{\incrementMlDefinitionIndex} {
-    \pgfmathtruncatemacro{\mlDefinitionIndex}{\mlDefinitionIndex + 1}
-}
-
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Zbiór treningowy - zbiór danych, który jest używany do trenowania modelu uczenia maszynowego.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Zbiór walidacjny - zbiór danych, który jest używany do sprawdzenia wydajności modelu uczenia maszynowego.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Zbiór testowy - zbiór danych używany do oceny wydajności modelu uczenia maszynowego
 po przeszkoleniu go na zbiorze treningowym i ocenie na zbiorze walidacyjnym.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Klasyfikacja to proces polegający na przypisaniu obiektów do wcześniej zdefiniowanych klas na podstawie ich cech.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Regresja liniowa - metoda, w której model liniowy przewiduje wyniki na podstawie ważonej sumy cech wejściowych oraz stałej,
 nazywanej punktem obciążenia lub punktem przecięcia.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy k) zwanych "złożeniami"
 (lub "foldami" - stąd nazwa k-Fold Cross-Validation). Model jest trenowany na $k-1$ złożeń, a testowany na pozostałym z nich.
 Proces ten jest powtarzany $k$ razy, za każdym razem używając innego złożenia do testowania, a pozostałych do treningu.
@@ -45,14 +40,14 @@ na dane testowe i treningowe, wydajność systemu będzie podobna.
 Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej iteracji.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Bias (błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
 Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą wartością.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Funkcje aktywacji są nieliniowe, co pozwala na modelowanie złożonych funkcji i wprowadza nieliniowość do sieci.
 Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T * W)$, gdzie:
 $Y'$ to przewidywana wartość wyjściowa,
@@ -62,8 +57,8 @@ $W$ to przypisane wagi,
 a $g$ to funkcja aktywacji.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Funkcja ReLU (ang. Recified Linear Unit) - funkcja aktywacji.
 Jest ciągła, ale nieróżniczkowalna w punkcie z = 0, a jej pochodna dla z < 0 wynosi 0.
 Spisuje się bardzo dobrze w modelowaniu złożonych funkcji, a dodatkowym aututem jest jej szybkość przetwarzania.
@@ -80,8 +75,8 @@ Nie ma maksymalnej wartości wyjściowej.
 \FloatBarrier
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Przeuczenie to sytuacja, w której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
 co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na podstawie nowych danych spoza zbioru treningowego.
 
@@ -94,80 +89,80 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 \FloatBarrier
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Regularyzacja to technika stosowana w celu zapobiegania przeuczeniu modelu.
 Działa poprzez dodanie kary do funkcji kosztu, co penalizuje zbyt złożone modele.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Regularyzacja L2 służy do ograniczania wag sieci neuronowych,
 natomiast regularyzacja L1 przydaje się do tworzenia modeli rzadkich (w których wiele wag ma wartość równą 0). 
 Zazwyczaj powinno się stosować ten sam typ regularyzatora we wszystkich wartstwach sieci.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Epoka to pełny cykl przez cały zbiór danych treningowych, w której model przetwarza wszystie dostępne dane treningowe.
 Liczba epok określa ile razy model przejdzie przez cały zbiór danych treningowych.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Dokładność modelu to stosunek oznaczonych prawidłowo wartości do przykładów sklasyfikowanych nieprawidłowo.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Koncepcja macierzy pomyłek polega na zliczaniu przypadków zaklasyfikowania próbek z klasy A jako przykładów należących do klasy B.
 Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane są z rzeczywistymi wartościami docelowymi.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Strata modelu to wartość, która wskazuje,
 jak bardzo prognozy modelu różnią się od rzeczywistych wartości dla pojedynczych przykładów.
 Idealnie przewidziane wartości mają stratę równą zeru,
 natomiast im większa różnica między prognozami a rzeczywistością, tym wyższa jest strata.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Algorytm t-SNE (t-Distributed Stochastic Neighbor Embedding) to technika redukcji wymiarowości,
 która szczególnie dobrze nadaje się do wizualizacji wielowymiarowych zbiorów danych.
 Można ją zaimplementować przy użyciu aproksymacji Barnesa-Huta,
 co umożliwia stosowanie jej na dużych, rzeczywistych zbiorach danych.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Entropia krzyżowa pomiędzy dwoma rozkładami prawdopodobieństwa $p$ i $q$ jest definiowana wzorem
 $H(p,q) = -\sum p(x) \log q(x) $ (przynajmniej wtedy, gdy obydwa rozkłady są dyskretne).
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Konwergencja modelu to stopniowe poprawianie się wydajności podczas trwania procesu uczenia,
 aż do osiągnięcia stabilnego poziomu. Według założeń, po osiągnięciu takiego poziomu,
 kolejne treningi nie powinny przynosić dalszych korzyści lub owe korzyści są pomijalnie małe.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Normalizacja wsadowa (ang. batch normalization) to operacja pozwalająca modelowi określić optymalną skalę
 i średnią danych wejściowych dla każdej warstwy.
 Z tego też powodu stosowana jest przed funkcją aktywacji w każdej warstwie.
 W jej wyniku, dane wejściowe zostają wyśrodkowane i znormalizowane,
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Caching danych przyspiesza naukę modelu. Proces ten umieszcza zawartość danych w pamięci podręcznej GPU.
 Dzięki temu każdy przykład ze zbioru danych jest odczytywany i przetwarzany tylko raz, a nie jak domyslnie - raz na epokę.
 
 \noindent
-\textbf{Definicja \mlDefinitionIndex.}
-\incrementMlDefinitionIndex
+\textbf{Definicja \definitionIndex.}
+\incrementdefinitionIndex
 Pobieranie wstępne (ang. prefetching) to metoda, w której podczas przetwarzania przez algrytm uczenia jednej grupy,
 zestaw danych równolegle przygotowuje kolejną grupę.
