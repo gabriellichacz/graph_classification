@@ -1,4 +1,4 @@
-\textbf{Wersja podstawowa modelu z walidacją krzyżową}
+\subsubsection{Wersja podstawowa modelu z walidacją krzyżową}
 
 W przypadku modelu z walidacją krzyżową, uczonego na grafach z 4 wierzchołkami,
 dokładność wzrasta gwałtownie na początku treningu,
@@ -48,7 +48,7 @@ Większość obrazów testowych określił jako grafy pełne, a tylko 3 jako jed
 co oczywiście nie jest zgodne ze stanem rzeczywistym.
 Realna dokładność modelu wynosi więc około 24\%.
 
-\textbf{Modyfikacje modelu z walidacją krzyżową}
+\subsubsection{Modyfikacje modelu z walidacją krzyżową}
 
 W celu poprawy dokładności i zapobiegnięciu przeuczenia wprowadzone
 zostały następujące modyfikacje do modelu z walidacją krzyżową.
@@ -66,7 +66,7 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 		może pomóc w lepszej konwergencji modelu.
 \end{itemize}
 
-\textbf{Zmodyfikowany model z walidacją krzyżową - Conv2D i Dropout}
+\subsubsection{Zmodyfikowany model z walidacją krzyżową - Conv2D i Dropout}
 
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z walidacją krzyżową - wersja 1,
 	label={tests-model-crossval1}]
@@ -131,7 +131,7 @@ co jest znacznym polepszeniem w stosunku do początkowego modelu z zastosowaną 
 Wynik, o ile daleko mu do pełnej pewności, jest znacznie lepszy niż losowe przypisywanie klas grafów.
 Model ten więc, choć nie idealny, wykazuje pewną realną użyteczność.
 
-\textbf{Zmodyfikowany model z walidacją krzyżową - normalizacja wsadowa}
+\subsubsection{Zmodyfikowany model z walidacją krzyżową - normalizacja wsadowa}
 
 Model został zmodyfikowany poprzez zastosowanie normalizacji wsadowej pomiędzy kolejnymi warstwami Conv2D modelu.
 Ma to na celu poprawienie stabilności treningu oraz przyspieszenie uczenia.
@@ -201,7 +201,7 @@ Jest to o 9 punktów procentowych mniej niż poprzenia modyfikacja modelu,
 co prowadzi do wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
 Nie jest to udany eksperyment, lecz model wciąż prezentuje pewną użyteczność.
 
-\textbf{Zmodyfikowany model z walidacją krzyżową - augmentacja danych}
+\subsubsection{Zmodyfikowany model z walidacją krzyżową - augmentacja danych}
 
 Przed rozpoczęciem nauki modelu, zastosowana została augmentacja danych treningowych.
 Najpierw, stworzony został sekwencyjny model, składający się z pewnych warstw.
@@ -269,7 +269,7 @@ Model w takiej postaci nie sklasyfikował poprawnie nawet 10\% grafów testowych
 Nie jest to zaskoczenie, mając na uwadze osiągniętą dokładność modelu na pewnych przejściach walidacji krzyżowej,
 która wynosiła około 22-23\%.
 
-\textbf{Zmodyfikowany model z walidacją krzyżową - spowolnienie uczenia}
+\subsubsection{Zmodyfikowany model z walidacją krzyżową - spowolnienie uczenia}
 
 W tym modelu zostało zastosowane wywołanie zwrotne, które spowalnia proces uczenia.
 Współczynnik procesu uczenia decyduje o tym, jak duże kroki wykonuje algorytm optymalizacyjny podczas aktualizacji wag sieci neuronowej.
@@ -325,7 +325,7 @@ Model poprawnie sklasyfikował około 31\% grafów zewnętrznych.
 Jest to w zasadzie identyczny wynik, jak dla modelu z zastosowaniem normalizacji wsadowej.
 Zważając na to, że ogólną większość grafów oznaczył jako pełne, może to również być przypadek.
 
-\textbf{Zmodyfikowany model z walidacją krzyżową - modyfikacje połączone}
+\subsubsection{Zmodyfikowany model z walidacją krzyżową - modyfikacje połączone}
 
 Dokładność dla wszystkich przebiegów stopniowo wzrasta wraz z liczbą epok
 i osiąga wysoki poziom, bo powyżej 80\%, pod koniec treningu.

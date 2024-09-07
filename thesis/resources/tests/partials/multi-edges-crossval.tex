@@ -1,4 +1,4 @@
-\textbf{Wersja podstawowa modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
+\subsubsection{Wersja podstawowa modelu ze zmienną liczbą wierzchołków i walidacją krzyżową}
 
 Model uczony na grafach ze zmienną liczbą wierzchołków oraz zastosowaną walidacją krzyżową,
 bardzo szybko osiąga poziom dokładności biski 100\%, bo już w kilku pierwszych epokach.
@@ -48,7 +48,7 @@ Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym 
 Podejrzenia dotyczące przeuczenia modelu były więc bezpodstawne.
 Model całkiem dobrze nauczył się żądanych wzorców.
 
-\textbf{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Dropout oraz spowolnienie uczenia}
+\subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Dropout oraz spowolnienie uczenia}
 
 Model stosuje zwiększone parametry filtrów dla warstw Conv2D, powiększony parametr Dropout z 0,2 do 0,5
 oraz spowolnienie uczenia.
@@ -99,7 +99,7 @@ oraz całkiem wysoki wynik modelu bez modyfikacji.
 Wnioskować można, że spowolnienie uczenia i zwiększenie liczby filtrów w warstwach Conv2D oraz zwiększenie parametru dropout,
 nie przyniosło oczekiwanych skutków.
 
-\textbf{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - modyfikacje połączone}
+\subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - modyfikacje połączone}
 
 Do modelu wprowadzone zostały wszystkie modyfikacje wymienione w rozdziale z modelem z walidacją krzyżową,
 czyli zwiększenie liczby filtrów w warstwach, normalizacja wsadowa, augmentacja danych oraz zmniejszenie szybkości uczenia.
