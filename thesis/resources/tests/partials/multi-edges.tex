@@ -41,6 +41,15 @@ Z uwagi na bliskość wyników dla treningu i walidacji, można stwierdzić, że
 Model poprawnie sklasyfikował ponad 34\% rysunków zewnętrznych.
 Nie jest to zły wynik, biorąc pod uwagę niską złożoność modelu.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-7.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model ze zmienną liczbą wierzchołków.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-var-0d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków - Conv2D i Droput oraz spowolnienie uczenia}
 
 W modelu wprowadzone zostało zwiększenie liczby filtrów dla warstw Conv2D, zwiększenie parametru Dropout
@@ -75,7 +84,7 @@ Wydaje się, że model osiągnął pewną stabilność na niskim poziomie, co mo
 	\centering
 	\includegraphics[width=14cm]{resources/tests/images/v4/multiple_edges_1_bar.png}
 	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i Droput}
-	\label{Fig:tests-var-0c}
+	\label{Fig:tests-var-1c}
 \end{figure}
 \FloatBarrier
 
@@ -83,6 +92,16 @@ Osiągnięta stabilizacja modelu i brak znaczących różnic między wartościam
 czy straty na zbiorach treningowych i wdalidacyjnych, nie przełożyła się w sposób rewolucyjny na osiągi modelu.
 Model jednakże nie wypadł całkowicie źle - poprawnie sklasyfikował 36\% zewnętrznych grafów testowych,
 co plasuje go w czołówce testowanych modeli pod kątem realnej dokładności.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-8.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model ze zmienną liczbą wierzchołków
+		- Conv2D i Droput oraz spowolnienie uczenia.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-var-1d}
+\end{figure}
+\FloatBarrier
 
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków - modyfikacje połączone}
 
@@ -129,3 +148,12 @@ Wniosek jaki można wyciągnąć jest taki, że model zapamiętał dane treningo
 Model poprawnie wskazał tylko około 24\% grafów, lecz analiza jego wskaźników mówi nam,
 że jest to dzieło raczej przypadku, aniżeli poprawnego nauczenia się ogólnych wzorców danych.
 Jego dokładność walidacyjna była bardzo niestabilna.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-9.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model ze zmienną liczbą wierzchołków - modyfikacje połączone
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-2d}
+\end{figure}
+\FloatBarrier
