@@ -105,3 +105,6 @@ Numeracja stron powinna być automatyczna. ---- done
 Wszystkie główne elementy struktury pracy dyplomowej, a więc wstęp, kolejne rozdziały, spisy rysunków, tabel, wykresów, bibliografia, ewentualne aneksy oraz streszczenie muszą rozpoczynać się od nowej strony. ---- done
 
 Podpisane wykresy, rysunki, tabele i zdjęcia zamieszczamy w tekście centralnie w stosunku do wewnętrznego i zewnętrznego marginesu. ---- done
+
+##################### Cudzysłow #####################
+„
