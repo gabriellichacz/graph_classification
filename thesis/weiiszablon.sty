@@ -316,82 +316,43 @@
 \kindofthesis {\rodzajPracyPLEnd{\rodzajPracyNo}}
 \kindofthesisEN{\rodzajPracyEN{\rodzajPracyNo}}
 
-\newcommand{\makesummary}{
-\linespread{1}
-\begin{table}[h]
-{
-\begin{tabular}{|p{15cm}|}
-\hline
-\begin{minipage}[t]{10.0cm}
-\flushleft
-POLITECHNIKA RZESZOWSKA im. I. Łukasiewicza
+\newcommand{\makesummary} {
+  \thispagestyle{empty}
+  \setlength{\parindent}{0in}
+  \setlength{\parskip}{0em}
 
-Wydział Matematyki i Fizyki Stosowanej
-% \@department
+  \textbf{POLITECHNIKA RZESZOWSKA} \hfill Rzeszów, 2024 \\
+  \textbf{im. Ignacego Łukasiewicza} \\
+  \textbf{WYDZIAŁ MATEMATYKI I FIZYKI STOSOWANEJ} \\
 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{4.9cm}
-\flushright
-Rzeszów, \the\year
-\end{minipage}
-\\
-\begin{center}
-\textbf{STRESZCZENIE PRACY DYPLOMOWEJ 
-\MakeUppercase{\@kindofthesis}}
-\end{center}
-\begin{center}
-\textbf{\MakeUppercase{\@title}}
-\end{center}
+  \begin{center}
+    \textbf{STRESZCZENIE  PRACY  DYPLOMOWEJ }
+  \end{center}
 
-Autor: \@author, nr albumu: \@studentID
-	
-Opiekun: \@supervisor
-	
-Słowa kluczowe: \@abstractKeywords
-\\
-\\
-\begin{fixedSizeBox}
-\@abstract
-\end{fixedSizeBox}
-\\
-\hline
-\begin{minipage}[t]{10.0cm}
-\flushleft
-RZESZOW UNIVERSITY OF TECHNOLOGY
-		
-The Faculty of Mathematics and Applied Physics
-%\@departmentEN
+  \textbf{Tytuł:} \@title \\
+  \textbf{Autor:} \@author \\
+  \textbf{Promotor:} \@supervisor \\
+  \textbf{Słowa klucze:} \@abstractKeywords
+  \\
+  \@abstract
 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{4.9cm}
-\flushright
-Rzeszow, \the\year
-\end{minipage}
-\\
-\begin{center}
-\textbf{\MakeUppercase{\@kindofthesisEN} THESIS ABSTRACT}
-\end{center}
-\begin{center}
-\textbf{\MakeUppercase{\@titleEN}}
-\end{center}
+  \vfill
+  $$\noindent\rule{\textwidth}{2pt}$$
+  \vfill
 
-Author: \@author, nr albumu: \@studentID
-	
-Supervisor: \@supervisorEN
+  \textbf{RZESZOW UNIVERSITY OF TECHNOLOGY} \hfill Rzeszów, 2024 \\
+  \textbf{FACULTY OF MATHEMATICS AND APPLIED PHYSICS } \\
 
-Key words: \@abstractKeywordsEN
-\\
-\\
-\begin{fixedSizeBox}
-\@abstractEN
-\end{fixedSizeBox}
-\\
-\hline
-\end{tabular}
-}
-\end{table}
+  \begin{center}
+    \textbf{DIPLOMA THESIS ABSTRACT}
+  \end{center} 
+
+  \textbf{Title:} \@titleEN\\
+  \textbf{Author:} \@author \\
+  \textbf{Supervisor:}  \@supervisorEN \\
+  \textbf{Key words:} \@abstractKeywordsEN
+  \\
+  \@abstractEN
 }
 
 \endinput
