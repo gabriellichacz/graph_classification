@@ -48,6 +48,15 @@ Jest to zadowalający wynik, zważając na trudności innych modeli w poprawnym 
 Podejrzenia dotyczące przeuczenia modelu były więc bezpodstawne.
 Model całkiem dobrze nauczył się żądanych wzorców.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-10.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model ze zmienną liczbą wierzchołków i walidacją krzyżową.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-csvar-0d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Dropout oraz spowolnienie uczenia}
 
 Model stosuje zwiększone parametry filtrów dla warstw Conv2D, powiększony parametr Dropout z 0,2 do 0,5
@@ -99,6 +108,16 @@ oraz całkiem wysoki wynik modelu bez modyfikacji.
 Wnioskować można, że spowolnienie uczenia i zwiększenie liczby filtrów w warstwach Conv2D oraz zwiększenie parametru dropout,
 nie przyniosło oczekiwanych skutków.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-11.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez
+		zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - Conv2D i Dropout oraz spowolnienie uczenia.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-1d}
+\end{figure}
+\FloatBarrier
+
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków i walidacją krzyżową - modyfikacje połączone}
 
 Do modelu wprowadzone zostały wszystkie modyfikacje wymienione w rozdziale z modelem z walidacją krzyżową,
@@ -148,3 +167,13 @@ Wskazuje to na przeuczenie modelu i brak uczenia się wzorców ogólnych.
 Model ocenił poprawnie około 38\% klas grafów zewnętrznych, co nie jest złym wynikiem.
 W przypadku modeli z walidacją krzyżową, zastosowanie wszystkich przygotowanych modyfikacji modelu,
 nie do końca spełniło swoje złożenia, ale również nie pogorszyło wyniku.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-12.png}
+	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model
+		ze zmienną liczbą wierzchołków i walidacją krzyżową - modyfikacje połączone.
+		Przypisana klasa to X z X\% pewnością.}
+	\label{Fig:tests-cv-2d}
+\end{figure}
+\FloatBarrier
