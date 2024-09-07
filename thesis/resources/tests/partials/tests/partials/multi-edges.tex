@@ -1,3 +1,5 @@
+\textbf{Wersja podstawowa modelu ze zmienną liczbą wierzchołków}
+
 Dokładność modelu uczonego na grafach treningowych z liczbą wierzchołków od czterech do siedmiu,
 prezentuje się dość stabilnie po początkowej fazie wzrostu. Występują tylko drobne fluktuacje.
 Po kilku początkowych epokach, dokładność oscyluje wokół 95\%, dochodząc nawet do 100\%.
@@ -39,7 +41,7 @@ Z uwagi na bliskość wyników dla treningu i walidacji, można stwierdzić, że
 Model poprawnie sklasyfikował ponad 34\% rysunków zewnętrznych.
 Nie jest to zły wynik, biorąc pod uwagę niską złożoność modelu.
 
-\textbf{Zmodyfikowany model - Conv2D i Droput oraz spowolnienie uczenia}
+\textbf{Zmodyfikowany model ze zmienną liczbą wierzchołków - Conv2D i Droput oraz spowolnienie uczenia}
 
 W modelu wprowadzone zostało zwiększenie liczby filtrów dla warstw Conv2D, zwiększenie parametru Dropout
 oraz zastosowano wywołanie zwrotne, które spowalnia uczenie.
@@ -82,7 +84,7 @@ czy straty na zbiorach treningowych i wdalidacyjnych, nie przełożyła się w s
 Model jednakże nie wypadł całkowicie źle - poprawnie sklasyfikował 36\% zewnętrznych grafów testowych,
 co plasuje go w czołówce testowanych modeli pod kątem realnej dokładności.
 
-\textbf{Zmodyfikowany model}
+\textbf{Zmodyfikowany model ze zmienną liczbą wierzchołków - modyfikacje połączone}
 
 Do modelu wprowadzone zostały modyfikacje na wzór tych ze zmodyfikowanego modelu z walidacją krzyżową.
 Przetestowany został wariant z włączonymi wszystkimi modyfikacjami na raz.
