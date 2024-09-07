@@ -1,6 +1,6 @@
-Graf definiuje się jako pewną parę uporządkowaną $G = (V, E)$, gdzie $V$ zbiór wierzchołków,
-a $E$ to zbiór krawędzi, które łączą niektóre z tych wierzchołków.
-Takie obiekty mozna przedstawić graficznie jako reprezentację danych,
+Graf definiuje się jako pewną parę uporządkowaną $G = (V, E)$, gdzie $V$ to zbiór wierzchołków,
+a $E$ to zbiór krawędzi.
+Takie obiekty można przedstawić graficznie jako reprezentację danych,
 w której wartości są przedstawione w pewien uporządkowany sposób, zwykle w relacji do siebie nawzajem.
 „\textit{Stanowią wygodny aparat do modelowania różnych obiektów, (...) i odpowiednio interpretowane
 - mogą zawierać pewne informacje}”\cite{Wloch2008}.
@@ -15,44 +15,47 @@ W dziedzinach informatycznych, grafy stanowią fundament wielu algorytmów, taki
 algorytmy najkrótszej drogi, drzew rozpinających, czy modeli sieci.
 Przykładem może być tutaj wyszukiwanie najkrótszej trasy, chociażby w nawigacji GPS,
 gdzie wierzchołki odpowiadają skrzyżowaniom, a krawędzie drogom.
-W przypadku znajdowania najbardziej optymalnych tras, warto wymienić takie algorytmy jak $A*$, Bellmana-Forda czy Dijkstry.
+W przypadku znajdowania najbardziej optymalnych tras, warto wymienić takie algorytmy jak $A^*$, Bellmana-Forda czy Dijkstry.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=6cm]{resources/introduction/images/shortest_path.png}
 	\caption{Przykład grafu z wyznaczoną najkrótszą drogą od wierzchołka $A$ do $H$.
 		Zaznaczona została czeronymi okręgami.
-		Liczby przy krawędziach grafu oznaczają koszt przebycia odległości między wierzchołkami łączonymi daną krawędzią.}
+		Liczby przy krawędziach grafu oznaczają odległość między wierzchołkami łączonymi daną krawędzią.}
     \label{Fig:intro-1}
 \end{figure}
 
-Grafy, istotną rolę odgrywają w reprezentacji i modelowaniu struktur danych, takich jak bazy danych.
+Grafy istotną rolę odgrywają w reprezentacji i modelowaniu struktur danych, takich jak bazy danych.
 Najczęściej stosowane bazy danych, tj. relacyjne, zbudowane są w sposób, który grafy mogą doskonale zobrazować -
 wierzchołki odpowiadają kolumnom w tabelach a połączenia między nimi to krawędzie, reprezentujące relacje.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[height=7.5cm]{resources/introduction/images/database.png}
-	\caption{Przykładowy schemat relacyjnej bazy danych}
+	\caption{Przykładowy schemat relacyjnej bazy danych.
+		Źródło: opracowanie własne na podstawie danych:
+		https://www.kaggle.com/datasets/robikscube/flight-delay-dataset-20182022}
     \label{Fig:intro-2}
 \end{figure}
 
-W biologii, grafy pełnią ważną rolę w modelowaniu układu nerwowego, sieci białek,
+W biologii grafy pełnią ważną rolę w modelowaniu układu nerwowego, sieci białek,
 szlaków metabolicznych oraz interakcji między genami.
 W genetyce wykorzystuje się je między innymi do analizy drzew filogenetycznych,
 co pozwala chociażby na śledzenie relacji ewolucyjnych między organizmami,
-z liśćmi reprezentującymi żywe organizmy, a wierzchołkami pośrednimi jako ich wspólnymi przodkami \cite{Erciyes2023}.
+z wierzchołkami stopnia 1 reprezentującymi żywe organizmy,
+a wierzchołkami pośrednimi jako ich wspólnymi przodkami \cite{Erciyes2023}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=12cm]{resources/introduction/images/dino.png}
 	\caption{Filogenetyczne relacje Tyrannosaurinae.
-		Źródło: opracowanie własne na podstawie: Brusatte, S., Carr, T.
-		The phylogeny and evolutionary history of tyrannosauroid dinosaurs, Sci Rep 6, 20252 (2016)}
+		Źródło: opracowanie własne na podstawie:
+		Brusatte, S., Carr, T. The phylogeny and evolutionary history of tyrannosauroid dinosaurs, Sci Rep 6, 20252 (2016)}
     \label{Fig:intro-3}
 \end{figure}
 
-Natomiast w chemii, grafy służą do reprezentacji struktury molekularnej związków chemicznych,
+Natomiast w chemii grafy służą do reprezentacji struktury molekularnej związków chemicznych,
 umożliwiając naukowcom analizę ich właściwości i reaktywności.
 Znaczenie teorii grafów dla chemii wynika głównie z istnienia zjawiska izomeryzmu,
 które jest uzasadnione przez teorię struktury chemicznej.
