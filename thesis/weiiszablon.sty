@@ -152,9 +152,9 @@
 
 % numery zestawow zadan dla poszczegolnych grup
 \def\PLdefault {wpisz-rodzaj-pracyPL}    
-\setcase 1 {inżynierska}
-\setcase 2 {magisterska}
-\setcase 3 {doktorska}
+\setcase 1 {INZYNIERSKA}
+\setcase 2 {MAGISTERSKA}
+\setcase 3 {DOKTORSKA}
 % NormalTeXSyntaxOff
 
 % NormalTeXSyntaxON
@@ -164,9 +164,9 @@
 
 % numery zestawow zadan dla poszczegolnych grup
 \def\PLdefault {wpisz-rodzaj-pracy}    
-\setcase 1 {inżynierskiej}
-\setcase 2 {magisterskiej}
-\setcase 3 {doktorskiej}
+\setcase 1 {INŻYNIERSKIEJ}
+\setcase 2 {MAGISTERSKIEJ}
+\setcase 3 {DOKTORSKIEJ}
 % NormalTeXSyntaxOff 
 
 % NormalTeXSyntaxON
@@ -238,6 +238,9 @@
 \newcommand\kindofthesis[1]{\renewcommand\@kindofthesis{#1}}
 \newcommand\@kindofthesis{\@latex@error{No \noexpand\kindofthesis given}\@ehc}
 
+\newcommand\faculty[1]{\renewcommand\@faculty{#1}}
+\newcommand\@faculty{\@latex@error{No \noexpand\faculty given}\@ehc}
+
 \newcommand\kindofthesisEN[1]{\renewcommand\@kindofthesisEN{#1}}
 \newcommand\@kindofthesisEN{\@latex@error{No \noexpand\kindofthesisEN given}\@ehc}
 
@@ -264,28 +267,49 @@
 
 % strona tytułowa pracy
 \renewcommand{\maketitle}{
-\begin{titlepage}
-\begin{center}
-\vskip5cm
-\includegraphics[width=12.5cm]{auxiliary/wmifs_pl.png}
-\\[5cm]
-{\textbf{\Large \@author}}
-\\[.5cm]
-{\Large \@title}
-\\[5cm]
-{\textbf{\Large Praca \rodzajPracyPLTitle{\rodzajPracyNo}}} 
-\end{center}
-~\\
-\begin{flushleft}
-{\Large Promotor:}
+  \thispagestyle{empty}
+  \begin{titlepage}
+    \def\dystans{1cm}
 
-{\Large \@supervisor}
-\end{flushleft}
-~\\[0.5cm]
-\begin{center}
-{\Large Rzeszów, \the\year}
-\end{center}
-\end{titlepage}
+    \begin{center}
+      \includegraphics[scale=0.8]{auxiliary/prz_pl.png}\\
+      {\Large Politechnika Rzeszowska
+      im. Ignacego Łukasiewicza \\
+      Wydział Matematyki i Fizyki Stosowanej}
+    \end{center}
+    \vspace{1.3cm}
+    
+    \begin{center}
+      {\Large \textsc{\textbf{PRACA \rodzajPracyPLTitle{\rodzajPracyNo}}} \\}
+      \vspace{0.5cm}
+      {\large kierunek studiów: \@faculty}
+    \end{center}
+    \vspace{1.1cm}
+    
+    \begin{center}
+      {\LARGE\textsc{\@title} \\}
+    \end{center}
+    \vspace{1.1cm}
+
+    \begin{center}
+      {\Large {\@author}}
+    \end{center}
+    \vspace{1cm}
+
+    \begin{flushright}		
+      \begin{minipage}{0.5\textwidth}
+        \begin{flushright}
+          {\large Promotor \\
+          dr \@supervisor}
+        \end{flushright}
+      \end{minipage}
+    \end{flushright}
+    \vfill
+
+    \begin{center}
+      {\Large Rzeszów \the\year}
+    \end{center}
+  \end{titlepage}
 }
 
 % strona koncowa pracy
