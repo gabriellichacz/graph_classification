@@ -14,6 +14,19 @@ jego rodzaje oraz sam proces działania.
 W pracy przedstawiono proces tworzenia zbioru danych za pomocą skryptów R,
 oraz kolejne kroki budowy modeli sztucznych sieci neuronowych do rozpoznawania grafów.
 Przeprowadzono analizę ich skuteczności zarówno na danych syntetycznych, jak i~rzeczywistych.
+Sieci neuronowe były trenowane na wygenerowanych rysunkach grafów,
+co umożliwiło stworzenie modeli do klasyfikacji grafów zewnętrznych.
+Następnie modele te przetestowano na rzeczywistych rysunkach grafów,
+aby zweryfikować ich praktyczną użyteczność oraz ocenić,
+w jakim stopniu ich teoretyczna dokładność przekłada się na realne zastosowania.
+
+W testach zastosowano naukę na maksymalnie 75 epokach.
+Analizując krzywe dokładności i~straty modeli, można dojść do wniosku,
+że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub znikome pozytywne.
+Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
+są za małe, by poprawnie nauczyć większość modeli.
+Modele osiągały dość wysokie dokładności już po kilku pierwszych epokach,
+ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
 
 %%%%%%%%%%%%%% % -- TO DO -- %
 % Piszę referat ze sprawozdaniem na temat tworzenia modeli sztucznych sieci neuronowych,
@@ -23,12 +36,6 @@ Przeprowadzono analizę ich skuteczności zarówno na danych syntetycznych, jak 
 % Zaprezentowane zostały skrypty modeli oraz generatora grafów.
 % Opisany został każdy model.
 % Napisz jakieś podsumowanie do tego referatu.
-
-Sieci neuronowe zostały wyszkolone na wygenerowanych rysunkach grafów,
-co umożliwiło stworzenie efektywnych modeli do klasyfikacji.
-Następnie modele te przetestowano na rzeczywistych rysunkach grafów,
-aby zweryfikować ich praktyczną użyteczność oraz ocenić,
-w jakim stopniu ich teoretyczna dokładność przekłada się na realne zastosowania.
 
 Wyniki eksperymentów pokazały, że modele dobrze radzą sobie z~zadaniem klasyfikacji grafów,
 osiągając wysokie wartości dokładności zarówno w~trakcie treningu, jak i~walidacji.
@@ -46,14 +53,6 @@ w zadaniach związanych z~analizą i~klasyfikacją grafów,
 co otwiera nowe możliwości w~kontekście przetwarzania danych graficznych w~praktycznych zastosowaniach.
 
 %%%%%%%%%%%%%%
-W testach zastosowano naukę na maksymalnie 75 epokach.
-Analizując krzywe dokładności i~straty modeli, można dojść do wniosku,
-że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub znikome pozytywne.
-Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
-są za małe, by poprawnie nauczyć większość modeli.
-Modeli osiągały dość wysokie dokładności już po kilku pierwszych epokach,
-ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
-
 W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
 ze względu na powstające problemy z~procesem nauczania, po owej epoce.
 
