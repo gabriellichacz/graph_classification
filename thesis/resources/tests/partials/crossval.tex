@@ -75,6 +75,8 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 		może pomóc w~lepszej konwergencji modelu.
 \end{itemize}
 
+\clearpage
+
 \subsubsection{Zmodyfikowany model z~walidacją krzyżową - Conv2D i~Dropout}
 
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z~walidacją krzyżową - wersja 1,
@@ -121,7 +123,7 @@ zważając na wahania wskaźników.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_1_txt.png}
+	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_1_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z~walidacją krzyżową - Conv2D i~Dropout}
 	\label{Fig:tests-cv-1b}
 \end{figure}
@@ -201,7 +203,7 @@ i spore skoki wartości strat modelu prowadzą do konkluzji,
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_2_txt.png}
+	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_2_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z~walidacją krzyżową - normalizacja wsadowa}
 	\label{Fig:tests-cv-2b}
 \end{figure}
@@ -241,6 +243,8 @@ W teorii, powinno to uodpornić model na grafy różnej wielkości.
 W kolejnej linii skryptu, wyżej stworzony sekwencyjny model został zastosowany do zbioru danych treningowych.
 Dalej, na zbiorach uczących i~walidacyjnych, użyte zostały funkcje cachujące dane - przyspiesza to proces uczenia.
 
+% \clearpage
+
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu poprzedzającego tworzenie modelu z~walidacją krzyżową
 	- wersja 3,label={tests-model-crossval3}]
 	data_augmentation = tf.keras.Sequential([
@@ -279,7 +283,7 @@ co wyraża się w~krzywych dokładności oraz straty modelu.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_3_txt.png}
+	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_3_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z~walidacją krzyżową - augmentacja danych}
 	\label{Fig:tests-cv-3b}
 \end{figure}
@@ -344,7 +348,7 @@ co wskazuje na przeuczenie modelu.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[height=5.5cm]{resources/tests/images/v4/crossvalid_4_txt.png}
+	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_4_txt.png}
 	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z~walidacją krzyżową - spowolnienie uczenia}
 	\label{Fig:tests-cv-4b}
 \end{figure}
