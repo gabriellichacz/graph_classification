@@ -29,21 +29,21 @@ Modele osiągały dość wysokie dokładności już po kilku pierwszych epokach,
 ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
 W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
 ze względu na powstające problemy z~procesem nauczania, po owej epoce.
+
 Uczenie modeli z~wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
 niż nauka na rysunkach grafów o~zmiennej liczbie wierzchołków.
+
 Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
+
 W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
 przez co modele te testach na danych zewnętrznych,
 klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
 
-%%%%%%%%%%%%%% % -- TO DO -- %
-Wyniki eksperymentów pokazały, że modele dobrze radzą sobie z~zadaniem klasyfikacji grafów,
-osiągając wysokie wartości dokładności zarówno w~trakcie treningu, jak i~walidacji.
-Dokładność teoretyczna modeli była bardzo zbliżona do wyników na rzeczywistych danych testowych,
-co potwierdza skuteczność zastosowanych architektur ANN.
-W referacie szczegółowo opisano także metody generowania grafów,
-skrypty użyte do treningu modeli, oraz charakterystykę samych sieci neuronowych.
+Wyniki eksperymentów pokazały, że modele miewają problemy z przeuczeniem,
+ale w przypadku części modeli osiągnięta wysoka dokładność na zbiorach treningowych i walidacyjnych,
+przełożyła się na dobre wyniki klasyfikacji danych zewnętrznych.
 
+%%%%%%%%%%%%%% % -- TO DO -- %
 Pomimo ogólnie dobrych wyników,
 zaobserwowano drobne różnice pomiędzy wynikami na danych syntetycznych i~rzeczywistych,
 co sugeruje, że dalsze badania mogą skupić się na udoskonaleniu procesu generowania grafów
