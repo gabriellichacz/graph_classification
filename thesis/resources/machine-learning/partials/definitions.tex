@@ -1,4 +1,4 @@
-Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Fenner2020}, \cite{Geron2020},
+Definicje zostały zaczerpnięte z~literatury, z~pozycji \cite{Fenner2020}, \cite{Geron2020},
 \cite{Seenappa} , \cite{Goodfellow2016}, \cite{vanDerMaaten}, \cite{strGoogle} oraz \cite{strIbm}.
 
 \noindent
@@ -15,7 +15,7 @@ Zbiór walidacjny - zbiór danych, który jest używany do sprawdzenia wydajnoś
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
 Zbiór testowy - zbiór danych używany do oceny wydajności modelu uczenia maszynowego
-po przeszkoleniu go na zbiorze treningowym i ocenie na zbiorze walidacyjnym.
+po przeszkoleniu go na zbiorze treningowym i~ocenie na zbiorze walidacyjnym.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -25,32 +25,32 @@ Klasyfikacja to proces polegający na przypisaniu obiektów do wcześniej zdefin
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Regresja liniowa - metoda, w której model liniowy przewiduje wyniki na podstawie ważonej sumy cech wejściowych oraz stałej,
+Regresja liniowa - metoda, w~której model liniowy przewiduje wyniki na podstawie ważonej sumy cech wejściowych oraz stałej,
 nazywanej punktem obciążenia lub punktem przecięcia.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Walidacja krzyżowa to proces, w którym dane dzielone są na kilka części (przyjmujemy $k$) zwanych „złożeniami”
-(lub „foldami” - stąd nazwa $k$-Fold Cross-Validation). Model jest trenowany na $k-1$ złożeń, a testowany na pozostałym z nich.
-Proces ten jest powtarzany $k$ razy, za każdym razem używając innego złożenia do testowania, a pozostałych do treningu.
-Jeżeli różnica w wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
+Walidacja krzyżowa to proces, w~którym dane dzielone są na kilka części (przyjmujemy $k$) zwanych „złożeniami”
+(lub „foldami” - stąd nazwa $k$-Fold Cross-Validation). Model jest trenowany na $k-1$ złożeń, a~testowany na pozostałym z~nich.
+Proces ten jest powtarzany $k$ razy, za każdym razem używając innego złożenia do testowania, a~pozostałych do treningu.
+Jeżeli różnica w~wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
 Z drugiej strony, jeżeli wszystkie wyniki są podobne, można mieć dużą dozę pewności, że niezależnie od konkretnego podziału
-na dane testowe i treningowe, wydajność systemu będzie podobna.
-Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z każdej iteracji.
+na dane testowe i~treningowe, wydajność systemu będzie podobna.
+Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z~każdej iteracji.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Bias (błąd obciążenia) to błąd wynikający z niepoprawnych założeń w procesie uczenia maszynowego.
-Oznacza różnicę między przewidywaną wartością modelu a rzeczywistą wartością.
+Bias (błąd obciążenia) to błąd wynikający z~niepoprawnych założeń w~procesie uczenia maszynowego.
+Oznacza różnicę między przewidywaną wartością modelu a~rzeczywistą wartością.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Funkcja aktywacji w sieci neuronowej to nieliniowa funkcja matematyczna,
+Funkcja aktywacji w~sieci neuronowej to nieliniowa funkcja matematyczna,
 która umożliwia sieci modelowanie złożonych zależności.
-Jej rolą jest przekształcanie sumy ważonej wejść i wartości biasu,
+Jej rolą jest przekształcanie sumy ważonej wejść i~wartości biasu,
 co pozwala na tworzenie nieliniowych funkcji wyjściowych.
 Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T * W)$, gdzie:
 $Y'$ to przewidywana wartość wyjściowa,
@@ -63,8 +63,8 @@ a $g$ to funkcja aktywacji.
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
 Funkcja ReLU (ang. Recified Linear Unit) - funkcja aktywacji.
-Jest ciągła, ale nieróżniczkowalna w punkcie z = 0, a jej pochodna dla z < 0 wynosi 0.
-Spisuje się bardzo dobrze w modelowaniu złożonych funkcji, a dodatkowym aututem jest jej szybkość przetwarzania.
+Jest ciągła, ale nieróżniczkowalna w~punkcie z~= 0, a~jej pochodna dla z~< 0 wynosi 0.
+Spisuje się bardzo dobrze w~modelowaniu złożonych funkcji, a~dodatkowym aututem jest jej szybkość przetwarzania.
 Nie ma maksymalnej wartości wyjściowej.
 Funkcja ReLU definiowana jest wzorem:
 $g(x) = max(0, x)$
@@ -74,7 +74,7 @@ $g(x) = max(0, x)$
 	\includegraphics[width=8cm]{resources/machine-learning/images/def_relu.png}
 	\caption{Funkcja aktywacji ReLU.
 		Źródło: opracowanie własne na podstawie:
-        Géron A.: Uczenie maszynowe z użyciem Scikit-Learn i TensorFlow. Helion SA, Gliwice 2020.}
+        Géron A.: Uczenie maszynowe z~użyciem Scikit-Learn i~TensorFlow. Helion SA, Gliwice 2020.}
     \label{Fig:def-1}
 \end{figure}
 \FloatBarrier
@@ -82,7 +82,7 @@ $g(x) = max(0, x)$
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Przeuczenie to sytuacja, w której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
+Przeuczenie to sytuacja, w~której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
 co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na podstawie nowych danych spoza zbioru treningowego.
 
 \begin{figure}[ht]
@@ -96,7 +96,7 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Regularyzacja to technika stosowana w celu zapobiegania przeuczeniu modelu.
+Regularyzacja to technika stosowana w~celu zapobiegania przeuczeniu modelu.
 Działa poprzez dodanie kary do funkcji kosztu, co penalizuje zbyt złożone modele.
 
 \noindent
@@ -109,7 +109,7 @@ Zazwyczaj powinno się stosować ten sam typ regularyzatora we wszystkich wartst
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Epoka to pełny cykl przez cały zbiór danych treningowych, w której model przetwarza wszystie dostępne dane treningowe.
+Epoka to pełny cykl przez cały zbiór danych treningowych, w~której model przetwarza wszystie dostępne dane treningowe.
 Liczba epok określa ile razy model przejdzie przez cały zbiór danych treningowych.
 
 \noindent
@@ -120,9 +120,9 @@ Dokładność modelu to stosunek oznaczonych prawidłowo wartości do przykład�
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Macierz pomyłek w sieci neuronowej to tabela służąca do oceny jakości modelu klasyfikacyjnego.
-Przedstawia liczbę przypadków, w których próbki z klasy A zostały zaklasyfikowane jako należące do klasy B.
-Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane są z rzeczywistymi wartościami docelowymi.
+Macierz pomyłek w~sieci neuronowej to tabela służąca do oceny jakości modelu klasyfikacyjnego.
+Przedstawia liczbę przypadków, w~których próbki z~klasy a~zostały zaklasyfikowane jako należące do klasy B.
+Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane są z~rzeczywistymi wartościami docelowymi.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -130,7 +130,7 @@ Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane
 Strata modelu to wartość, która wskazuje,
 jak bardzo prognozy modelu różnią się od rzeczywistych wartości dla pojedynczych przykładów.
 Idealnie przewidziane wartości mają stratę równą zeru,
-natomiast im większa różnica między prognozami a rzeczywistością, tym wyższa jest strata.
+natomiast im większa różnica między prognozami a~rzeczywistością, tym wyższa jest strata.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -143,7 +143,7 @@ co umożliwia stosowanie jej na dużych, rzeczywistych zbiorach danych.
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Entropia krzyżowa pomiędzy dwoma rozkładami prawdopodobieństwa $p$ i $q$ jest definiowana wzorem
+Entropia krzyżowa pomiędzy dwoma rozkładami prawdopodobieństwa $p$ i~$q$ jest definiowana wzorem
 $H(p,q) = -\sum p(x) \log q(x) $ (przynajmniej wtedy, gdy obydwa rozkłady są dyskretne).
 
 \noindent
@@ -158,17 +158,17 @@ kolejne treningi nie powinny przynosić dalszych korzyści lub owe korzyści są
 \incrementdefinitionIndex
 Normalizacja wsadowa (ang. batch normalization) to operacja pozwalająca modelowi określić optymalną skalę
 i średnią danych wejściowych dla każdej warstwy.
-Z tego też powodu stosowana jest przed funkcją aktywacji w każdej warstwie.
-W jej wyniku, dane wejściowe zostają wyśrodkowane i znormalizowane,
+Z tego też powodu stosowana jest przed funkcją aktywacji w~każdej warstwie.
+W jej wyniku, dane wejściowe zostają wyśrodkowane i~znormalizowane,
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Caching danych przyspiesza naukę modelu. Proces ten umieszcza zawartość danych w pamięci podręcznej GPU.
-Dzięki temu każdy przykład ze zbioru danych jest odczytywany i przetwarzany tylko raz, a nie jak domyslnie - raz na epokę.
+Caching danych przyspiesza naukę modelu. Proces ten umieszcza zawartość danych w~pamięci podręcznej GPU.
+Dzięki temu każdy przykład ze zbioru danych jest odczytywany i~przetwarzany tylko raz, a~nie jak domyslnie - raz na epokę.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Pobieranie wstępne (ang. prefetching) to metoda, w której podczas przetwarzania przez algrytm uczenia jednej grupy,
+Pobieranie wstępne (ang. prefetching) to metoda, w~której podczas przetwarzania przez algrytm uczenia jednej grupy,
 zestaw danych równolegle przygotowuje kolejną grupę.

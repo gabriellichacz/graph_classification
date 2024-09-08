@@ -1,28 +1,28 @@
 Głębokie sieci neuronowe, opierają się na strukturze warstw,
-które przekształcają i analizują dane wejściowe, aby uzyskać z nich pożądane cechy.
-Każda z tych warstw pełni pewną, specyficzną funkcję, począwszy od przeskalowania danych,
+które przekształcają i~analizują dane wejściowe, aby uzyskać z~nich pożądane cechy.
+Każda z~tych warstw pełni pewną, specyficzną funkcję, począwszy od przeskalowania danych,
 przez konwolucje (przekształcenie macierzowe danych),
 aż po bardziej zaawansowane operacje, umożliwiając modelowi sprawniejsze uczenie się bardziej złożonych wzorców.
 \begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]   
-	\item Warstwa Flatten (spłaszczona) ma za zadanie przekształcić każdy obraz wejściowy w tablicę jednowymiarową.
-		Nie zawiera żadnych parametrów, a jej jedynym celem jest proste, wstępne przetworzenie danych \cite{Geron2020}.
+	\item Warstwa Flatten (spłaszczona) ma za zadanie przekształcić każdy obraz wejściowy w~tablicę jednowymiarową.
+		Nie zawiera żadnych parametrów, a~jej jedynym celem jest proste, wstępne przetworzenie danych \cite{Geron2020}.
 	\item Warstwa Dense (w pełni połączona) zarządza samodzielnie swoją macierzą wag,
-		zawierającą wszystkie wagi połączeń między neuronami, a wejściami do nich oraz wekorem obciążeń.
-		Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w dopasowaniu do danych treningowych.
+		zawierającą wszystkie wagi połączeń między neuronami, a~wejściami do nich oraz wekorem obciążeń.
+		Zawiera najczęściej bardzo dużo parametrów, dzięki czemu model uzyskuje swobodę w~dopasowaniu do danych treningowych.
 		Jednocześnie, grozi mu również przez to ryzyko przetrenowania,
-		zwłaszcza w przypadku korzystania z mniejszych zestawów danych \cite{Geron2020}.
+		zwłaszcza w~przypadku korzystania z~mniejszych zestawów danych \cite{Geron2020}.
     \item Warstwa Rescaling mnoży każde wejście przez ustalony współczynnik skalujący.
 		Zastosowanie tej techniki jest przydatne, gdy różne cechy danych wejściowych mają różne zakresy wartości.
-		Poprzez jednolite skalowanie, model może efektywniej uczyć się wzorców, a proces optymalizacji staje się stabilniejszy \cite{Fenner2020}.
-	\item Warstwa Conv2D tworzy jądro splotu, które jest nakładane na dane wejściowe w jednym wymiarze przestrzennym (lub czasowym), 
+		Poprzez jednolite skalowanie, model może efektywniej uczyć się wzorców, a~proces optymalizacji staje się stabilniejszy \cite{Fenner2020}.
+	\item Warstwa Conv2D tworzy jądro splotu, które jest nakładane na dane wejściowe w~jednym wymiarze przestrzennym (lub czasowym), 
 		aby wygenerować tensor danych wyjściowych.
 		Dodatkowo, jeśli stosowana jest funkcja aktywacji, jest ona stosowana również do danych wyjściowych \cite{Geron2020}.
-	\item Warstwa MaxPooling2D dokonuje redukcji wymiarów danych wejściowych wzdłuż ich wymiarów przestrzennych (wysokości i szerokości),
-		wybierając maksymalną wartość z każdego okna o rozmiarze określonym przez wybrany współczynnik $pool\_size$,
+	\item Warstwa MaxPooling2D dokonuje redukcji wymiarów danych wejściowych wzdłuż ich wymiarów przestrzennych (wysokości i~szerokości),
+		wybierając maksymalną wartość z~każdego okna o~rozmiarze określonym przez wybrany współczynnik $pool\_size$,
 		dla każdego kanału danych wejściowych.
-		Okno to jest przesuwane o określoną liczbę kroków wzdłuż obu wymiarów \cite{Geron2020}.
-	\item Warstwa Dropout losowo zeruje jednostki wejściowe z prawdopodobieństwem określonym
+		Okno to jest przesuwane o~określoną liczbę kroków wzdłuż obu wymiarów \cite{Geron2020}.
+	\item Warstwa Dropout losowo zeruje jednostki wejściowe z~prawdopodobieństwem określonym
 		przez wybrany współczynnik dropout na każdym etapie treningu, co pomaga unikać przeuczenia modelu.
-		Jednostki, które nie zostały wyzerowane, są skalowane w górę przez mnożenie przez $\frac{1}{1 - współczynnikDropout}$,
+		Jednostki, które nie zostały wyzerowane, są skalowane w~górę przez mnożenie przez $\frac{1}{1 - współczynnikDropout}$,
 		aby suma wartości wejściowych pozostała niezmieniona \cite{Geron2020}.
 \end{itemize}

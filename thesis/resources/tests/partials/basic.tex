@@ -1,17 +1,17 @@
 \subsubsection{Model podstawowy uczony na grafach czterowierzchołkowych}
 
-Dokładność modelu podstawowego, uczonego na grafach z czterema wierzchołkami stopniowo rosnie,
-zaczynając od około 40\% i osiągając prawie 90\% pod koniec procesu uczenia.
+Dokładność modelu podstawowego, uczonego na grafach z~czterema wierzchołkami stopniowo rosnie,
+zaczynając od około 40\% i~osiągając prawie 90\% pod koniec procesu uczenia.
 Może to sugerować, że model dobrze uczy się na danych treningowych.
 Dokładność na danych walidacyjnych jest zbliżona do wcześniej przytoczonej.
-Wskazuje to, że model dobrze radzi sobie z generalizacją na nowych danych.
+Wskazuje to, że model dobrze radzi sobie z~generalizacją na nowych danych.
 
-Strata na danych treningowych gwałtownie spada z około 1,75 do około 0,25 w ciągu pierwszych dziesięciu epok,
+Strata na danych treningowych gwałtownie spada z~około 1,75 do około 0,25 w~ciągu pierwszych dziesięciu epok,
 po czym stabilizuje się.
 Wskazuje to na szybkie uczenie się na na danych treningowych.
 Strata na danych walidacyjnych jest nieznacznie bardziej zmienna,
-z kilkoma wzrostami w późniejszych epokach.
-Możliwa jest więc trudność z generalizacją na nowych danych.
+z kilkoma wzrostami w~późniejszych epokach.
+Możliwa jest więc trudność z~generalizacją na nowych danych.
 
 \begin{figure}[ht]
 	\centering
@@ -21,8 +21,8 @@ Możliwa jest więc trudność z generalizacją na nowych danych.
 \end{figure}
 \FloatBarrier
 
-Ogólnie rzecz biorąc, model wydaje się dobrze uczyć na danych treningowych i generalizować na danych walidacyjnych,
-chociaż zmienność straty walidacyjnej może wskazywać na pewne problemy z przeuczeniem.
+Ogólnie rzecz biorąc, model wydaje się dobrze uczyć na danych treningowych i~generalizować na danych walidacyjnych,
+chociaż zmienność straty walidacyjnej może wskazywać na pewne problemy z~przeuczeniem.
 
 \begin{figure}[ht]
 	\centering
@@ -47,7 +47,7 @@ zaważając że jest to najbardziej podstawowa wersja testowanego modelu.
 	\centering
 	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/cycle-1.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model podstawowy uczony na grafach czterowierzchołkowych.
-		Przypisana klasa to graf pełny z 99,97\% pewnością.}
+		Przypisana klasa to graf pełny z~99,97\% pewnością.}
 	\label{Fig:tests-base-1d}
 \end{figure}
 \FloatBarrier
@@ -78,15 +78,15 @@ zaważając że jest to najbardziej podstawowa wersja testowanego modelu.
 
 \subsubsection{Model podstawowy uczony na grafach sześciowierzchołkowych}
 
-Kolejny warty uwagi wynik został uzyskany za pomocą podstawowego modelu, ale uczonego na grafach o sześciu wierzechołkach.
-Dokładność zarówno dla zbioru treningowego, jak i walidacyjnego, bardzo szybko wzrasta już w kilku pierwszych epokach
-i osiąga bardzo wysoki wynik, bo prawie 100\%.
-Występuje kilka spadków obu krzywych, z czego jeden nawet do 80\%.
-Ogólnie, po około 10 epokach, dokładność dla obu zestawów danych jest bardzo zbliżona i stabilizuje się na poziomie około 99\%.
+Kolejny warty uwagi wynik został uzyskany za pomocą podstawowego modelu, ale uczonego na grafach o~sześciu wierzechołkach.
+Dokładność zarówno dla zbioru treningowego, jak i~walidacyjnego, bardzo szybko wzrasta już w~kilku pierwszych epokach
+i~osiąga bardzo wysoki wynik, bo prawie 100\%.
+Występuje kilka spadków obu krzywych, z~czego jeden nawet do 80\%.
+Ogólnie, po około 10 epokach, dokładność dla obu zestawów danych jest bardzo zbliżona i~stabilizuje się na poziomie około 99\%.
 
-Strata, podobnie jak dokładnośc, spada w ciągu początkowych epok procesu nauczania do niskich wartości, bo około 0,25.
-W ciągu kolejnych epok, aż do końca, widać minimalny trend malejący, z trzema wzrostami straty do około wartości 0,5 na zbiorze walidacyjnym.
-Może to oznaczać, że w tych punktach model napotyka na trudniejsze przypadki testowe.
+Strata, podobnie jak dokładność, spada w~ciągu początkowych epok procesu nauczania do niskich wartości, bo około 0,25.
+W ciągu kolejnych epok, aż do końca, widać minimalny trend malejący, z~trzema wzrostami straty do około wartości 0,5 na zbiorze walidacyjnym.
+Może to oznaczać, że w~tych punktach model napotyka na trudniejsze przypadki testowe.
 
 \begin{figure}[ht]
 	\centering
@@ -96,10 +96,10 @@ Może to oznaczać, że w tych punktach model napotyka na trudniejsze przypadki 
 \end{figure}
 \FloatBarrier
 
-Różnice między wartościami straty i dokładności dla zbioru walidacyjnego i testowego są niewielkie.
+Różnice między wartościami straty i~dokładności dla zbioru walidacyjnego i~testowego są niewielkie.
 Nie widać również znaczących fluktuacji.
-Krzywe dokładności i straty sugerują, że model może być poprawnie nauczony ogólnych wzorców
-i nie być nadmiernie dopasowanym do danych treningowych.
+Krzywe dokładności i~straty sugerują, że model może być poprawnie nauczony ogólnych wzorców
+i~nie być nadmiernie dopasowanym do danych treningowych.
 
 \begin{figure}[ht]
 	\centering
@@ -126,7 +126,7 @@ jest wynikiem zdecydowanie lepszym niż przypisywanie klas grafów losowo.
 	\centering
 	\includegraphics[width=10cm]{../graph_classification/test_graphs/drawn/full-9.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model podstawowy uczony na grafach sześciowierzchołkowych.
-		Przypisana klasa to graf pełny z 100\% pewnością.}
+		Przypisana klasa to graf pełny z~100\% pewnością.}
 	\label{Fig:tests-base-3d}
 \end{figure}
 \FloatBarrier

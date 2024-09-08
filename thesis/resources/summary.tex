@@ -1,51 +1,51 @@
 % -- TO DO -- %
 % Piszę referat ze sprawozdaniem na temat tworzenia modeli sztucznych sieci neuronowych,
-% które uczą się na rysunkach grafów, a później są testowane na realnych rysunkach grafów
-% i sprawdzana jest ich dokładność teoretyczna oraz realna.
+% które uczą się na rysunkach grafów, a~później są testowane na realnych rysunkach grafów
+% i~sprawdzana jest ich dokładność teoretyczna oraz realna.
 % Przed testami wprowadzony został temat, przegląd literatury oraz zarysowany temat uczenia maszynowego.
 % Zaprezentowane zostały skrypty modeli oraz generatora grafów.
 % Opisany został każdy model.
 % Napisz jakieś podsumowanie do tego referatu.
 
 W przeprowadzonym badaniu przedstawiono proces budowy modeli sztucznych sieci neuronowych (ANN) do rozpoznawania grafów,
-a także analizę ich skuteczności zarówno na danych syntetycznych, jak i rzeczywistych.
+a także analizę ich skuteczności zarówno na danych syntetycznych, jak i~rzeczywistych.
 Sieci neuronowe zostały wyszkolone na wygenerowanych rysunkach grafów,
 co umożliwiło stworzenie efektywnych modeli do klasyfikacji.
 Następnie modele te przetestowano na rzeczywistych rysunkach grafów,
 aby zweryfikować ich praktyczną użyteczność oraz ocenić,
 w jakim stopniu ich teoretyczna dokładność przekłada się na realne zastosowania.
 
-Wyniki eksperymentów pokazały, że modele dobrze radzą sobie z zadaniem klasyfikacji grafów,
-osiągając wysokie wartości dokładności zarówno w trakcie treningu, jak i walidacji.
+Wyniki eksperymentów pokazały, że modele dobrze radzą sobie z~zadaniem klasyfikacji grafów,
+osiągając wysokie wartości dokładności zarówno w~trakcie treningu, jak i~walidacji.
 Dokładność teoretyczna modeli była bardzo zbliżona do wyników na rzeczywistych danych testowych,
 co potwierdza skuteczność zastosowanych architektur ANN.
 W referacie szczegółowo opisano także metody generowania grafów,
 skrypty użyte do treningu modeli, oraz charakterystykę samych sieci neuronowych.
 
 Pomimo ogólnie dobrych wyników,
-zaobserwowano drobne różnice pomiędzy wynikami na danych syntetycznych i rzeczywistych,
+zaobserwowano drobne różnice pomiędzy wynikami na danych syntetycznych i~rzeczywistych,
 co sugeruje, że dalsze badania mogą skupić się na udoskonaleniu procesu generowania grafów
-lub wprowadzeniu dodatkowych mechanizmów regularyzacyjnych w celu poprawy zdolności generalizacji modeli.
-Przedstawione w referacie badania wskazują na wysoki potencjał sztucznych sieci neuronowych
-w zadaniach związanych z analizą i klasyfikacją grafów,
-co otwiera nowe możliwości w kontekście przetwarzania danych graficznych w praktycznych zastosowaniach.
+lub wprowadzeniu dodatkowych mechanizmów regularyzacyjnych w~celu poprawy zdolności generalizacji modeli.
+Przedstawione w~referacie badania wskazują na wysoki potencjał sztucznych sieci neuronowych
+w zadaniach związanych z~analizą i~klasyfikacją grafów,
+co otwiera nowe możliwości w~kontekście przetwarzania danych graficznych w~praktycznych zastosowaniach.
 
 %%%%%%%%%%%%%%
 W testach zastosowano naukę na maksymalnie 75 epokach.
-Analizując krzywe dokładności i straty modeli, można dojść do wniosku,
+Analizując krzywe dokładności i~straty modeli, można dojść do wniosku,
 że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub znikome pozytywne.
 Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
 są za małe, by poprawnie nauczyć większość modeli.
 Modeli osiągały dość wysokie dokładności już po kilku pierwszych epokach,
-ale zdecydowana większość z nich, z biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
+ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
 
 W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
-ze względu na powstające problemy z procesem nauczania, po owej epoce.
+ze względu na powstające problemy z~procesem nauczania, po owej epoce.
 
-Uczenie modeli z wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
-niż nauka na rysunkach grafów o zmiennej liczbie wierzchołków.
+Uczenie modeli z~wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
+niż nauka na rysunkach grafów o~zmiennej liczbie wierzchołków.
 
-Skomplikowaność modelu i zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
+Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
 
 W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
 przez co modele te testach na danych zewnętrznych,

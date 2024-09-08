@@ -1,25 +1,25 @@
-W tym rozdziale zostaną przedstawione podstawowe definicje z dziedziny teorii grafów.
-Definicje zostały zaczerpnięte z literatury, z pozycji \cite{Wloch2008}, \cite{Wilson2012} oraz \cite{Wojciechwoski2013}.
+W tym rozdziale zostaną przedstawione podstawowe definicje z~dziedziny teorii grafów.
+Definicje zostały zaczerpnięte z~literatury, z~pozycji \cite{Wloch2008}, \cite{Wilson2012} oraz \cite{Wojciechwoski2013}.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
 Grafem nieskierowanym, skończonym $G$ nazywamy parę $(V,E)$, gdzie $V = V(G)$ jest zbiorem skończonym, niepustym,
 natomiast $E = E(G)$ jest rodziną mogących się powtarzać dwuelementowych podzbiorów niekoniecznie różnych elementów ze zbioru $V$.
-Zbiór $V(G)$ nazywamy zbiorem wierzchołków, a elementy tego zbioru nazywamy wierzchołkami i oznaczamy symbolami:
+Zbiór $V(G)$ nazywamy zbiorem wierzchołków, a~elementy tego zbioru nazywamy wierzchołkami i~oznaczamy symbolami:
 $x$, $y$, $x_i$, $y_i$, $1$, $2$, ... Zbiór $E(G)$ nazywamy zbiorem krawędzi grafu $G$.
-Mówimy, że krawędź $\{v, w\}$ łączy wierzchołki $v$ i $w$, i na ogół oznaczamy ją krócej symbolem $vw$.
-W wielu zagadnieniach nazwy wierzchołków są nieistotne, więc je pomijamy i mówimy wtedy, że graf jest nieoznakowany.
+Mówimy, że krawędź $\{v, w\}$ łączy wierzchołki $v$ i~$w$, i~na ogół oznaczamy ją krócej symbolem $vw$.
+W wielu zagadnieniach nazwy wierzchołków są nieistotne, więc je pomijamy i~mówimy wtedy, że graf jest nieoznakowany.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Jeżeli w grafie $G$ istnieją co najmniej dwie krawędzie $xy$, to krawędź tę nazywamy krawędzią wielokrotną.
+Jeżeli w~grafie $G$ istnieją co najmniej dwie krawędzie $xy$, to krawędź tę nazywamy krawędzią wielokrotną.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Krawędź $xx$ w grafie $G$ nazywamy pętlą.
+Krawędź $xx$ w~grafie $G$ nazywamy pętlą.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -29,7 +29,7 @@ Graf mający krawędzie wielokrotne nazywamy multigrafem.
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Graf, który nie ma krawędzi wielokrotnych i pętli, nazywamy grafem prostym.
+Graf, który nie ma krawędzi wielokrotnych i~pętli, nazywamy grafem prostym.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -39,30 +39,30 @@ Graf zawierający pętle nazywamy pseudografem.
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Drogę $P$ z wierzchołka $x_1$ do wierzchołka $x_m$ w grafie $G$ nazywamy skończony ciąg wierzchołków
-$x_1, x_2, ..., x_m, m \geqslant 2$ i krawędzi ${x_i, x_{i + 1}}, i = 1, ..., m$.
+Drogę $P$ z~wierzchołka $x_1$ do wierzchołka $x_m$ w~grafie $G$ nazywamy skończony ciąg wierzchołków
+$x_1, x_2, ..., x_m, m \geqslant 2$ i~krawędzi ${x_i, x_{i + 1}}, i~= 1, ..., m$.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Grafem spójnym nazywamy graf $G$, w którym każde dwa wierzchołki są połaczone drogą dowolnej długości.
+Grafem spójnym nazywamy graf $G$, w~którym każde dwa wierzchołki są połaczone drogą dowolnej długości.
 Graf, który nie jest spójny, nazywamy grafem niespójnym.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Dwa wierzchołki $x$, $y$ w grafie $G$ są sąsiednie, jeżeli $xy \in E(G)$.
-Mówimy wtedy, żę wierzchołki $x$ i $y$ są incydentne z tą krawędzią.
+Dwa wierzchołki $x$, $y$ w~grafie $G$ są sąsiednie, jeżeli $xy \in E(G)$.
+Mówimy wtedy, żę wierzchołki $x$ i~$y$ są incydentne z~tą krawędzią.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Stopień wierzchołka $v$ oznaczany symbolem $deg(v)$ jest liczbą krawędzi incydentnych z $v$.
+Stopień wierzchołka $v$ oznaczany symbolem $deg(v)$ jest liczbą krawędzi incydentnych z~$v$.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Wierzchołek stopnia 0 nazywamy wierzchołkiem izolowanym, a wierzchołek stopnia 1, liściem.
+Wierzchołek stopnia 0 nazywamy wierzchołkiem izolowanym, a~wierzchołek stopnia 1, liściem.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -99,12 +99,12 @@ Graf skierowany - graf niezawierający krawędzi niezorientowanych.
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Drzewem nazywany spójny graf bez cykli. Korzeń w drzewie jest jedynym wierzchołkiem,
-który nie ma przodka, wszystkie wierzchołki sąsiednie z korzeniem są jego potomkami.
+Drzewem nazywany spójny graf bez cykli. Korzeń w~drzewie jest jedynym wierzchołkiem,
+który nie ma przodka, wszystkie wierzchołki sąsiednie z~korzeniem są jego potomkami.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Drzewem binarnym nazywamy drzewo składające się z wyróżnionego wierzchołka nazywanego korzeniem oraz dwóch poddrzew biarnych
+Drzewem binarnym nazywamy drzewo składające się z~wyróżnionego wierzchołka nazywanego korzeniem oraz dwóch poddrzew biarnych
 - lewgo $T_l$ oraz prawego $T_p$.
 % -- TO DO -- % Drzewo binarne - zmiana definicji

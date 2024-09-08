@@ -4,7 +4,7 @@
 %%% % weiiszablon.sty
 %%% %
 %%% % Plik stylu dla pracy dyplomowej 
-%%% % Wydziału Elektrotechniki i Informatyki
+%%% % Wydziału Elektrotechniki i~Informatyki
 %%% % Politechniki Rzeszowskiej
 %%% %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,19 +15,19 @@
 \usepackage{courier} % czcionka courier
 \usepackage{mathptmx} % pakiet wymagany do czcionki Times New Roman
 \usepackage{graphicx} % pakiet graficzny
-\usepackage{enumitem} % spis treści i listy
-\usepackage{indentfirst} % aktywne pierwsze wcięcie w akapicie (domyślnie nie jest)
+\usepackage{enumitem} % spis treści i~listy
+\usepackage{indentfirst} % aktywne pierwsze wcięcie w~akapicie (domyślnie nie jest)
 \usepackage{etoolbox} % pakiet umożliwiający edycję domyślnych komend
 \usepackage{amsmath} % pakiet matematyczny
 \usepackage{color} % podstawowe kolory
 \usepackage{listings} % styl dla formatowania kodów źródłowych
 \usepackage[a4paper,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm,includefoot=false,includehead=false,footskip=1.16cm]{geometry} % wymiary strony
-\usepackage{bm} % dla pogrubionych i pochylonych czcionek w środowisku matematycznym
+\usepackage{bm} % dla pogrubionych i~pochylonych czcionek w~środowisku matematycznym
 \usepackage{placeins}
-\usepackage{tikz} % Do używania zmiennych przy numerowaniu definicji - można usunąć na samym końcu i ręcznie ponumerować
+\usepackage{tikz} % Do używania zmiennych przy numerowaniu definicji - można usunąć na samym końcu i~ręcznie ponumerować
 \usepackage{amssymb}
 
-% kropki po numeracji rozdziałów w spisie treści
+% kropki po numeracji rozdziałów w~spisie treści
 \usepackage{tocloft} 					
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
@@ -42,7 +42,7 @@
 \def\l@section#1#2{\old@l@section{#1}{#2}\cftbeforesecskip0pt}
 \makeatother
 
-% zmiana domyślnego formatowania tytułów w spisie treści
+% zmiana domyślnego formatowania tytułów w~spisie treści
 %\renewcommand{\cftsecfont}{} 
 %\renewcommand\cftsecpagefont{\normalfont}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -59,7 +59,7 @@
   escapeinside={\%*}{*)}, % if you want to add LaTeX within your code
   extendedchars=true, % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   firstnumber=1, % start line enumeration with line 1
-  frame=single, % adds a frame around the code
+  frame=single, % adds a~frame around the code
   keepspaces=true, % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue}, % keyword style
   numbers=left, % where to put the line-numbers; possible values are (none, left, right)
@@ -101,7 +101,7 @@
 \definecolor{niebieski}{RGB}{0,130,150} % kolor niebieski
 \definecolor{mygray}{gray}{0.6} % kolor szary
 
-% zmiana czcionki i odstępów w tytułach rozdziałów
+% zmiana czcionki i~odstępów w~tytułach rozdziałów
 \usepackage[compact]{titlesec}
 \titleformat{\section}
   {\normalfont\fontsize{16pt}{16pt}\bfseries}
@@ -141,7 +141,7 @@
 \renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
 \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 
-% dodatkowe odstępy przed tabelami i rysunkami
+% dodatkowe odstępy przed tabelami i~rysunkami
 \AtBeginEnvironment{figure}{}\AtEndEnvironment{figure}{\addvspace{1pt}}
 \AtBeginEnvironment{table}{}\AtEndEnvironment{table}{\vspace{1pt}}
 
@@ -251,10 +251,10 @@
 \newcommand\@supervisorEN{\@latex@error{No \noexpand\supervisorEN given}\@ehc}
 
 \newcommand\abstractKeywords[1]{\renewcommand\@abstractKeywords{#1}}
-\newcommand\@abstractKeywords{\@latex@error{No \noexpand\abstractKeywords given (max. 5 słów kluczowych w 2 wierszach, oddzielanych przecinkami)}\@ehc}
+\newcommand\@abstractKeywords{\@latex@error{No \noexpand\abstractKeywords given (max. a~słów kluczowych w~2 wierszach, oddzielanych przecinkami)}\@ehc}
 
 \newcommand\abstractKeywordsEN[1]{\renewcommand\@abstractKeywordsEN{#1}}
-\newcommand\@abstractKeywordsEN{\@latex@error{No \noexpand\abstractKeywordsEN given (max. 5 słów kluczowych w 2 wierszach, oddzielanych przecinkami)}\@ehc}
+\newcommand\@abstractKeywordsEN{\@latex@error{No \noexpand\abstractKeywordsEN given (max. a~słów kluczowych w~2 wierszach, oddzielanych przecinkami)}\@ehc}
 
 \renewcommand\abstract[1]{\renewcommand\@abstract{#1}}
 \newcommand\@abstract{\@latex@error{No \noexpand\abstract given (Treść streszczenia po polsku)}\@ehc}
@@ -275,7 +275,7 @@
       \includegraphics[scale=0.8]{auxiliary/prz_pl.png}\\
       {\Large Politechnika Rzeszowska
       im. Ignacego Łukasiewicza \\
-      Wydział Matematyki i Fizyki Stosowanej}
+      Wydział Matematyki i~Fizyki Stosowanej}
     \end{center}
     \vspace{1.3cm}
     
@@ -323,7 +323,7 @@
 
   \textbf{POLITECHNIKA RZESZOWSKA} \hfill Rzeszów, 2024 \\
   \textbf{im. Ignacego Łukasiewicza} \\
-  \textbf{WYDZIAŁ MATEMATYKI I FIZYKI STOSOWANEJ} \\
+  \textbf{WYDZIAŁ MATEMATYKI i~FIZYKI STOSOWANEJ} \\
 
   \begin{center}
     \textbf{STRESZCZENIE  PRACY  DYPLOMOWEJ }
