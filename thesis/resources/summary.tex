@@ -27,6 +27,14 @@ Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie
 są za małe, by poprawnie nauczyć większość modeli.
 Modele osiągały dość wysokie dokładności już po kilku pierwszych epokach,
 ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
+W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
+ze względu na powstające problemy z~procesem nauczania, po owej epoce.
+Uczenie modeli z~wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
+niż nauka na rysunkach grafów o~zmiennej liczbie wierzchołków.
+Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
+W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
+przez co modele te testach na danych zewnętrznych,
+klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
 
 %%%%%%%%%%%%%% % -- TO DO -- %
 % Piszę referat ze sprawozdaniem na temat tworzenia modeli sztucznych sieci neuronowych,
@@ -51,16 +59,3 @@ lub wprowadzeniu dodatkowych mechanizmów regularyzacyjnych w~celu poprawy zdoln
 Przedstawione w~referacie badania wskazują na wysoki potencjał sztucznych sieci neuronowych
 w zadaniach związanych z~analizą i~klasyfikacją grafów,
 co otwiera nowe możliwości w~kontekście przetwarzania danych graficznych w~praktycznych zastosowaniach.
-
-%%%%%%%%%%%%%%
-W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
-ze względu na powstające problemy z~procesem nauczania, po owej epoce.
-
-Uczenie modeli z~wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
-niż nauka na rysunkach grafów o~zmiennej liczbie wierzchołków.
-
-Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
-
-W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
-przez co modele te testach na danych zewnętrznych,
-klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
