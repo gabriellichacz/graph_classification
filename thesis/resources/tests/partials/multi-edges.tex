@@ -6,7 +6,7 @@ Po kilku początkowych epokach, dokładność oscyluje wokół 95\%, dochodząc 
 Linie walidacji i~treningu są bardzo blisko siebie, co~sugeruje dobrą generalizację modelu
 i~nie wskazuje na~przeuczenie.
 
-W~przypadku straty modelu, początkowy gwałtowny spadek sugeruje, że model dość szybko się uczy.
+W~przypadku straty modelu, początkowy gwałtowny spadek sugeruje, że~model dość szybko się uczy.
 Po 10 epokach następuje stabilizacja straty na~niskim, bo wynoszącym około 0.1, poziomie.
 Podobnie jak w~przypadku dokładności, strata dla zbioru walidacyjnego jest blisko straty treningowej.
 Można zaobserować pewne wzrosty, które mogą być spowodowane trudniejszymi przypadkami w~zbiorze walidacyjnym.
@@ -20,12 +20,12 @@ Można zaobserować pewne wzrosty, które mogą być spowodowane trudniejszymi p
 \FloatBarrier
 
 Model ten wydaje się być dobrze dopasywany i~stabilny oraz poprawnie generalizujący.
-Z~uwagi na~bliskość wyników dla treningu i~walidacji, można stwierdzić, że model nie jest przeuczony.
+Z~uwagi na~bliskość wyników dla treningu i~walidacji, można stwierdzić, że~model nie jest przeuczony.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v3/multiple_edges_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą wierzchołków}
+	\caption{Klasyfikacja obrazów zewnętrznych dla modelu ze zmienną liczbą \\ wierzchołków}
 	\label{Fig:tests-var-0b}
 \end{figure}
 \FloatBarrier
@@ -50,7 +50,7 @@ Nie jest to~zły wynik, biorąc pod uwagę niską złożoność modelu.
 \end{figure}
 \FloatBarrier
 
-\subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków - Conv2D i~Droput oraz spowolnienie uczenia}
+\subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków - Conv2D i~Dropout oraz spowolnienie uczenia}
 
 W~modelu wprowadzone zostało zwiększenie liczby filtrów dla warstw Conv2D, zwiększenie parametru Dropout
 oraz zastosowano wywołanie zwrotne, które spowalnia uczenie.
@@ -65,7 +65,7 @@ Straty modelu wykazują podobne cechy do~dokładności - szybki spadek wartości
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_1_img.png}
-	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Droput}
+	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Dropout}
 	\label{Fig:tests-var-1a}
 \end{figure}
 \FloatBarrier
@@ -75,7 +75,7 @@ Wydaje się, że model osiągnął pewną stabilność na~niskim poziomie, co~mo
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_1_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Droput}
+	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Dropout}
 	\label{Fig:tests-var-1b}
 \end{figure}
 \FloatBarrier
@@ -83,13 +83,13 @@ Wydaje się, że model osiągnął pewną stabilność na~niskim poziomie, co~mo
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_1_bar.png}
-	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Droput}
+	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków - Conv2D i~Dropout}
 	\label{Fig:tests-var-1c}
 \end{figure}
 \FloatBarrier
 
 Osiągnięta stabilizacja modelu i~brak znaczących różnic między wartościami dokładności,
-czy straty na~zbiorach treningowych i~wdalidacyjnych, nie przełożyła się w~sposób rewolucyjny na~osiągi modelu.
+czy straty na~zbiorach treningowych i~wdalidacyjnych, nie przełożyła się~w~sposób rewolucyjny na~osiągi modelu.
 Model jednakże nie wypadł całkowicie źle - poprawnie sklasyfikował 36\% zewnętrznych grafów testowych,
 co~plasuje go w~czołówce testowanych modeli pod kątem realnej dokładności.
 
@@ -97,7 +97,7 @@ co~plasuje go w~czołówce testowanych modeli pod kątem realnej dokładności.
 	\centering
 	\includegraphics[height=4cm]{../graph_classification/test_graphs/drawn/cycle-7.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model ze zmienną liczbą wierzchołków
-		- Conv2D i~Droput oraz spowolnienie uczenia.
+		- Conv2D i~Dropout oraz spowolnienie uczenia.
 		Przypisana klasa to~cykl z~98,88\% pewnością.}
 	\label{Fig:tests-var-1d}
 \end{figure}
@@ -110,9 +110,9 @@ Przetestowany został wariant z~włączonymi wszystkimi modyfikacjami na~raz.
 
 Podobnie jak dla zmodyfikowanego modelu z~walidacją krzyżową, dokładność treningowa jest bardzo wysoka (prawie 100\%),
 ale dokładność walidacyjna nie jest ustabilizowana. Jej wartości oscylują w~przedziale od 0,2, aż do~0,9.
-To sugeruje, że model nie generalizuje dobrze na~nowych danych i~może być nadmiernie dopasowany.
+To sugeruje, że~model nie generalizuje dobrze na~nowych danych i~może być nadmiernie dopasowany.
 
-Wykresy straty prezentują się w~podobny sposób jak i~wykresy dokładności.
+Wykresy straty prezentują~się~w~podobny sposób jak i~wykresy dokładności.
 Strata treningowa jest bliska zeru, co~mówi o~świetnym zapamiętywaniu danych treningowych przez model, kosztem generalizacji na~nowe dane.
 Strata walidacji jednak jest niestabilna z~bardzo wysokimi wartościami w~niekórych epokach.
 
@@ -127,7 +127,7 @@ Strata walidacji jednak jest niestabilna z~bardzo wysokimi wartościami w~niekó
 Model wykazuje cechy modelu przeuczonego.
 Są to~bardzo wysoka dokładność i~niemal zerowa strata na~zbiorze treningowym
 oraz bardzo niska dokładność i~wysoka, ale niestabilna strata na~zbiorze walidacyjnym.
-Wniosek jaki można wyciągnąć jest taki, że model zapamiętał dane treningowe, ale nie nauczył się żadnych wzorców.
+Wniosek jaki można wyciągnąć jest taki, że~model zapamiętał dane treningowe, ale nie nauczył się żadnych wzorców.
 
 \begin{figure}[ht]
 	\centering
@@ -146,7 +146,7 @@ Wniosek jaki można wyciągnąć jest taki, że model zapamiętał dane treningo
 \FloatBarrier
 
 Model poprawnie wskazał tylko około 24\% grafów, lecz analiza jego wskaźników mówi nam,
-że jest to~dzieło raczej przypadku, aniżeli poprawnego nauczenia się ogólnych wzorców danych.
+że jest to~dzieło raczej przypadku, aniżeli poprawnego nauczenia się~ogólnych wzorców danych.
 Jego dokładność walidacyjna była bardzo niestabilna.
 
 \begin{figure}[ht]

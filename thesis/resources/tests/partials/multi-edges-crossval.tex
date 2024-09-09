@@ -9,14 +9,14 @@ przypadkami w~zbiorze danych walidacyjnych.
 
 Strata tego modelu gwałtownie spada na~początku procesu uczenia,
 po czym stabilizuje się na~zadowalająco~niskim poziomie - poniżej 20\%.
-Skoki wskaźnika są bardziej zauważalne na~zbiorze walidacyjnym,
-ale nie wydają się być regularne i~nie wpływają na~ogólny wynik.
+Skoki wskaźnika są~bardziej zauważalne na~zbiorze walidacyjnym,
+ale nie wydają się być regularne i~nie~wpływają na~ogólny wynik.
 Mogą być wynikiem, przeuczenia na~pojedynczych epokach lub~naturalną zmiennością walidacyjnego zbioru danych.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v3/multiple_edges_crossvalid_img.png}
-	\caption{Dokładność i~walidacja dla modelu ze zmienną liczbą wierzchołków i~walidacją krzyżową}
+	\caption{Dokładność i~walidacja dla modelu ze zmienną liczbą wierzchołków \\ i~walidacją krzyżową}
 	\label{Fig:tests-csvar-0a}
 \end{figure}
 \FloatBarrier
@@ -75,7 +75,7 @@ da się zaobserować nagły wzrost straty do~około 2,5 jednostek, który stopni
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_crossvalid_1_img.png}
-	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Droput}
+	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Dropout}
 	\label{Fig:tests-csvar-1a}
 \end{figure}
 \FloatBarrier
@@ -89,7 +89,8 @@ Ogólnie, model osiągnął bardzo dobre wyniki, co~sugeruje, że proces nauczan
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_crossvalid_1_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Droput}
+	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu \\
+		ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Dropout}
 	\label{Fig:tests-csvar-1b}
 \end{figure}
 \FloatBarrier
@@ -97,7 +98,8 @@ Ogólnie, model osiągnął bardzo dobre wyniki, co~sugeruje, że proces nauczan
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/multiple_edges_crossvalid_1_bar.png}
-	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla zmodyfikowanego modelu ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Droput}
+	\caption{Wizualizacja klasyfikacji obrazów zewnętrznych dla zmodyfikowanego modelu
+		ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Dropout}
 	\label{Fig:tests-csvar-1c}
 \end{figure}
 \FloatBarrier
@@ -166,7 +168,7 @@ Wskazuje to~na~przeuczenie modelu i~brak uczenia się wzorców ogólnych.
 
 Model ocenił poprawnie około 38\% klas grafów zewnętrznych, co~nie jest złym wynikiem.
 W~przypadku modeli z~walidacją krzyżową, zastosowanie wszystkich przygotowanych modyfikacji modelu,
-nie do~końca spełniło swoje złożenia, ale również nie pogorszyło wyniku.
+nie do~końca spełniło swoje złożenia, ale również nie~pogorszyło wyniku.
 
 \begin{figure}[ht]
 	\centering

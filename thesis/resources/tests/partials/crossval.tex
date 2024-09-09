@@ -8,7 +8,7 @@ Możliwe do~zaobserowania są regularne spadki dokładności w~niektórych epoka
 co~może wynikać z~niestabilnego treningu lub~problemów modelu w~generalizacji dla niektórych danych walidacyjncyh.
 
 Dla straty modelu można zaobserować spadek w~pierwszych 10 epokach, co~mogłoby wskazywać na~szybkie uczenie się modelu.
-Zaraz po~nim, następuje stabilizacja na~niskim poziomie, z~pojedynczymi skokami, głównie na~zbiorze walidacyjnym.
+Zaraz po~nim, następuje stabilizacja na~niskim poziomie, z~pojedynczymi skokami, głównie na~zbiorze walidacyjnym. \\
 Nieregularne wzrosty straty, podobnie jak w~przypadku dokładności, mogą wskazywać na~problemy z~przeuczeniem.
 
 \begin{figure}[ht]
@@ -25,7 +25,7 @@ sugerują jednak potencjalne problemy z~generalizacją, co~może być wynikiem n
 przeuczenia modelu, lub~trudności w~rozpoznawaniu bardziej złożonych przykładów w~danych walidacyjnych.
 
 W~przypadku tego modelu, zwiększenie liczby epok, nie przyniosłoby zamierzonych skutków.
-Model zbyt szybko się przeucza, a~więc większa liczba iteracji nie wpłynęłaby w~żaden znaczący sposób na~wynik.
+Model zbyt szybko się przeucza, a~więc większa liczba iteracji nie~wpłynęłaby w~żaden znaczący sposób na~wynik.
 
 \begin{figure}[ht]
 	\centering
@@ -218,7 +218,7 @@ i~spore skoki wartości strat modelu prowadzą do~konkluzji,
 \FloatBarrier
 
 Model sklasyfikował poprawnie prawie 31\% grafów zewnętrznych.
-Jest to~o~9 punktów procentowych mniej niż poprzenia modyfikacja modelu,
+Jest to~o~9~punktów procentowych mniej niż poprzenia modyfikacja modelu,
 co~prowadzi do~wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
 Nie jest to~udany eksperyment, lecz model wciąż prezentuje pewną użyteczność.
 
@@ -314,7 +314,7 @@ która wynosiła około 22-23\%.
 
 W~tym modelu zostało zastosowane wywołanie zwrotne, które spowalnia proces uczenia.
 Współczynnik procesu uczenia decyduje o~tym, jak duże kroki wykonuje algorytm optymalizacyjny podczas aktualizacji wag sieci neuronowej.
-Gdy owy współczynnik jest zbyt duży, model może oscylować wokół minimum funkcji straty i~nigdy go nie osiągnąć.
+Gdy owy współczynnik jest zbyt duży, model może oscylować wokół minimum funkcji straty i~nigdy go~nie~osiągnąć.
 W~przypadku kiedy jest zbyt mały, może prowadzić do~bardzo wolnego uczenia się, czy nawet utknięcia w~lokalnym minimum.
 Parametr $factor$ w~skrypcie decyduje o~tym, o~jaką wartość zredukować współczynnik uczenia,
 jeśli nie nastąpi poprawa uczenia przez okres wyrażony parametrem $patience$.
@@ -328,7 +328,7 @@ Zapobiega to~zbyt drastycznemu zmniejszeniu learning rate, które mogłoby zaham
 
 Krzywa dokładności treningowej oraz walidacyjnej wzrasta gwałtownie w~początkowych epokach nauki.
 Oznacza to, że model szybko uczy się nieskomplikowanych wzorców.
-W~kolejnej części procesu nauki, dokładność na~obu zbiorach stabiizuje się między 90\%, a~100\%.
+W~kolejnej części procesu nauki, dokładność na~obu zbiorach stabiizuje się~między 90\%, a~100\%.
 Z~powodu widocznych sporych spadków na~zbiorze walidacyjnym, można założyć pewne problemy z~modelem - przeuczenie.
 
 Podobnie jak dokładność, strata gwałtownie obniża się na~początku procesu uczenia.
@@ -338,7 +338,7 @@ Możliwe, że model jest zbyt dopasowany do~specyficznych cech danych treningowy
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_4_img.png}
-	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu z~walidacją krzyżową - spowolnienie uczenia}
+	\caption{Dokładność i~walidacja dla zmodyfikowanego modelu z~walidacją \\ krzyżową - spowolnienie uczenia}
 	\label{Fig:tests-cv-4a}
 \end{figure}
 \FloatBarrier
@@ -349,7 +349,7 @@ co~wskazuje na~przeuczenie modelu.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15.5cm]{resources/tests/images/v4/crossvalid_4_txt.png}
-	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu z~walidacją krzyżową - spowolnienie uczenia}
+	\caption{Klasyfikacja obrazów zewnętrznych dla zmodyfikowanego modelu \\ z~walidacją krzyżową - spowolnienie uczenia}
 	\label{Fig:tests-cv-4b}
 \end{figure}
 \FloatBarrier
@@ -370,7 +370,7 @@ Zważając na~to, że ogólną większość grafów oznaczył jako pełne, może
 	\centering
 	\includegraphics[height=4cm]{../graph_classification/test_graphs/drawn/path-10.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z~walidacją krzyżową - spowolnienie uczenia.
-		Przypisana klasa to~sćieżka z~95,52\% pewnością.}
+		Przypisana klasa to~ścieżka z~95,52\% pewnością.}
 	\label{Fig:tests-cv-4d}
 \end{figure}
 \FloatBarrier
