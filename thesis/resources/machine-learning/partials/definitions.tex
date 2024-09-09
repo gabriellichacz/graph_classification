@@ -15,24 +15,24 @@ Zbiór walidacjny - zbiór danych, który jest używany do sprawdzenia wydajnoś
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
 Zbiór testowy - zbiór danych używany do oceny wydajności modelu uczenia maszynowego
-po przeszkoleniu go na zbiorze treningowym i~ocenie na zbiorze walidacyjnym.
+po przeszkoleniu go na~zbiorze treningowym i~ocenie na~zbiorze walidacyjnym.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Klasyfikacja to proces polegający na przypisaniu obiektów do wcześniej zdefiniowanych klas na podstawie ich cech.
+Klasyfikacja to~proces polegający na~przypisaniu obiektów do wcześniej zdefiniowanych klas na~podstawie ich cech.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Regresja liniowa - metoda, w~której model liniowy przewiduje wyniki na podstawie ważonej sumy cech wejściowych oraz stałej,
-nazywanej punktem obciążenia lub punktem przecięcia.
+Regresja liniowa - metoda, w~której model liniowy przewiduje wyniki na~podstawie ważonej sumy cech wejściowych oraz stałej,
+nazywanej punktem obciążenia lub~punktem przecięcia.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Walidacja krzyżowa to proces, w~którym dane dzielone są na kilka części (przyjmujemy $k$) zwanych „złożeniami”
-(lub „foldami” - stąd nazwa $k$-Fold Cross-Validation). Model jest trenowany na $k-1$ złożeń, a~testowany na pozostałym z~nich.
+Walidacja krzyżowa to~proces, w~którym dane dzielone są na~kilka części (przyjmujemy $k$) zwanych „złożeniami”
+(lub „foldami” - stąd nazwa $k$-Fold Cross-Validation). Model jest trenowany na~$k-1$ złożeń, a~testowany na~pozostałym z~nich.
 Proces ten jest powtarzany $k$ razy, za każdym razem używając innego złożenia do testowania, a~pozostałych do treningu.
 Jeżeli różnica w~wydajności jest znacząca, uzasadniony jest sceptyzm odnośnie pojedynczych wyników pomiaru wydajności systemu.
 Z drugiej strony, jeżeli wszystkie wyniki są podobne, można mieć dużą dozę pewności, że niezależnie od konkretnego podziału
@@ -42,22 +42,22 @@ Końcowa ocena modelu jest uzyskiwana poprzez uśrednienie wyników z~każdej it
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Bias (błąd obciążenia) to błąd wynikający z~niepoprawnych założeń w~procesie uczenia maszynowego.
+Bias (błąd obciążenia) to~błąd wynikający z~niepoprawnych założeń w~procesie uczenia maszynowego.
 Oznacza różnicę między przewidywaną wartością modelu a~rzeczywistą wartością.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Funkcja aktywacji w~sieci neuronowej to nieliniowa funkcja matematyczna,
+Funkcja aktywacji w~sieci neuronowej to~nieliniowa funkcja matematyczna,
 która umożliwia sieci modelowanie złożonych zależności.
 Jej rolą jest przekształcanie sumy ważonej wejść i~wartości biasu,
-co pozwala na tworzenie nieliniowych funkcji wyjściowych.
+co pozwala na~tworzenie nieliniowych funkcji wyjściowych.
 Równanie matematyczne opisujące działanie sieci neuronowej ma postać: $Y' = g(W_o + X^T * W)$, gdzie:
-$Y'$ to przewidywana wartość wyjściowa,
-$W_o$ to wartość bias,
-$X^T$ to transpozycja macierzy wejściowej $X$,
-$W$ to przypisane wagi,
-a $g$ to funkcja aktywacji.
+$Y'$ to~przewidywana wartość wyjściowa,
+$W_o$ to~wartość bias,
+$X^T$ to~transpozycja macierzy wejściowej $X$,
+$W$ to~przypisane wagi,
+a $g$ to~funkcja aktywacji.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -73,7 +73,7 @@ $g(x) = max(0, x)$
 	\centering
 	\includegraphics[width=7.5cm]{resources/machine-learning/images/def_relu.png}
 	\caption{Funkcja aktywacji ReLU.
-		Źródło: opracowanie własne na podstawie:
+		Źródło: opracowanie własne na~podstawie:
         Géron A.: \textit{Uczenie maszynowe z~użyciem Scikit-Learn i~TensorFlow}. Helion SA, Gliwice, 2020}
     \label{Fig:def-1}
 \end{figure}
@@ -82,8 +82,8 @@ $g(x) = max(0, x)$
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Przeuczenie to sytuacja, w~której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
-co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na podstawie nowych danych spoza zbioru treningowego.
+Przeuczenie to~sytuacja, w~której algorytm dopasowuje się zbyt dokładnie do danych treningowych,
+co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskować na~podstawie nowych danych spoza zbioru treningowego.
 
 \begin{figure}[ht]
 	\centering
@@ -96,7 +96,7 @@ co prowadzi do modelu, który nie potrafi dokładnie prognozować ani wnioskowa�
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Regularyzacja to technika stosowana w~celu zapobiegania przeuczeniu modelu.
+Regularyzacja to~technika stosowana w~celu zapobiegania przeuczeniu modelu.
 Działa poprzez dodanie kary do funkcji kosztu, co penalizuje zbyt złożone modele.
 
 \noindent
@@ -109,25 +109,25 @@ Zazwyczaj powinno się stosować ten sam typ regularyzatora we wszystkich wartst
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Epoka to pełny cykl przez cały zbiór danych treningowych, w~której model przetwarza wszystie dostępne dane treningowe.
+Epoka to~pełny cykl przez cały zbiór danych treningowych, w~której model przetwarza wszystie dostępne dane treningowe.
 Liczba epok określa ile razy model przejdzie przez cały zbiór danych treningowych.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Dokładność modelu to stosunek oznaczonych prawidłowo wartości do przykładów sklasyfikowanych nieprawidłowo.
+Dokładność modelu to~stosunek oznaczonych prawidłowo wartości do przykładów sklasyfikowanych nieprawidłowo.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Macierz pomyłek w~sieci neuronowej to tabela służąca do oceny jakości modelu klasyfikacyjnego.
+Macierz pomyłek w~sieci neuronowej to~tabela służąca do oceny jakości modelu klasyfikacyjnego.
 Przedstawia liczbę przypadków, w~których próbki z~klasy a~zostały zaklasyfikowane jako należące do klasy B.
 Aby utworzyć taką macierz, należy uzyskać zbiór prognoz, które porówywane są z~rzeczywistymi wartościami docelowymi.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Strata modelu to wartość, która wskazuje,
+Strata modelu to~wartość, która wskazuje,
 jak bardzo prognozy modelu różnią się od rzeczywistych wartości dla pojedynczych przykładów.
 Idealnie przewidziane wartości mają stratę równą zeru,
 natomiast im większa różnica między prognozami a~rzeczywistością, tym wyższa jest strata.
@@ -135,10 +135,10 @@ natomiast im większa różnica między prognozami a~rzeczywistością, tym wyż
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Algorytm t-SNE (t-Distributed Stochastic Neighbor Embedding) to technika redukcji wymiarowości,
+Algorytm t-SNE (t-Distributed Stochastic Neighbor Embedding) to~technika redukcji wymiarowości,
 która szczególnie dobrze nadaje się do wizualizacji wielowymiarowych zbiorów danych.
 Można ją zaimplementować przy użyciu aproksymacji Barnesa-Huta,
-co umożliwia stosowanie jej na dużych, rzeczywistych zbiorach danych.
+co umożliwia stosowanie jej na~dużych, rzeczywistych zbiorach danych.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
@@ -149,14 +149,14 @@ $H(p,q) = -\sum p(x) \log q(x) $ (przynajmniej wtedy, gdy obydwa rozkłady są d
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Konwergencja modelu to stopniowe poprawianie się wydajności podczas trwania procesu uczenia,
+Konwergencja modelu to~stopniowe poprawianie się wydajności podczas trwania procesu uczenia,
 aż do osiągnięcia stabilnego poziomu. Według założeń, po osiągnięciu takiego poziomu,
-kolejne treningi nie powinny przynosić dalszych korzyści lub owe korzyści są pomijalnie małe.
+kolejne treningi nie powinny przynosić dalszych korzyści lub~owe korzyści są pomijalnie małe.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Normalizacja wsadowa (ang. batch normalization) to operacja pozwalająca modelowi określić optymalną skalę
+Normalizacja wsadowa (ang. batch normalization) to~operacja pozwalająca modelowi określić optymalną skalę
 i średnią danych wejściowych dla każdej warstwy.
 Z tego też powodu stosowana jest przed funkcją aktywacji w~każdej warstwie.
 W jej wyniku, dane wejściowe zostają wyśrodkowane i~znormalizowane,
@@ -165,10 +165,10 @@ W jej wyniku, dane wejściowe zostają wyśrodkowane i~znormalizowane,
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
 Caching danych przyspiesza naukę modelu. Proces ten umieszcza zawartość danych w~pamięci podręcznej GPU.
-Dzięki temu każdy przykład ze zbioru danych jest odczytywany i~przetwarzany tylko raz, a~nie jak domyslnie - raz na epokę.
+Dzięki temu każdy przykład ze zbioru danych jest odczytywany i~przetwarzany tylko raz, a~nie jak domyslnie - raz na~epokę.
 
 \noindent
 \textbf{Definicja \definitionIndex.}
 \incrementdefinitionIndex
-Pobieranie wstępne (ang. prefetching) to metoda, w~której podczas przetwarzania przez algrytm uczenia jednej grupy,
+Pobieranie wstępne (ang. prefetching) to~metoda, w~której podczas przetwarzania przez algrytm uczenia jednej grupy,
 zestaw danych równolegle przygotowuje kolejną grupę.

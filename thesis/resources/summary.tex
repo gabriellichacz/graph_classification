@@ -13,41 +13,41 @@ Przedstawiona jest również idea uczenia maszynowego,
 jego rodzaje oraz sam proces działania.
 W pracy przedstawiono proces tworzenia zbioru danych za pomocą skryptów R,
 oraz kolejne kroki budowy modeli sztucznych sieci neuronowych do rozpoznawania grafów.
-Przeprowadzono analizę ich skuteczności zarówno na danych syntetycznych, jak i~rzeczywistych.
-Sieci neuronowe były trenowane na wygenerowanych rysunkach grafów,
+Przeprowadzono analizę ich skuteczności zarówno na~danych syntetycznych, jak i~rzeczywistych.
+Sieci neuronowe były trenowane na~wygenerowanych rysunkach grafów,
 co umożliwiło stworzenie modeli do klasyfikacji grafów zewnętrznych.
-Następnie modele te przetestowano na rzeczywistych rysunkach grafów,
+Następnie modele te przetestowano na~rzeczywistych rysunkach grafów,
 aby zweryfikować ich praktyczną użyteczność oraz ocenić,
-w jakim stopniu ich teoretyczna dokładność przekłada się na realne zastosowania.
+w jakim stopniu ich teoretyczna dokładność przekłada się na~realne zastosowania.
 
-W testach zastosowano naukę na maksymalnie 75 epokach.
+W testach zastosowano naukę na~maksymalnie 75 epokach.
 Analizując krzywe dokładności i~straty modeli, można dojść do wniosku,
-że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub znikome pozytywne.
-Przeprowadzono również testy na mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
+że dłuższe uczenie nie przyniosłoby pozytywnych skutków lub~znikome pozytywne.
+Przeprowadzono również testy na~mniejszych liczbach epok, lecz wartości takie jak 10, czy 20,
 są za małe, by poprawnie nauczyć większość modeli.
 Modele osiągały dość wysokie dokładności już po kilku pierwszych epokach,
 ale zdecydowana większość z~nich, z~biegiem kolejnych epok, nabierała jeszcze lepszej dokładności.
 W przypadku jednego modelu, konieczne było zmniejszenie liczby epok do 55,
-ze względu na powstające problemy z~procesem nauczania, po owej epoce.
+ze względu na~powstające problemy z~procesem nauczania, po owej epoce.
 
 Uczenie modeli z~wykorzystaniem stałej liczby wierzchołków grafów okazało się bardziej skuteczne
-niż nauka na rysunkach grafów o~zmiennej liczbie wierzchołków.
+niż nauka na~rysunkach grafów o~zmiennej liczbie wierzchołków.
 
-Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na zwiększoną realną dokładność modelu.
+Skomplikowaność modelu i~zastosowane techniki optymalizacyjne rzadko przekładały się na~zwiększoną realną dokładność modelu.
 
-W przypadku uczenia najbardziej zmodyfikowanych modeli, to grafy pełne najczęściej dominowały cały zbiór danych,
-przez co modele te testach na danych zewnętrznych,
+W przypadku uczenia najbardziej zmodyfikowanych modeli, to~grafy pełne najczęściej dominowały cały zbiór danych,
+przez co modele te testach na~danych zewnętrznych,
 klasyfikowały większość testowych grafów rysowanych odręcznie jako właśnie grafy pełne.
 
 Wyniki eksperymentów pokazały, że modele miewają problemy z~przeuczeniem,
-ale w~przypadku części modeli osiągnięta wysoka dokładność na zbiorach treningowych i~walidacyjnych,
-przełożyła się na dobre wyniki klasyfikacji danych zewnętrznych.
+ale w~przypadku części modeli osiągnięta wysoka dokładność na~zbiorach treningowych i~walidacyjnych,
+przełożyła się na~dobre wyniki klasyfikacji danych zewnętrznych.
 
 Generalnie, pomimo ogólnie dobrych wyników,
-zaobserwowano różnice pomiędzy wynikami na danych syntetycznych i~rzeczywistych,
-co sugeruje, że dalsze badania mogą skupić się na udoskonaleniu procesu generowania grafów (większa różnorodność danych)
+zaobserwowano różnice pomiędzy wynikami na~danych syntetycznych i~rzeczywistych,
+co sugeruje, że dalsze badania mogą skupić się na~udoskonaleniu procesu generowania grafów (większa różnorodność danych)
 lub wprowadzeniu dodatkowych mechanizmów regularyzacyjnych w~celu poprawy zdolności generalizacji modeli.
 
-Przedstawione w~pracy badania wskazują na wysoki potencjał sztucznych sieci neuronowych
+Przedstawione w~pracy badania wskazują na~wysoki potencjał sztucznych sieci neuronowych
 w zadaniach związanych z~analizą i~klasyfikacją grafów,
 co otwiera nowe możliwości w~kontekście przetwarzania danych graficznych w~praktycznych zastosowaniach.
