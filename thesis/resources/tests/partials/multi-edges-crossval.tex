@@ -3,12 +3,12 @@
 Model uczony na~grafach ze zmienną liczbą wierzchołków oraz zastosowaną walidacją krzyżową,
 bardzo szybko osiąga poziom dokładności biski 100\%, bo już w~kilku pierwszych epokach.
 Po około 10 epoce, dokonuje się stabilizacja, oscylująca między 95\%, a~100\%.
-W przypadku tego modelu, fluktuacje dokładności są znikome, co wskazuje na~dobrą stabilność modelu.
+W~przypadku tego modelu, fluktuacje dokładności są znikome, co~wskazuje na~dobrą stabilność modelu.
 Pojedyncze przypadku spadu dokładności, mogą być spowodowane bardziej skomplikowanymi
 przypadkami w~zbiorze danych walidacyjnych.
 
 Strata tego modelu gwałtownie spada na~początku procesu uczenia,
-po czym stabilizuje się na~zadowalająco niskim poziomie - poniżej 20\%.
+po czym stabilizuje się na~zadowalająco~niskim poziomie - poniżej 20\%.
 Skoki wskaźnika są bardziej zauważalne na~zbiorze walidacyjnym,
 ale nie wydają się być regularne i~nie wpływają na~ogólny wynik.
 Mogą być wynikiem, przeuczenia na~pojedynczych epokach lub~naturalną zmiennością walidacyjnego zbioru danych.
@@ -22,9 +22,9 @@ Mogą być wynikiem, przeuczenia na~pojedynczych epokach lub~naturalną zmienno�
 \FloatBarrier
 
 Model wydaje się dokładny na~zbiorze treningowym i~walidacyjnym,
-co może skutkować polepszoną skutecznością w~klasyfikacji grafów.
+co~może skutkować polepszoną skutecznością w~klasyfikacji grafów.
 Minimalne różnice pomiędzy dokładnością treningową a~walidacyjną wskazują na~dobrą zdolność generalizacji.
-Z otrzymanych wyników, wydawałoby się, że model nie uległ przeuczeniu,
+Z~otrzymanych wyników, wydawałoby się, że model nie uległ przeuczeniu,
 choć jest to~również możliwe, zważając na~bardzo wysokie wyniki dokładności. 
 
 \begin{figure}[ht]
@@ -59,18 +59,18 @@ Model całkiem dobrze nauczył się żądanych wzorców.
 
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków i~walidacją krzyżową - Conv2D i~Dropout oraz spowolnienie uczenia}
 
-Model stosuje zwiększone parametry filtrów dla warstw Conv2D, powiększony parametr Dropout z~0,2 do 0,5
+Model stosuje zwiększone parametry filtrów dla warstw Conv2D, powiększony parametr Dropout z~0,2 do~0,5
 oraz spowolnienie uczenia.
 
 Dokładność osiąga poziom bliski 100\% na~zbiorze treningowym i~walidacyjnym w~bardzo szybkim tempie.
-Po osiągnięciu tego pułapu, utrzymuje się na~nim do ostatniej epoki procesu nauczania modelu.
+Po osiągnięciu tego pułapu, utrzymuje się na~nim do~ostatniej epoki procesu nauczania modelu.
 Jedyną anomalię można zaobserować około 55 epoki dla jednego z~przejść walidacji krzyżowej.
-Spada ona gwałtownie do poziomu 23\% i~pozostaje w~takim stanie do końca nauki.
+Spada ona gwałtownie do~poziomu 23\% i~pozostaje w~takim stanie do~końca nauki.
 
 Strata prezentuje się podobnie jak dokładność.
-Wartości utrzymują się na~dość niskich poziomach przez cały proces uczenia po początkowym spadku.
+Wartości utrzymują się na~dość niskich poziomach przez cały proces uczenia po~początkowym spadku.
 Około 55 epoki, dla jednego przejścia walidacji krzyżowej,
-da się zaobserować nagły wzrost straty do około 2,5 jednostek, który stopniowo spada do około 1,8.
+da się zaobserować nagły wzrost straty do~około 2,5 jednostek, który stopniowo spada do~około 1,8.
 
 \begin{figure}[ht]
 	\centering
@@ -80,11 +80,11 @@ da się zaobserować nagły wzrost straty do około 2,5 jednostek, który stopni
 \end{figure}
 \FloatBarrier
 
-W przypadku pojedynczej anomalii jaką da się zaobserować na~krzywych dokładności oraz straty,
+W~przypadku pojedynczej anomalii jaką da się zaobserować na~krzywych dokładności oraz straty,
 można wnioskować, że dla jednego przejścia walidacji krzyżowej, a~konkretnie czwartego, wystąpił pewien problem z~uczeniem modelu.
 Mogła to~być zmiana wartości współczynnika uczenia się lub~inna zmiana w~procesie treningu.
 Różnice pomiędzy wartościami dla danych treningowych oraz waldacyjnych są znikome - nawet w~przypadku odstającym wartościami od reszty.
-Ogólnie, model osiągnął bardzo dobre wyniki, co sugeruje, że proces nauczania przebiegł pomyślnie.
+Ogólnie, model osiągnął bardzo dobre wyniki, co~sugeruje, że proces nauczania przebiegł pomyślnie.
 
 \begin{figure}[ht]
 	\centering
@@ -133,7 +133,7 @@ Model szybko zmniejsza stratę treningową i~pozostaje ona na~bardzo niskim pozi
 Wskazuje to~na~sprawność w~uczeniu się na~danych treningowych.
 Wykresy strat przedstawiają się w~nietypowej formie.
 Dla początkowych i~końcowych epok, straty walidacji niewiele się wahają,
-a wręcz przeciwnie sytuacja wygląda dla epok od około dziesiątej do dwudziestej.
+a~wręcz przeciwnie sytuacja wygląda dla epok od około dziesiątej do~dwudziestej.
 Model ma więc trudności z~radzeniem sobie z~danymi, które są dla niego nowe.
 
 \begin{figure}[ht]
@@ -164,9 +164,9 @@ Wskazuje to~na~przeuczenie modelu i~brak uczenia się wzorców ogólnych.
 \end{figure}
 \FloatBarrier
 
-Model ocenił poprawnie około 38\% klas grafów zewnętrznych, co nie jest złym wynikiem.
-W przypadku modeli z~walidacją krzyżową, zastosowanie wszystkich przygotowanych modyfikacji modelu,
-nie do końca spełniło swoje złożenia, ale również nie pogorszyło wyniku.
+Model ocenił poprawnie około 38\% klas grafów zewnętrznych, co~nie jest złym wynikiem.
+W~przypadku modeli z~walidacją krzyżową, zastosowanie wszystkich przygotowanych modyfikacji modelu,
+nie do~końca spełniło swoje złożenia, ale również nie pogorszyło wyniku.
 
 \begin{figure}[ht]
 	\centering

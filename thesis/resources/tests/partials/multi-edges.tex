@@ -1,12 +1,12 @@
 \subsubsection{Wersja podstawowa modelu ze zmienną liczbą wierzchołków}
 
-Dokładność modelu uczonego na~grafach treningowych z~liczbą wierzchołków od czterech do siedmiu,
-prezentuje się dość stabilnie po początkowej fazie wzrostu. Występują tylko drobne fluktuacje.
-Po kilku początkowych epokach, dokładność oscyluje wokół 95\%, dochodząc nawet do 100\%.
-Linie walidacji i~treningu są bardzo blisko siebie, co sugeruje dobrą generalizację modelu
-i nie wskazuje na~przeuczenie.
+Dokładność modelu uczonego na~grafach treningowych z~liczbą wierzchołków od czterech do~siedmiu,
+prezentuje się dość stabilnie po~początkowej fazie wzrostu. Występują tylko drobne fluktuacje.
+Po kilku początkowych epokach, dokładność oscyluje wokół 95\%, dochodząc nawet do~100\%.
+Linie walidacji i~treningu są bardzo blisko siebie, co~sugeruje dobrą generalizację modelu
+i~nie wskazuje na~przeuczenie.
 
-W przypadku straty modelu, początkowy gwałtowny spadek sugeruje, że model dość szybko się uczy.
+W~przypadku straty modelu, początkowy gwałtowny spadek sugeruje, że model dość szybko się uczy.
 Po 10 epokach następuje stabilizacja straty na~niskim, bo wynoszącym około 0.1, poziomie.
 Podobnie jak w~przypadku dokładności, strata dla zbioru walidacyjnego jest blisko straty treningowej.
 Można zaobserować pewne wzrosty, które mogą być spowodowane trudniejszymi przypadkami w~zbiorze walidacyjnym.
@@ -20,7 +20,7 @@ Można zaobserować pewne wzrosty, które mogą być spowodowane trudniejszymi p
 \FloatBarrier
 
 Model ten wydaje się być dobrze dopasywany i~stabilny oraz poprawnie generalizujący.
-Z uwagi na~bliskość wyników dla treningu i~walidacji, można stwierdzić, że model nie jest przeuczony.
+Z~uwagi na~bliskość wyników dla treningu i~walidacji, można stwierdzić, że model nie jest przeuczony.
 
 \begin{figure}[ht]
 	\centering
@@ -52,15 +52,15 @@ Nie jest to~zły wynik, biorąc pod uwagę niską złożoność modelu.
 
 \subsubsection{Zmodyfikowany model ze zmienną liczbą wierzchołków - Conv2D i~Droput oraz spowolnienie uczenia}
 
-W modelu wprowadzone zostało zwiększenie liczby filtrów dla warstw Conv2D, zwiększenie parametru Dropout
+W~modelu wprowadzone zostało zwiększenie liczby filtrów dla warstw Conv2D, zwiększenie parametru Dropout
 oraz zastosowano wywołanie zwrotne, które spowalnia uczenie.
 
-Dokładność treningowa i~walidacyjna modelu bardzo szybko wzrasta do wartości bliskich 100\%
-i stabilizuje się na~takim poziomie do końca procesu nauki.
+Dokładność treningowa i~walidacyjna modelu bardzo szybko wzrasta do~wartości bliskich 100\%
+i~stabilizuje się na~takim poziomie do~końca procesu nauki.
 Gdyby tylko dokładność treningowa osiągała taki poziom, możnaby założyć z~dużą dozą pewności, przeuczenie modelu.
-W tym przypadku jednak, różnice między dokładnością walidacyjną a~treningową są marginalne.
+W~tym przypadku jednak, różnice między dokładnością walidacyjną a~treningową są marginalne.
 
-Straty modelu wykazują podobne cechy do dokładności - szybki spadek wartości oraz stabilizacja na~niskim poziomie.
+Straty modelu wykazują podobne cechy do~dokładności - szybki spadek wartości oraz stabilizacja na~niskim poziomie.
 
 \begin{figure}[ht]
 	\centering
@@ -70,7 +70,7 @@ Straty modelu wykazują podobne cechy do dokładności - szybki spadek wartości
 \end{figure}
 \FloatBarrier
 
-Wydaje się, że model osiągnął pewną stabilność na~niskim poziomie, co może pozytywnie świadczyć o~jego zdolności generalizacji na~nowe dane.
+Wydaje się, że model osiągnął pewną stabilność na~niskim poziomie, co~może pozytywnie świadczyć o~jego zdolności generalizacji na~nowe dane.
 
 \begin{figure}[ht]
 	\centering
@@ -91,7 +91,7 @@ Wydaje się, że model osiągnął pewną stabilność na~niskim poziomie, co mo
 Osiągnięta stabilizacja modelu i~brak znaczących różnic między wartościami dokładności,
 czy straty na~zbiorach treningowych i~wdalidacyjnych, nie przełożyła się w~sposób rewolucyjny na~osiągi modelu.
 Model jednakże nie wypadł całkowicie źle - poprawnie sklasyfikował 36\% zewnętrznych grafów testowych,
-co plasuje go w~czołówce testowanych modeli pod kątem realnej dokładności.
+co~plasuje go w~czołówce testowanych modeli pod kątem realnej dokładności.
 
 \begin{figure}[ht]
 	\centering
@@ -109,11 +109,11 @@ Do modelu wprowadzone zostały modyfikacje na~wzór tych ze zmodyfikowanego mode
 Przetestowany został wariant z~włączonymi wszystkimi modyfikacjami na~raz.
 
 Podobnie jak dla zmodyfikowanego modelu z~walidacją krzyżową, dokładność treningowa jest bardzo wysoka (prawie 100\%),
-ale dokładność walidacyjna nie jest ustabilizowana. Jej wartości oscylują w~przedziale od 0,2, aż do 0,9.
+ale dokładność walidacyjna nie jest ustabilizowana. Jej wartości oscylują w~przedziale od 0,2, aż do~0,9.
 To sugeruje, że model nie generalizuje dobrze na~nowych danych i~może być nadmiernie dopasowany.
 
 Wykresy straty prezentują się w~podobny sposób jak i~wykresy dokładności.
-Strata treningowa jest bliska zeru, co mówi o~świetnym zapamiętywaniu danych treningowych przez model, kosztem generalizacji na~nowe dane.
+Strata treningowa jest bliska zeru, co~mówi o~świetnym zapamiętywaniu danych treningowych przez model, kosztem generalizacji na~nowe dane.
 Strata walidacji jednak jest niestabilna z~bardzo wysokimi wartościami w~niekórych epokach.
 
 \begin{figure}[ht]

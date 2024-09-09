@@ -2,21 +2,21 @@ W wyniku testów wyłoniony został model o~najlepszej dokładności realnej, tj
 dokładności klasyfikacji zewnętrznych grafów testowych.
 Model ten okazał się jednym z~najbardziej podstawowych z~przygotowanych,
 bo jest to~podstawowy model uczony na~grafach sześciowierzchołkowych.
-W ramach eksperymentu, zastosowano dla niego modyfikacje,
+W~ramach eksperymentu, zastosowano dla niego modyfikacje,
 które pomogły zwiększyć realną dokładność modelu.
 Modyfikacje te zostały wprowadzone i~przetestowane w~podrozdziale z~testami modeli
-z walidacją krzyżową.
+z~walidacją krzyżową.
 Jedyną zmianą z~zaproponowanych, która przynosi realne korzyści,
 jest zwiększenie liczby filtrów w~warstwach sieci neuronowej, kolejno 32, 64 oraz 128 dla Conv2D,
 oraz zastosowanie zwiększonego parametru dropout - 0,5.
 
 \subsubsection{Zmodyfikowany model podstawowy uczony na~grafach sześciowierzchołkowych}
 
-Model osiąga wysokie i~stabilne wyniki, lecz po około 55 epoce procesu nauczania,
-dokładność gwałtownie spada, aż do wartości około 23\%.
+Model osiąga wysokie i~stabilne wyniki, lecz po~około 55 epoce procesu nauczania,
+dokładność gwałtownie spada, aż do~wartości około 23\%.
 
 Ta sama sytuacja dotyczy straty, która to~gwałtownie wzrasta około 60 epoki,
-z około 0,25, do aż 1,75.
+z~około 0,25, do~aż 1,75.
 
 \begin{figure}[ht]
 	\centering
@@ -49,17 +49,17 @@ który spowodował, że model „przyspieszył” w~ostatnich epokach.
 
 \subsubsection{Zmodyfikowany poprawiony model podstawowy uczony na~grafach sześciowierzchołkowych}
 
-Wyniki uzyskane z~procesu nauki poprzeniego modelu sugerują zmniejszenie liczby epok do około 55.
+Wyniki uzyskane z~procesu nauki poprzeniego modelu sugerują zmniejszenie liczby epok do~około 55.
 Taka modyfikacja została zastosowana, a~test przeprowadzono ponownie.
 
 Po skróceniu procesu uczenia, dokładność modelu nie spada gwałtownie w~końcowych epokach.
-Dokładność szybko rośnie na~początku treningu i~osiąga wysokie wartości już po kilku epokach.
-Dokonuje się również stabilizacja w~okolicach 98\%-100\%, co wskazuje na~dobre dopasowanie modelu do danych.
+Dokładność szybko rośnie na~początku treningu i~osiąga wysokie wartości już po~kilku epokach.
+Dokonuje się również stabilizacja w~okolicach 98\%-100\%, co~wskazuje na~dobre dopasowanie modelu do~danych.
 Fluktuacje walidacji są niewielkie i~nie wskazujące na~problemy z~modelem.
 
-Strata, po modyfikacji, już nie wzrasta gwłatownie pod koniec procesu uczenia.
-Oba typy strat maleją po kilku pierwszych epokach i~pozostają na~niskim poziomie (0,1 - 0,2).
-Model wygląda więc na~dobrze dopasowany do danych treningowych, jak i~walidacyjnych.
+Strata, po~modyfikacji, już nie wzrasta gwłatownie pod koniec procesu uczenia.
+Oba typy strat maleją po~kilku pierwszych epokach i~pozostają na~niskim poziomie (0,1 - 0,2).
+Model wygląda więc na~dobrze dopasowany do~danych treningowych, jak i~walidacyjnych.
 
 \begin{figure}[ht]
 	\centering
@@ -91,7 +91,7 @@ Model działa bardzo dobrze, z~minimalnymi fluktuacjami, które mogą być natur
 
 Zmodyfikowany model poprawnie sklasyfikował prawie 42\% grafów zewnętrznych.
 Jest to~wynik gorszy o~3 punkty procentowe od wariantu tego samego modelu
-z mniejszą liczbą filtrów w~warstwach Conv2D oraz niższym wskaźnikiem dropout.
+z~mniejszą liczbą filtrów w~warstwach Conv2D oraz niższym wskaźnikiem dropout.
 Wynik jednak jest wciąż zadowlający, bo czterdziestodwuprocentowa pewność,
 jest wynikiem lepszym niż przypisywanie klas losowo.
 
@@ -106,6 +106,6 @@ jest wynikiem lepszym niż przypisywanie klas losowo.
 \FloatBarrier
 
 Ponownie, to~prostszy model okazał się tym, który dokonuje lepszej generalizacji na~nowe dane
-i lepiej zapamiętuje ogólne wzorce.
-Sugeruje to, że zbyt duże skomplikowanie modelu do zadania o~niewielkiej złożoności,
+i~lepiej zapamiętuje ogólne wzorce.
+Sugeruje to, że zbyt duże skomplikowanie modelu do~zadania o~niewielkiej złożoności,
 przynosi korzyści odwrotne od zamierzonych.

@@ -1,14 +1,14 @@
 \subsubsection{Wersja podstawowa modelu z~walidacją krzyżową}
 
-W przypadku modelu z~walidacją krzyżową, uczonego na~grafach z~4~wierzchołkami,
+W~przypadku modelu z~walidacją krzyżową, uczonego na~grafach z~4~wierzchołkami,
 dokładność wzrasta gwałtownie na~początku treningu,
-osiągając wartości powyżej 0.8 już po około 10 epokach.
+osiągając wartości powyżej 0.8 już po~około 10 epokach.
 Dokładność stabiliziuje się w~okolicach 90\%, ale mimo to~widać pewne fluktuacje, zwłaszacza na~danych walidacyjnych.
-Możliwe do zaobserowania są regularne spadki dokładności w~niektórych epokach,
-co może wynikać z~niestabilnego treningu lub~problemów modelu w~generalizacji dla niektórych danych walidacyjncyh.
+Możliwe do~zaobserowania są regularne spadki dokładności w~niektórych epokach,
+co~może wynikać z~niestabilnego treningu lub~problemów modelu w~generalizacji dla niektórych danych walidacyjncyh.
 
-Dla straty modelu można zaobserować spadek w~pierwszych 10 epokach, co mogłoby wskazywać na~szybkie uczenie się modelu.
-Zaraz po nim, następuje stabilizacja na~niskim poziomie, z~pojedynczymi skokami, głównie na~zbiorze walidacyjnym.
+Dla straty modelu można zaobserować spadek w~pierwszych 10 epokach, co~mogłoby wskazywać na~szybkie uczenie się modelu.
+Zaraz po~nim, następuje stabilizacja na~niskim poziomie, z~pojedynczymi skokami, głównie na~zbiorze walidacyjnym.
 Nieregularne wzrosty straty, podobnie jak w~przypadku dokładności, mogą wskazywać na~problemy z~przeuczeniem.
 
 \begin{figure}[ht]
@@ -21,10 +21,10 @@ Nieregularne wzrosty straty, podobnie jak w~przypadku dokładności, mogą wskaz
 
 Podsumowując, ten wariant modelu generalnie uczy się poprawnie, dzięki czemu osiąga wysoką dokładność i~niską stratę.
 Fluktuacje jakie występują w~wynikach, szczególnie na~danych walidacyjnych,
-sugerują jednak potencjalne problemy z~generalizacją, co może być wynikiem niestabilności modelu,
+sugerują jednak potencjalne problemy z~generalizacją, co~może być wynikiem niestabilności modelu,
 przeuczenia modelu, lub~trudności w~rozpoznawaniu bardziej złożonych przykładów w~danych walidacyjnych.
 
-W przypadku tego modelu, zwiększenie liczby epok, nie przyniosłoby zamierzonych skutków.
+W~przypadku tego modelu, zwiększenie liczby epok, nie przyniosłoby zamierzonych skutków.
 Model zbyt szybko się przeucza, a~więc większa liczba iteracji nie wpłynęłaby w~żaden znaczący sposób na~wynik.
 
 \begin{figure}[ht]
@@ -43,9 +43,9 @@ Model zbyt szybko się przeucza, a~więc większa liczba iteracji nie wpłynęł
 \end{figure}
 \FloatBarrier
 
-Z powodu przeuczenia model nie radził sobie z~zewnętrznymi obrazkami testowymi.
+Z~powodu przeuczenia model nie radził sobie z~zewnętrznymi obrazkami testowymi.
 Większość obrazów testowych określił jako grafy pełne, a~tylko 3~jako jedna z~innych klas,
-co oczywiście nie jest zgodne ze stanem rzeczywistym.
+co~oczywiście nie jest zgodne ze stanem rzeczywistym.
 Realna dokładność modelu wynosi więc około 24\%.
 
 \begin{figure}[ht]
@@ -59,19 +59,19 @@ Realna dokładność modelu wynosi więc około 24\%.
 
 \subsubsection{Modyfikacje modelu z~walidacją krzyżową}
 
-W celu poprawy dokładności i~zapobiegnięciu przeuczenia wprowadzone
-zostały następujące modyfikacje do modelu z~walidacją krzyżową.
+W~celu poprawy dokładności i~zapobiegnięciu przeuczenia wprowadzone
+zostały następujące modyfikacje do~modelu z~walidacją krzyżową.
 Każde z~nich zostało przetestowane w~osobnym modelu.
 Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjami. 
 \begin{itemize}[label=-,labelsep=0.4cm,leftmargin=0.6cm]
-    \item Zmieniono liczbę filtrów w~warstwach Conv2D z~32 w~każdej warstwie, do kolejno 32, 64 oraz 128.
-		Jednocześnie zwiększono parametr Dropout z~0,2 do 0,5.
-    \item Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
-    \item Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
+    \item Zmieniono liczbę filtrów w~warstwach Conv2D z~32 w~każdej warstwie, do~kolejno 32, 64 oraz 128.
+		Jednocześnie zwiększono parametr Dropout z~0,2 do~0,5.
+    \item Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po~każdej warstwie Conv2D.
+    \item Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do~zbioru treningowego,
 		w~celu poprawy zdolności generalizacyjnych.
 		Wykorzystano również GPU w~procesie pobierania wstępnego danych i~cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
 	\item Skorzystanie z~wywołania zwrotnego, które zmniejsza szybkość uczenia.
-		W przypadku stagnacji dokładności w~procesie przechodzenia przez kolejne epoki uczenia modelu
+		W~przypadku stagnacji dokładności w~procesie przechodzenia przez kolejne epoki uczenia modelu
 		może pomóc w~lepszej konwergencji modelu.
 \end{itemize}
 
@@ -96,14 +96,14 @@ Stworzony został również jeden model ze wszystkimi połączonymi modyfikacjam
 	  ])
 \end{lstlisting}
 
-Wszystkie przebiegi walidacji krzyżowej osiągają wysoką dokładność po kilku pierwszych epokach.
+Wszystkie przebiegi walidacji krzyżowej osiągają wysoką dokładność po~kilku pierwszych epokach.
 Model bardzo szybko uczy się rozpoznawać wzorce.
-Walidacja również osiąga zadowalające wyniki, tj. około 90\%. Może to~wskazywać na~poprawną generalizację do nowych danych.
+Walidacja również osiąga zadowalające wyniki, tj. około 90\%. Może to~wskazywać na~poprawną generalizację do~nowych danych.
 Występuje jednak niewielka niesabilność, występująca pomiędzy epokami,
-co widać po gwałtownych spadkach i~wzrostach dokładności walidacji.
+co~widać po~gwałtownych spadkach i~wzrostach dokładności walidacji.
 
 Strata na~zbiorze treningowym i~walidacyjnym systematycznie maleje z~kolejnymi epokami,
-co może wskazywać na~dobre dopasowanie do danych treningowych.
+co~może wskazywać na~dobre dopasowanie do~danych treningowych.
 Zauważalnym problemem jest jednak spora fluktuacja obu wskaźników.
 Model może napotykać trudności z~pewnymi próbkami w~zbiorze danych walidacyjnych. 
 
@@ -138,8 +138,8 @@ zważając na~wahania wskaźników.
 \FloatBarrier
 
 Model poprawnie sklasyfikował aż 40\% rysunków grafów,
-co jest znacznym polepszeniem w~stosunku do początkowego modelu z~zastosowaną walidacją krzyżową.
-Wynik, o~ile daleko mu do pełnej pewności, jest znacznie lepszy niż losowe przypisywanie klas grafów.
+co~jest znacznym polepszeniem w~stosunku do~początkowego modelu z~zastosowaną walidacją krzyżową.
+Wynik, o~ile daleko mu do~pełnej pewności, jest znacznie lepszy niż losowe przypisywanie klas grafów.
 Model ten więc, choć nie idealny, wykazuje pewną realną użyteczność.
 
 \begin{figure}[ht]
@@ -156,7 +156,7 @@ Model ten więc, choć nie idealny, wykazuje pewną realną użyteczność.
 Model został zmodyfikowany poprzez zastosowanie normalizacji wsadowej pomiędzy kolejnymi warstwami Conv2D modelu.
 Ma to~na~celu poprawienie stabilności treningu oraz przyspieszenie uczenia.
 Użyte zostało również zwiększenie liczby filtrów w~warstwach Conv2D oraz zwiększenie parametru Dropout
-z poprzedniej modyfikacji modelu, ponieważ osięgnęła ona zamierzone cele.
+z~poprzedniej modyfikacji modelu, ponieważ osięgnęła ona zamierzone cele.
 
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu tworzącego model z~walidacją krzyżową - wersja 2,
 	label={tests-model-crossval2}]
@@ -178,12 +178,12 @@ z poprzedniej modyfikacji modelu, ponieważ osięgnęła ona zamierzone cele.
   ])
 \end{lstlisting}
 
-Na wykresach dokładności treningowych widać stały wzrost od około 70\% do prawie 100\%.
-Jest to~oczywiście pozytywna cecha modelu, lecz po analizie krzywych dokładności walidacyjnych,
+Na wykresach dokładności treningowych widać stały wzrost od około 70\% do~prawie 100\%.
+Jest to~oczywiście pozytywna cecha modelu, lecz po~analizie krzywych dokładności walidacyjnych,
 należy stwierdzić, że jest to~przeuczenie. Model poprawnie nauczył się danych treningowych,
 lecz nie zapamiętał ogólnych wzorców, zważając na~wysokie wahania oraz niestałość walidacji.
 
-Strata treningowa, co jest spodziewane po uznaniu model za przeuczony,
+Strata treningowa, co~jest spodziewane po~uznaniu model za przeuczony,
 osiąga bardzo niskie wartości treingowe - przez wszystkie epoki jest bliska 0.
 Strata walidacyjna zaś, mimo że pozornie wygląda na~stabilną, taka nie jest
 - należy zwrócić uwagę na~jednostki na~skali. Wahania są bardzo duże oraz występuje pojedyncza wartość odstająca,
@@ -198,8 +198,8 @@ która osiąga ponad 6000 jednostek.
 \FloatBarrier
 
 Wysokie fluktuacje dokładności walidacyjnych, bardzo wysokie wartości dokładności treningowych
-i spore skoki wartości strat modelu prowadzą do konkluzji,
-że model jest nadmiernie dopasowany do danych treningowych i~nie potrafi generalizować odpowiednio na~nowe dane.
+i~spore skoki wartości strat modelu prowadzą do~konkluzji,
+że model jest nadmiernie dopasowany do~danych treningowych i~nie potrafi generalizować odpowiednio na~nowe dane.
 
 \begin{figure}[ht]
 	\centering
@@ -219,7 +219,7 @@ i spore skoki wartości strat modelu prowadzą do konkluzji,
 
 Model sklasyfikował poprawnie prawie 31\% grafów zewnętrznych.
 Jest to~o~9 punktów procentowych mniej niż poprzenia modyfikacja modelu,
-co prowadzi do wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
+co~prowadzi do~wniosków, że zastosowanie normalizacji wsadowej nie spełniło założonej funkcji.
 Nie jest to~udany eksperyment, lecz model wciąż prezentuje pewną użyteczność.
 
 \begin{figure}[ht]
@@ -236,11 +236,11 @@ Nie jest to~udany eksperyment, lecz model wciąż prezentuje pewną użytecznoś
 Przed rozpoczęciem nauki modelu, zastosowana została augmentacja danych treningowych.
 Najpierw, stworzony został sekwencyjny model, składający się z~pewnych warstw.
 Pierwsza z~nich - RandomFlip, odwraca losowe obrazy w~poziomie, zwiększając tym samym różnorodność danych.
-Kolejna - RandomRotation, losowo obraza obrazy o~kąt w~zakresie od -0.1 do 0.1 radianów,
+Kolejna - RandomRotation, losowo obraza obrazy o~kąt w~zakresie od -0.1 do~0.1 radianów,
 tym samym pomagając modelowi stać się odpornym na~rotacje grafów.
 RandomZoom z~kolei przybliża lub~oddala obrazy o~wartości oscylujące w~zakresie 10\%.
-W teorii, powinno to~uodpornić model na~grafy różnej wielkości.
-W kolejnej linii skryptu, wyżej stworzony sekwencyjny model został zastosowany do zbioru danych treningowych.
+W~teorii, powinno to~uodpornić model na~grafy różnej wielkości.
+W~kolejnej linii skryptu, wyżej stworzony sekwencyjny model został zastosowany do~zbioru danych treningowych.
 Dalej, na~zbiorach uczących i~walidacyjnych, użyte zostały funkcje cachujące dane - przyspiesza to~proces uczenia.
 
 % \clearpage
@@ -258,17 +258,17 @@ Dalej, na~zbiorach uczących i~walidacyjnych, użyte zostały funkcje cachujące
 \end{lstlisting}
 
 Dokładność treningowa i~walidacyjna w~ciągu kilku pierwszych epok wzrasta znacząco,
-od około 23\% do 50\%, po czym rośnie w~stałym tempie do 90\%.
+od około 23\% do~50\%, po~czym rośnie w~stałym tempie do~90\%.
 Wydają się to~być dość realistyczne wartości dokładności dla nieprzeuczonego modelu.
 Głównym problemem w~tym przypadku wydają się być niektóre przebiegi walidacji krzyżowej.
-W ich przypadku, dokładność na~danych treningowych oraz walidacyjnych wynosi przez wszystkie epoki uczenia, około 23\%.
+W~ich przypadku, dokładność na~danych treningowych oraz walidacyjnych wynosi przez wszystkie epoki uczenia, około 23\%.
 Przy każdej iteracji walidacji krzyżowej generowane są nowe zbiory walidacyjne i~treningowe,
-co w~połączeniu z~augmentacją danych, może powodować, że niektóre z~tych zbiorów są wyjątkowo trudne do nauki dla modelu.
+co~w~połączeniu z~augmentacją danych, może powodować, że niektóre z~tych zbiorów są wyjątkowo trudne do~nauki dla modelu.
 Możliwe jest również, że niektóre zbiory na~których dokonano augmentacji, zważając na~to, że jest ona losowa,
-są nieprzystosowane do nauki modeli uczenia maszynowego.
+są nieprzystosowane do~nauki modeli uczenia maszynowego.
 
 Strata zachowuje się podobnie jak dokładność. Dla pewnych przejść walidacji krzyżowej, osiąga ona realistyczne
-i spadające z~biegiem epok wartości. Dla innych zaś, wartości straty są stałe przez wszystkie epoki uczenia.
+i~spadające z~biegiem epok wartości. Dla innych zaś, wartości straty są stałe przez wszystkie epoki uczenia.
 
 \begin{figure}[ht]
 	\centering
@@ -279,7 +279,7 @@ i spadające z~biegiem epok wartości. Dla innych zaś, wartości straty są sta
 \FloatBarrier
 
 Model wydaje się radzić poprawnie z~niektórymi wariantami zaugmentowanych danych, a~z~innymi - całkowicie nie,
-co wyraża się w~krzywych dokładności oraz straty modelu.
+co~wyraża się w~krzywych dokładności oraz straty modelu.
 
 \begin{figure}[ht]
 	\centering
@@ -312,28 +312,28 @@ która wynosiła około 22-23\%.
 
 \subsubsection{Zmodyfikowany model z~walidacją krzyżową - spowolnienie uczenia}
 
-W tym modelu zostało zastosowane wywołanie zwrotne, które spowalnia proces uczenia.
+W~tym modelu zostało zastosowane wywołanie zwrotne, które spowalnia proces uczenia.
 Współczynnik procesu uczenia decyduje o~tym, jak duże kroki wykonuje algorytm optymalizacyjny podczas aktualizacji wag sieci neuronowej.
 Gdy owy współczynnik jest zbyt duży, model może oscylować wokół minimum funkcji straty i~nigdy go nie osiągnąć.
-W przypadku kiedy jest zbyt mały, może prowadzić do bardzo wolnego uczenia się, czy nawet utknięcia w~lokalnym minimum.
+W~przypadku kiedy jest zbyt mały, może prowadzić do~bardzo wolnego uczenia się, czy nawet utknięcia w~lokalnym minimum.
 Parametr $factor$ w~skrypcie decyduje o~tym, o~jaką wartość zredukować współczynnik uczenia,
 jeśli nie nastąpi poprawa uczenia przez okres wyrażony parametrem $patience$.
 $min_lr$ to~minimalna wartość współczynnika uczenia, poniżej której wsółczynnik nie zostanie już zredukowany.
 Zapobiega to~zbyt drastycznemu zmniejszeniu learning rate, które mogłoby zahamować proces uczenia się modelu.
 
 \begin{lstlisting}[language=Python,caption=Listing zmodyfikowanego skryptu
-	znajdującego się bezpośrdenio po tworzeniu modelu z~walidacją krzyżową - wersja 4,label={tests-model-crossval4}]
+	znajdującego się bezpośrdenio po~tworzeniu modelu z~walidacją krzyżową - wersja 4,label={tests-model-crossval4}]
 	reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.001)
 \end{lstlisting}
 
 Krzywa dokładności treningowej oraz walidacyjnej wzrasta gwałtownie w~początkowych epokach nauki.
 Oznacza to, że model szybko uczy się nieskomplikowanych wzorców.
-W kolejnej części procesu nauki, dokładność na~obu zbiorach stabiizuje się między 90\%, a~100\%.
-Z powodu widocznych sporych spadków na~zbiorze walidacyjnym, można założyć pewne problemy z~modelem - przeuczenie.
+W~kolejnej części procesu nauki, dokładność na~obu zbiorach stabiizuje się między 90\%, a~100\%.
+Z~powodu widocznych sporych spadków na~zbiorze walidacyjnym, można założyć pewne problemy z~modelem - przeuczenie.
 
 Podobnie jak dokładność, strata gwałtownie obniża się na~początku procesu uczenia.
-W kolejnych epokach dokonuje się pewna stabilizacja, lecz mimo tego widoczne są fluktuacje, szczególnie na~zbiorze walidacyjnym.
-Możliwe, że model jest zbyt dopasowany do specyficznych cech danych treningowych i~nie generalizuje odpowiednio na~nowe dane.
+W~kolejnych epokach dokonuje się pewna stabilizacja, lecz mimo tego widoczne są fluktuacje, szczególnie na~zbiorze walidacyjnym.
+Możliwe, że model jest zbyt dopasowany do~specyficznych cech danych treningowych i~nie generalizuje odpowiednio na~nowe dane.
 
 \begin{figure}[ht]
 	\centering
@@ -344,7 +344,7 @@ Możliwe, że model jest zbyt dopasowany do specyficznych cech danych treningowy
 \FloatBarrier
 
 Model wykazuje pewne nieporządane cechy, takie jak wahania dokładności i~straty na~zbiorach walidacyjnych,
-co wskazuje na~przeuczenie modelu.
+co~wskazuje na~przeuczenie modelu.
 
 \begin{figure}[ht]
 	\centering
@@ -378,12 +378,12 @@ Zważając na~to, że ogólną większość grafów oznaczył jako pełne, może
 \subsubsection{Zmodyfikowany model z~walidacją krzyżową - modyfikacje połączone}
 
 Dokładność dla wszystkich przebiegów stopniowo wzrasta wraz z~liczbą epok
-i osiąga wysoki poziom, bo powyżej 80\%, pod koniec treningu.
-W przypadku walidacji jednak, wyniki nie są zadowalające, a~wrecz bardzo niestabilne.
+i~osiąga wysoki poziom, bo powyżej 80\%, pod koniec treningu.
+W~przypadku walidacji jednak, wyniki nie są zadowalające, a~wrecz bardzo niestabilne.
 Przez większość przebiegów uczenia utrzymuje się na~niskim poziomie,
-co może sugerować problemy z~generalizacją danych.
+co~może sugerować problemy z~generalizacją danych.
 
-Strata treningowa maleje w~większości przebiegów, co jest spodziewane podczas uczenia.
+Strata treningowa maleje w~większości przebiegów, co~jest spodziewane podczas uczenia.
 Widać jednak pewne fluktuacje, świadczące o~problemach z~konwergencją.
 Dla straty walidacyjnej można zaobserować wielką niestabilność - osiąga bardzo wysokie wartości,
 nawet rzędu kilku tysięcy, jak również bardzo niskie, bliskie zeru.
@@ -419,9 +419,9 @@ nie osiągnęło zamierzonego skutku.
 \end{figure}
 \FloatBarrier
 
-Model poprawnie wskazał klasy tylko 16\% grafów testowych, co jest znacznie poniżej oczekiwanych rezultatów,
+Model poprawnie wskazał klasy tylko 16\% grafów testowych, co~jest znacznie poniżej oczekiwanych rezultatów,
 zważając na~liczbę zastosowanych modyfikacji modelu.
-Wnioskować można, że nie każda modyfikacja była odpowiednio dobrana do danego przypadku
+Wnioskować można, że nie każda modyfikacja była odpowiednio dobrana do~danego przypadku
 lub niektóre z~nich nie łączą się zbyt dobrze.
 
 \begin{figure}[ht]
