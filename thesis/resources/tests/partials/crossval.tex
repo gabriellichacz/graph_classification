@@ -52,7 +52,9 @@ Realna dokładność modelu wynosi więc około 24\%.
 	\centering
 	\includegraphics[height=4cm]{../graph_classification/test_graphs/drawn/empty-1.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez model z~walidacją krzyżową.
-		Przypisana klasa to~graf pełny z~99,62\% pewnością.}
+		Przypisana klasa to~graf pełny z~99,62\% pewnością.
+		Biorąc pod uwagę wysoką pewność przy klasyfikacji,
+		można by spodziewać się lepszego wyniku niż otrzymany nieprawidłowy.}
 	\label{Fig:tests-cv-0d}
 \end{figure}
 \FloatBarrier
@@ -226,7 +228,9 @@ Nie jest to~udany eksperyment, lecz model wciąż prezentuje pewną użytecznoś
 	\centering
 	\includegraphics[height=4cm]{../graph_classification/test_graphs/drawn/full-8.png}
 	\caption{Klasyfikacja przykładowego grafu zewnętrznego przez zmodyfikowany model z~walidacją krzyżową - normalizacja wsadowa.
-		Przypisana klasa to~graf bezkrawędziowy z~100\% pewnością.}
+		Przypisana klasa to~graf bezkrawędziowy z~100\% pewnością.
+		Jest to oczywiście nieprawidłowy wynik, bo krawędzie istnieją.
+		Być może były one zbyt cienkie, by model je poprawnie zinterpretował.}
 	\label{Fig:tests-cv-2d}
 \end{figure}
 \FloatBarrier
