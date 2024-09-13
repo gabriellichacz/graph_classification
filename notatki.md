@@ -33,32 +33,7 @@ Dwudzielne (nie używam)
 Ścieżka, cykl, pełny to grafy spójne.
 Grafy dwudzielne mogą być spójne lub niespójne. 
 
-# 1
-Chyba do wywalenia te dwudzielne
-Dodaj wiecej obrotów, np. 100 grafów z obrotem 0.3, a 100 z 0.5
-
-# 2
-- Wstęp
-Wprowadzenie do tematu: Wyjaśnij, czym są grafy i dlaczego są ważne w matematyce, informatyce i innych dziedzinach.
-Cel pracy: Określ, dlaczego wybrałeś klasyfikację typów grafów jako temat swojej pracy.
-- Podstawowe definicje
-Omów podstawowe pojęcia związane z grafami, takie jak wierzchołki, krawędzie, grafy skierowane i nieskierowane.
-Przedstaw różne reprezentacje grafów, takie jak macierze sąsiedztwa i listy sąsiedztwa.
-- Klasyfikacja grafów
-Opisz różne typy grafów, takie jak grafy spójne, drzewa, grafy planarne, grafy regularne itp.
-Wyjaśnij, jak można klasyfikować grafy na podstawie ich właściwości (np. liczby wierzchołków, stopnia wierzchołków).
-- Algorytmy klasyfikacji grafów
-Przedstaw istniejące algorytmy służące do klasyfikacji grafów.
-Omów ich złożoność obliczeniową i efektywność.
-- Przykłady zastosowań
-Zbadaj, jak klasyfikacja typów grafów jest używana w praktyce. Przykłady mogą obejmować sieci społecznościowe, analizę sieci, planowanie tras, układanie grafów itp.
-- Badania własne
-Przeprowadź własne badania na temat klasyfikacji grafów. Możesz zbadać nowe algorytmy, porównać istniejące metody lub zastosować je w konkretnym kontekście.
-- Podsumowanie
-Podsumuj wyniki swoich badań i wnioski dotyczące klasyfikacji typów grafów.
-Zastanów się nad możliwościami dalszych badań w tej dziedzinie.
-
-##################-te nie-##################
+##################-odrzucone-##################
 - Graf gwiazda (star graph)
 Definicja: Graf dwudzielny który składa się z jednego wierzchołka centralnego, połączonego krawędziami z innymi wierzchołkami (liśćmi).
 Wierzchołki liści nie są ze sobą połączone.
@@ -74,37 +49,3 @@ Graf nieskierowany, który jest spójny i nie zawiera cykli. Każdy graf będąc
 - Graf hiper-kostki (hypercube graph)
 Definicja: Graf, którego wierzchołki reprezentują wszystkie możliwe ciągi binarne o długości n,
 a krawędzie łączą te wierzchołki, które różnią się dokładnie jednym bitem.
-
-#####################
-Wydajność przy definicji walidacji krzyżowej to odpowiednie słowo, bo to definicja z książki.
-
-##################### Plan 03.09 #####################
-1. Zrobić kopie obecnych modeli. ---- done
-2. Rozrysować na kartce więcej rysunków. ---- done
-3. Puścić przygotowane modele na nowych danych zewnętrznych. ---- done
-4. Edytować opisy modeli (nie powinno tego być wiele). ---- done
-5. Napisać wnioski z testów. ---- done
-6. Napisać podsumowanie.
-7. Napisac abstract.
-
-##################### Style #####################
-https://wmifs.prz.edu.pl/studenci/praca-dyplomowa/zasady-i-tryb-wykonania-pracy-dyplomowej
-
-Marginesy: ---- done
-margines górny – 25 mm
-margines dolny – 25 mm
-margines lewy – 30 mm
-margines prawy – 25 mm
-
-Praca powinna być napisana w formacie A4 czcionką w rozmiarze 10-12 pt. ---- done
-
-Odstęp między wierszami powinien wynosić 1,5 interlinii. ---- done
-
-Numeracja stron powinna być automatyczna. ---- done
-
-Wszystkie główne elementy struktury pracy dyplomowej, a więc wstęp, kolejne rozdziały, spisy rysunków, tabel, wykresów, bibliografia, ewentualne aneksy oraz streszczenie muszą rozpoczynać się od nowej strony. ---- done
-
-Podpisane wykresy, rysunki, tabele i zdjęcia zamieszczamy w tekście centralnie w stosunku do wewnętrznego i zewnętrznego marginesu. ---- done
-
-##################### Cudzysłow #####################
-„
