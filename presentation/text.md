@@ -6,6 +6,8 @@ Opisałem wykorzystane technologie oraz dokładnie przedstawiłem podstawową we
 stworzonego modelu sieci neuronowej.
 Najobszerniejszym rozdziałem był ten o testach i modyfikacjach modeli.
 
+**Slajd**
+
 Dla nas, ludzi, zdolność do rozpoznawania wzorców jest kluczowa w procesie nauki.
 Dzięki temu, że potrafimy identyfikować elementy, które już wcześniej widzieliśmy,
 jesteśmy w stanie szybciej przyswajać nową wiedzę.
@@ -32,6 +34,8 @@ Grafy rysowano w rozmiarze 800x600 pikseli, z pomarańczowymi wierzchołkami na 
 Zapisywano je w katalogach odpowiadających klasom,
 a przygotowane skrypty generowały ścieżki, cykle, grafy pełne, grafy bezkrawędziowe i drzewa binarne.
 
+**Slajd**
+
 W testach użyto łącznie 10 000 grafów, generowanych w liczbie 500 na każdy typ, z wariantami od 4 do 7 wierzchołków.
 Testy przeprowadzono na dwóch poziomach krzywizny krawędzi: stałej (0,3) oraz losowej (0-1).
 Wyniki testów ze stałą krzywizną zostały pominięte ze względu na ich niską wartość merytoryczną.
@@ -45,13 +49,11 @@ Typy danych zewnętrznych wybiegają poza klasy grafów wykorzystywanych przy uc
 # Model
 Wszystkie skrypty testowe rozpoczynają się od przygotowania środowiska do trenowania modelu.
 Ustawiane są ścieżki do katalogów z grafami oraz danymi treningowymi i walidacyjnymi.
-Jeśli katalogi nie istnieją, są tworzone.
 Skrypty definiują wielkość obrazów i partii danych używanych podczas treningu.
 Grafy dla różnych liczby wierzchołków są dzielone na zestawy treningowe (80%) i walidacyjne (20%),
 co daje łącznie 8 tys. grafik do treningu i 2 tys. do testów.
 
-Dla modeli używających różnych liczby wierzchołków dane łączone są w jednym katalogu i od razu dzielone na zbiory.
-Na początku wczytywane są obrazy, które następnie przekształca się do formatu 180x180 px i skaluje do odcieni szarości.
+Następnie wczytywane są owe obrazy, które następnie przekształca się do formatu 180x180 px i skaluje do odcieni szarości.
 W przypadku walidacji krzyżowej dane są dzielone inaczej dla każdej iteracji.
 
 Model sieci neuronowej został zdefiniowany jako sekwencyjny stos warstw z 5-krotną walidacją krzyżową.
@@ -64,6 +66,8 @@ z regularyzacją L2 (0,01) i Dropout (20%) dla redukcji przeuczenia.
 Warstwa wyjściowa dopasowuje liczbę jednostek do liczby klas. Model trenowano przez 75 epok.
 
 W kolejnych wariantach modeli zmieniano parametry warstw i funkcje aktywacji, aby znaleźć optymalną kombinację.
+
+**Slajd**
 
 Po wytrenowaniu, skrypt wizualizuje dokładność i stratę modelu.
 W konsoli wyświetla dokładność dla zbioru treningowego i walidacyjnego,
