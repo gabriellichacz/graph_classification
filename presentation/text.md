@@ -38,8 +38,9 @@ Wyniki testów ze stałą krzywizną zostały pominięte ze względu na ich nisk
 
 # Dane zewnętrzne
 Obrazy testowe, które nazwane są tutaj danymi zewnętrznymi, są rysunkami grafów pochodzącymi spoza przygotowanego testu.
-Dzielą się na obrazy pobrane z internetu, obrazy wygenerowane przez skrypt w R, ale nie używane w treningu,
-oraz rysunki odręczne grafów. Typy danych zewnętrznych wybiegają poza klasy grafów wykorzystywanych przy uczeniu modelu.
+Dzielą się na obrazy pobrane z internetu, obrazy wygenerowane przez skrypt w R,
+ale nie używane w treningu, oraz rysunki odręczne grafów.
+Typy danych zewnętrznych wybiegają poza klasy grafów wykorzystywanych przy uczeniu modelu.
 
 # Model
 Wszystkie przygotowane skrypty testowe rozpoczynają się od przygotowania środowiska do trenowania modelu.
