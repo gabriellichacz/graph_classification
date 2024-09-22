@@ -76,3 +76,11 @@ Im mniejsza entropia, tym lepsza skuteczność modelu.
 
 Następnie skrypt przeszukuje katalog z danymi, wczytuje testowe obrazy, przeskalowuje je,
 konwertuje na odcienie szarości i przewiduje ich klasy, wyświetlając wyniki w konsoli.
+
+# Testy
+
+# Podsumowanie
+
+
+# Zakończenie
+Dziękuję za uwagę.
