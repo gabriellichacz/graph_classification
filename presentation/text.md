@@ -110,11 +110,7 @@ Zastosowano modyfikacje modeli w celu polepszenia dokładności modeli oraz zmni
 
 Omówię tutaj jeden z modeli
 
-W modelu z walidacją krzyżową, trenowanym na grafach z 4 wierzchołkami, dokładność szybko rośnie i osiąga ponad 80% po 10 epokach, stabilizując się na poziomie 90%. Widać jednak fluktuacje, zwłaszcza w danych walidacyjnych, co może wynikać z problemów z generalizacją.
-
-Strata modelu spada w pierwszych 10 epokach, co sugeruje szybkie uczenie, a potem stabilizuje się, z pojedynczymi skokami na zbiorze walidacyjnym, wskazującymi możliwe przeuczenie.
-
-Podsumowując, model uczy się poprawnie, osiągając wysoką dokładność i niską stratę,
+Model uczy się poprawnie, osiągając wysoką dokładność i niską stratę,
 jednak fluktuacje w danych walidacyjnych sugerują problemy z generalizacją,
 prawdopodobnie z powodu niestabilności lub przeuczenia.
 Zwiększenie liczby epok nie poprawiłoby wyników, gdyż model przeucza się zbyt szybko.
@@ -123,9 +119,10 @@ Zwiększenie liczby epok nie poprawiłoby wyników, gdyż model przeucza się zb
 
 Z powodu przeuczenia model słabo radził sobie z zewnętrznymi obrazami testowymi,
 klasyfikując większość jako grafy pełne, co nie odzwierciedla rzeczywistości.
-Jego realna dokładność wynosi około 24%.
 
 **Slajd**
+
+Jego realna dokładność wynosi około 24%.
 
 Tutaj mamy przykład jednego z klasyfikowanych grafów.
 Przypisana klasa to graf pełny z 99,62% pewnością.
