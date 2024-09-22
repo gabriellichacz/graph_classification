@@ -78,7 +78,10 @@ Następnie skrypt przeszukuje katalog z danymi, wczytuje testowe obrazy, przeska
 konwertuje na odcienie szarości i przewiduje ich klasy, wyświetlając wyniki w konsoli.
 
 # Testy
-Testy sprawdzają realną dokładność modeli. Przy pięciu klasach losowy wybór daje 20% trafności. Modele z dokładnością poniżej tego progu lub blisko niego są nieprzydatne. Użyteczność modeli można wyznaczyć na około 35%, co oznacza znaczną poprawę względem losowego wyboru.
+Testy sprawdzają realną dokładność modeli.
+Przy pięciu klasach losowy wybór daje 20% trafności.
+Modele z dokładnością poniżej tego progu lub blisko niego są nieprzydatne.
+Użyteczność modeli można wyznaczyć na około 35%, co oznacza znaczną poprawę względem wyboru losowego.
 
 Sprawdzane warianty modeli wyświetlone są na obecnym slajdzie.
 
@@ -95,9 +98,10 @@ Zastosowano modyfikacje modeli w celu polepszenia dokładności modeli oraz zmni
 - Zmieniono liczbę filtrów w warstwach Conv2D z 32 w każdej warstwie, do kolejno 32, 64 oraz 128.
     Jednocześnie zwiększono parametr Dropout z 0,2 do 0,5.
 - Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
-- Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
+- Wprowadzenie augmentacji danych przed budową modelu, która dodaje więcej wariacji do zbioru treningowego,
     w celu poprawy zdolności generalizacyjnych.
-    Wykorzystano również GPU w procesie pobierania wstępnego danych i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
+    Wykorzystano również GPU w procesie pobierania wstępnego danych i cachingu zbiorów danych,
+    by przypsieszyć przetwarzanie danych.
 - Skorzystanie z wywołania zwrotnego, które zmniejsza szybkość uczenia.
     W przypadku stagnacji dokładności w procesie przechodzenia przez kolejne epoki uczenia modelu
     może pomóc w lepszej konwergencji modelu.
@@ -110,10 +114,31 @@ W modelu z walidacją krzyżową, trenowanym na grafach z 4 wierzchołkami, dok�
 
 Strata modelu spada w pierwszych 10 epokach, co sugeruje szybkie uczenie, a potem stabilizuje się, z pojedynczymi skokami na zbiorze walidacyjnym, wskazującymi możliwe przeuczenie.
 
+Podsumowując, model uczy się poprawnie, osiągając wysoką dokładność i niską stratę,
+jednak fluktuacje w danych walidacyjnych sugerują problemy z generalizacją,
+prawdopodobnie z powodu niestabilności lub przeuczenia.
+Zwiększenie liczby epok nie poprawiłoby wyników, gdyż model przeucza się zbyt szybko.
+
+**Slajd**
+
+Z powodu przeuczenia model słabo radził sobie z zewnętrznymi obrazami testowymi,
+klasyfikując większość jako grafy pełne, co nie odzwierciedla rzeczywistości.
+Jego realna dokładność wynosi około 24%.
+
+**Slajd**
+
+Tutaj mamy przykład jednego z klasyfikowanych grafów.
+Przypisana klasa to graf pełny z 99,62% pewnością.
+Biorąc pod uwagę wysoką pewność przy klasyfikacji,
+można by spodziewać się lepszego wyniku niż otrzymany nieprawidłowy.
+
 # Podsumowanie
 Podsumowując, celem pracy było stworzenie modeli sieci neuronowych rozpoznających pięć typów grafów
 i zostało to osiągnięte.
-Do generowania danych użyto języka R, a modele zaprojektowano i przetestowano w Pythonie z pakietem Tensorflow. Praca pokazała, że możliwe jest zbudowanie modelu rozpoznającego rysunki grafów lepiej niż przy losowym wyborze. Najlepszy model osiągnął dokładność 45%, co wskazuje na potrzebę ewentualnego dalszego rozwoju.
+Do generowania danych użyto języka R, a modele zaprojektowano i przetestowano w Pythonie z pakietem Tensorflow.
+
+Praca pokazała, że możliwe jest zbudowanie modelu rozpoznającego rysunki grafów lepiej niż przy losowym wyborze.
+Najlepszy model osiągnął dokładność 45%, co wskazuje na potrzebę ewentualnego dalszego rozwoju.
 
 # Zakończenie
 Dziękuję za uwagę.
