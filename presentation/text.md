@@ -130,9 +130,19 @@ Biorąc pod uwagę wysoką pewność przy klasyfikacji,
 można by spodziewać się lepszego wyniku niż otrzymany nieprawidłowy.
 
 # Podsumowanie
-Podsumowując, celem pracy było stworzenie modeli sieci neuronowych rozpoznających pięć typów grafów
-i zostało to osiągnięte.
+Podsumowując, celem pracy było stworzenie modeli sieci neuronowych
+rozpoznających pięć typów grafów i zostało to osiągnięte.
 Do generowania danych użyto języka R, a modele zaprojektowano i przetestowano w Pythonie z pakietem Tensorflow.
+
+Generalnie, uczenie modeli na grafach o stałej liczbie wierzchołków
+okazało się skuteczniejsze niż na grafach o zmiennej liczbie wierzchołków.
+Skomplikowanie modelu i zastosowane techniki optymalizacyjne rzadko zwiększały realną dokładność.
+
+W bardziej zmodyfikowanych modelach dominowały grafy pełne,
+przez co na danych zewnętrznych większość testowych grafów była klasyfikowana jako pełne.
+
+Mimo problemów z przeuczeniem, część modeli osiągnęła całkiem wysoką dokładność,
+która przełożyła się na dobre wyniki na danych zewnętrznych.
 
 Praca pokazała, że możliwe jest zbudowanie modelu rozpoznającego rysunki grafów lepiej niż przy losowym wyborze.
 Najlepszy model osiągnął dokładność 45%, co wskazuje na potrzebę ewentualnego dalszego rozwoju.
