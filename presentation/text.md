@@ -78,6 +78,37 @@ Następnie skrypt przeszukuje katalog z danymi, wczytuje testowe obrazy, przeska
 konwertuje na odcienie szarości i przewiduje ich klasy, wyświetlając wyniki w konsoli.
 
 # Testy
+Testy sprawdzają realną dokładność modeli. Przy pięciu klasach losowy wybór daje 20% trafności. Modele z dokładnością poniżej tego progu lub blisko niego są nieprzydatne. Użyteczność modeli można wyznaczyć na około 35%, co oznacza znaczną poprawę względem losowego wyboru.
+
+Sprawdzane warianty modeli wyświetlone są na obecnym slajdzie.
+
+Model podstawowy został przedstawiony w poprzednim rozdziale.
+Model z walidacją krzyżową, to wersja modelu podstawowego,
+która sprawdza różne podziały zbiorów danych testowych i uczących za pomocą walidacji krzyżowej.
+Model ze zmienną liczbą wierzchołków to model podstawowy,
+który uczony był na grafach bez podziału na liczbę ich wierzchołków.
+Model ze zmienną liczbą wierzchołków i walidacją krzyżową to połaczenie dwóch wcześniej wymienionych modeli.
+
+**Slajd**
+
+Zastosowano modyfikacje modeli w celu polepszenia dokładności modeli oraz zmniejszenia ich podatności na przeuczenie.
+- Zmieniono liczbę filtrów w warstwach Conv2D z 32 w każdej warstwie, do kolejno 32, 64 oraz 128.
+    Jednocześnie zwiększono parametr Dropout z 0,2 do 0,5.
+- Zastosowano normalizację wsadową pomiędzy warstwami modelu - konkretnie po każdej warstwie Conv2D.
+- Wprowadzenie augmentacji danych przed budową modelu, która wprowadza więcej wariacji do zbioru treningowego,
+    w celu poprawy zdolności generalizacyjnych.
+    Wykorzystano również GPU w procesie pobierania wstępnego danych i cachingu zbiorów danych, by przypsieszyć przetwarzanie danych.
+- Skorzystanie z wywołania zwrotnego, które zmniejsza szybkość uczenia.
+    W przypadku stagnacji dokładności w procesie przechodzenia przez kolejne epoki uczenia modelu
+    może pomóc w lepszej konwergencji modelu.
+
+**Slajd**
+
+Omówię tutaj jeden z modeli
+
+W modelu z walidacją krzyżową, trenowanym na grafach z 4 wierzchołkami, dokładność szybko rośnie i osiąga ponad 80% po 10 epokach, stabilizując się na poziomie 90%. Widać jednak fluktuacje, zwłaszcza w danych walidacyjnych, co może wynikać z problemów z generalizacją.
+
+Strata modelu spada w pierwszych 10 epokach, co sugeruje szybkie uczenie, a potem stabilizuje się, z pojedynczymi skokami na zbiorze walidacyjnym, wskazującymi możliwe przeuczenie.
 
 # Podsumowanie
 Podsumowując, celem pracy było stworzenie modeli sieci neuronowych rozpoznających pięć typów grafów
