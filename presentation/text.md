@@ -108,7 +108,7 @@ Zastosowano modyfikacje modeli w celu polepszenia dokładności modeli oraz zmni
 
 **Slajd**
 
-Omówię tutaj jeden z modeli
+Omówię tutaj jeden z testowanych modeli.
 
 Model uczy się poprawnie, osiągając wysoką dokładność i niską stratę,
 jednak fluktuacje w danych walidacyjnych sugerują problemy z generalizacją,
