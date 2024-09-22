@@ -80,7 +80,9 @@ konwertuje na odcienie szarości i przewiduje ich klasy, wyświetlając wyniki w
 # Testy
 
 # Podsumowanie
-
+Podsumowując, celem pracy było stworzenie modeli sieci neuronowych rozpoznających pięć typów grafów
+i zostało to osiągnięte.
+Do generowania danych użyto języka R, a modele zaprojektowano i przetestowano w Pythonie z pakietem Tensorflow. Praca pokazała, że możliwe jest zbudowanie modelu rozpoznającego rysunki grafów lepiej niż przy losowym wyborze. Najlepszy model osiągnął dokładność 45%, co wskazuje na potrzebę ewentualnego dalszego rozwoju.
 
 # Zakończenie
 Dziękuję za uwagę.
