@@ -153,5 +153,7 @@ Praca pokazała, że możliwe jest zbudowanie modelu rozpoznającego rysunki gra
 Najlepszy model osiągnął dokładność 45%, co wskazuje na potrzebę ewentualnego dalszego rozwoju.
 Był to model podstawowy, uczony na grafach o sześciu wierzchołkach.
 
+**Slajd**
+
 # Zakończenie
 Dziękuję za uwagę.
